@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="DTR Abogados — Panamá">
+  <main class="container">
+    <div class="topnav">
+      <a class="brand" href="/">DTR</a>
+      <nav>
+        <a href="#areas">Áreas</a>
+        <a href="#honorarios">Honorarios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+
+    <header class="hero">
+      <p class="kicker">DTR — Abogados, Consultores y Asociados</p>
+      <h1>Asesoría legal en Panamá,<br/>sin sorpresas ni tecnicismos.</h1>
+      <p class="lede">
+        Derecho migratorio, propiedad horizontal, sociedades y civil
+        para personas y empresas en Panamá.
+      </p>
+      <p class="id-line">
+        <strong>Yeltzin Ramírez</strong> · Colegiado · Panamá · Consulta inicial sin costo
+      </p>
+      <div class="cta-row">
+        <a class="cta cta-primary" href="https://wa.me/50700000000?text=Hola%20DTR" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+        <a class="cta cta-secondary" href="#areas">Ver áreas de práctica</a>
+      </div>
+    </header>
+
+    <section id="areas" class="areas">
+      <h2>Qué hacemos</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Migración</h3>
+          <p>
+            Visas de trabajo, residencias temporales y definitivas, permisos
+            y naturalización. Tramitación personal, plazos honestos.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Propiedad Horizontal</h3>
+          <p>
+            Asambleas, cobro de cuotas, reglamentos y conflictos de convivencia
+            para juntas directivas y propietarios.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Sociedades</h3>
+          <p>
+            Constitución de sociedades anónimas, compliance corporativo,
+            actas, poderes y disolución ordenada.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Civil y compraventa</h3>
+          <p>
+            Opciones de compra, compraventas de finca y PH, cesiones de derechos
+            y contratos civiles.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="honorarios" class="honorarios">
+      <h2>Honorarios transparentes</h2>
+      <p>
+        Aplicamos el <strong>Acuerdo CSJ 609-A/2021</strong> (tarifa mínima legal
+        de la Corte Suprema de Justicia). Trabajamos por asunto específico,
+        retainer mensual o cuota litis. Lo que firmamos es lo que pagas.
+      </p>
+    </section>
+
+    <section id="contacto" class="contacto">
+      <h2>Conversemos</h2>
+      <p>
+        Te respondemos en menos de 24 horas hábiles.
+      </p>
+      <div class="cta-row">
+        <a class="cta cta-primary" href="https://wa.me/50700000000?text=Hola%20DTR" target="_blank" rel="noopener">
+          WhatsApp
+        </a>
+        <a class="cta cta-secondary" href="mailto:info@dtrabogados.com">
+          Correo
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> DTR Abogados · Ciudad de Panamá, Panamá</p>
+      <p class="disclaimer">
+        Esta información es orientativa. Cada caso requiere análisis particular.
+        Servicios migratorios sujetos a plazos y requisitos por nacionalidad.
+      </p>
+    </footer>
+  </main>
+</Layout>
+
+<script is:inline>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
