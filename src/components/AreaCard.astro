@@ -1,0 +1,74 @@
+---
+interface Props {
+  slug: string;
+  titulo: string;
+  pregunta: string;
+  descripcion: string;
+}
+const { slug, titulo, pregunta, descripcion } = Astro.props;
+---
+
+<a href={`/${slug}/`} class="area-card">
+  <div class="area-card-inner">
+    <p class="area-card-question">{pregunta}</p>
+    <h3 class="area-card-title">{titulo}</h3>
+    <p class="area-card-desc">{descripcion}</p>
+    <span class="area-card-cta">
+      Ver procesos <span aria-hidden="true">→</span>
+    </span>
+  </div>
+</a>
+
+<style>
+  .area-card {
+    display: block;
+    background: var(--dtr-white);
+    border: 1px solid var(--dtr-line);
+    border-radius: var(--radius-lg);
+    padding: 1.75rem;
+    text-decoration: none;
+    color: inherit;
+    transition: transform var(--transition), box-shadow var(--transition),
+      border-color var(--transition);
+    height: 100%;
+  }
+  .area-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--dtr-gold);
+    text-decoration: none;
+  }
+  .area-card-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .area-card-question {
+    font-size: 0.82rem;
+    text-transform: none;
+    color: var(--dtr-gold-dark);
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    font-style: italic;
+  }
+  .area-card-title {
+    font-size: 1.35rem;
+    color: var(--dtr-navy);
+    margin-bottom: 0.75rem;
+  }
+  .area-card-desc {
+    color: var(--texto-claro);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex: 1;
+    margin-bottom: 1.5rem;
+  }
+  .area-card-cta {
+    color: var(--dtr-gold-dark);
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .area-card:hover .area-card-cta {
+    color: var(--dtr-navy);
+  }
+</style>

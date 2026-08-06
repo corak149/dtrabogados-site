@@ -1,0 +1,262 @@
+/**
+ * DTR — Áreas de práctica y sitemap V3
+ *
+ * Fuente única de verdad para: mega-menú, home cards, generación
+ * de rutas por área. Cuando Danna commitee el copy V3, se actualiza
+ * `descripcion` y `pregunta` por bloque.
+ *
+ * Ver: 900-Inbox/900-GREG/01-Pendientes/2026-08-03-HANDOFF-WEB-DTR-implementacion-V3.md
+ */
+
+export interface Proceso {
+  slug: string;
+  titulo: string;
+  descripcion?: string;
+}
+
+export interface Grupo {
+  slug: string;
+  titulo: string;
+  procesos: Proceso[];
+}
+
+export interface Area {
+  slug: string;                   // ej. "derecho-migratorio"
+  titulo: string;                 // "Migración a Panamá"
+  tituloCorto: string;            // "Migración"
+  pregunta: string;               // pregunta-cliente que responde
+  descripcion: string;            // sub para el card + hub
+  destacada?: boolean;            // aparece en home V3
+  grupos: Grupo[];
+}
+
+export const AREAS: Area[] = [
+  {
+    slug: "derecho-migratorio",
+    titulo: "Derecho Migratorio",
+    tituloCorto: "Migración",
+    pregunta: "¿Puedo vivir, trabajar o invertir en Panamá siendo extranjero?",
+    descripcion:
+      "Visas, residencias provisionales y permanentes, naturalización. Acompañamos el trámite completo con plazos claros por nacionalidad.",
+    destacada: true,
+    grupos: [
+      {
+        slug: "visas",
+        titulo: "Visas",
+        procesos: [
+          { slug: "visa-profesional", titulo: "Visa profesional" },
+          { slug: "visa-confianza", titulo: "Visa de confianza" },
+          { slug: "visa-inversionista", titulo: "Visa inversionista" },
+          { slug: "visa-estudiante", titulo: "Visa estudiante" },
+          { slug: "visa-religioso", titulo: "Visa religioso" },
+        ],
+      },
+      {
+        slug: "residente-provisional",
+        titulo: "Residente provisional",
+        procesos: [
+          { slug: "residencia-inversion-inmobiliaria", titulo: "Inversión inmobiliaria" },
+          { slug: "residencia-pension-jubilacion", titulo: "Pensión / jubilación" },
+          { slug: "residencia-trabajo", titulo: "Trabajo" },
+          { slug: "residencia-matrimonio", titulo: "Matrimonio con panameño/a" },
+          { slug: "residencia-reagrupacion-familiar", titulo: "Reagrupación familiar" },
+        ],
+      },
+      {
+        slug: "residente-permanente",
+        titulo: "Residente permanente",
+        procesos: [
+          { slug: "requisitos", titulo: "Requisitos" },
+          { slug: "naturalizacion", titulo: "Naturalización" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "derecho-civil",
+    titulo: "Derecho Civil",
+    tituloCorto: "Civil",
+    pregunta: "Estoy comprando, vendiendo o heredando un bien — ¿qué necesito?",
+    descripcion:
+      "Propiedad horizontal, compraventas, sucesiones y responsabilidad civil para personas y empresas en Panamá.",
+    destacada: true,
+    grupos: [
+      {
+        slug: "propiedad-horizontal",
+        titulo: "Propiedad Horizontal",
+        procesos: [
+          { slug: "asamblea-propietarios", titulo: "Asamblea de propietarios" },
+          { slug: "cobro-cuotas", titulo: "Cobro de cuotas" },
+          { slug: "reglamento-ph", titulo: "Reglamento PH" },
+          { slug: "conflictos-ph", titulo: "Conflictos PH" },
+        ],
+      },
+      {
+        slug: "compraventas",
+        titulo: "Compraventas",
+        procesos: [
+          { slug: "opcion-compra", titulo: "Opción de compra" },
+          { slug: "compraventa-finca", titulo: "Compraventa de finca" },
+          { slug: "cesion-derechos", titulo: "Cesión de derechos" },
+        ],
+      },
+      {
+        slug: "sucesiones",
+        titulo: "Sucesiones",
+        procesos: [
+          { slug: "juicio-sucesorio", titulo: "Juicio sucesorio" },
+          { slug: "cesion-hereditarios", titulo: "Cesión de derechos hereditarios" },
+          { slug: "particion-bienes", titulo: "Partición de bienes" },
+        ],
+      },
+      {
+        slug: "responsabilidad-civil",
+        titulo: "Responsabilidad civil",
+        procesos: [],
+      },
+    ],
+  },
+  {
+    slug: "derecho-comercial",
+    titulo: "Derecho Comercial",
+    tituloCorto: "Sociedades",
+    pregunta: "Quiero abrir mi S.A., fundación o hacer compliance — ¿por dónde empiezo?",
+    descripcion:
+      "Constitución de sociedades, fundaciones de interés privado, compliance corporativo y resolución de conflictos societarios.",
+    destacada: true,
+    grupos: [
+      {
+        slug: "sociedades-anonimas",
+        titulo: "Sociedades Anónimas",
+        procesos: [
+          { slug: "constitucion-sa", titulo: "Constitución S.A." },
+          { slug: "acciones-nominativas", titulo: "Acciones nominativas" },
+          { slug: "aumento-capital", titulo: "Aumento de capital" },
+          { slug: "reforma-pacto-social", titulo: "Reforma del pacto social" },
+        ],
+      },
+      {
+        slug: "fundaciones-interes-privado",
+        titulo: "Fundaciones de interés privado",
+        procesos: [],
+      },
+      {
+        slug: "compliance-corporativo",
+        titulo: "Compliance corporativo",
+        procesos: [
+          { slug: "programa-cumplimiento-penal", titulo: "Programa de cumplimiento penal" },
+          { slug: "debida-diligencia", titulo: "Debida diligencia" },
+        ],
+      },
+      {
+        slug: "conflictos-societarios",
+        titulo: "Conflictos societarios",
+        procesos: [
+          { slug: "exclusion-socios", titulo: "Exclusión de socios" },
+          { slug: "disolucion", titulo: "Disolución" },
+        ],
+      },
+    ],
+  },
+  {
+    slug: "derecho-maritimo",
+    titulo: "Derecho Marítimo",
+    tituloCorto: "Marítimo",
+    pregunta: "Bandera, hipoteca naval o gente de mar — ¿cómo lo resuelvo?",
+    descripcion:
+      "Abanderamiento y registro de buques, hipoteca naval y asuntos de la gente de mar bajo la ley panameña.",
+    grupos: [
+      { slug: "abanderamiento-buques", titulo: "Abanderamiento de buques", procesos: [] },
+      {
+        slug: "registro-buques",
+        titulo: "Registro de buques",
+        procesos: [{ slug: "hipoteca-naval", titulo: "Hipoteca naval" }],
+      },
+      { slug: "gente-de-mar", titulo: "Gente de mar", procesos: [] },
+    ],
+  },
+  {
+    slug: "derecho-penal",
+    titulo: "Derecho Penal",
+    tituloCorto: "Penal",
+    pregunta: "Necesito defensa penal o una querella empresarial — ¿me acompañan?",
+    descripcion:
+      "Defensa penal, penal corporativo (CSS y otros) y querellas empresariales.",
+    grupos: [
+      { slug: "defensa-penal", titulo: "Defensa penal", procesos: [] },
+      { slug: "penal-css-corporativo", titulo: "Penal CSS corporativo", procesos: [] },
+      { slug: "querellas-empresariales", titulo: "Querellas empresariales", procesos: [] },
+    ],
+  },
+  {
+    slug: "derecho-laboral",
+    titulo: "Derecho Laboral",
+    tituloCorto: "Laboral",
+    pregunta: "Despido, mutuo acuerdo o CSS — ¿cómo termino la relación laboral bien?",
+    descripcion:
+      "Despidos justificados e injustificados, mutuo acuerdo y trámites ante Seguridad Social.",
+    grupos: [
+      { slug: "despido-justificado", titulo: "Despido justificado", procesos: [] },
+      { slug: "despido-injustificado", titulo: "Despido injustificado", procesos: [] },
+      { slug: "mutuo-acuerdo", titulo: "Mutuo acuerdo", procesos: [] },
+      { slug: "seguridad-social", titulo: "Seguridad social", procesos: [] },
+    ],
+  },
+  {
+    slug: "derecho-tributario",
+    titulo: "Derecho Tributario",
+    tituloCorto: "Tributario",
+    pregunta: "ISR, ITBMS o planificación fiscal — ¿me ayudan?",
+    descripcion:
+      "ISR, ITBMS, planificación fiscal y recursos ante el Tribunal Administrativo Tributario.",
+    grupos: [
+      { slug: "isr", titulo: "ISR", procesos: [] },
+      { slug: "itbms", titulo: "ITBMS", procesos: [] },
+      { slug: "planificacion-fiscal", titulo: "Planificación fiscal", procesos: [] },
+      { slug: "recursos-tributario", titulo: "Recursos tributarios", procesos: [] },
+    ],
+  },
+  {
+    slug: "derecho-de-familia",
+    titulo: "Derecho de Familia",
+    tituloCorto: "Familia",
+    pregunta: "Divorcio, pensión o adopción — ¿por dónde empiezo?",
+    descripcion:
+      "Divorcios, pensión alimenticia, adopciones y otros procesos de familia.",
+    grupos: [
+      { slug: "divorcio", titulo: "Divorcio", procesos: [] },
+      { slug: "pension-alimenticia", titulo: "Pensión alimenticia", procesos: [] },
+      { slug: "adopcion", titulo: "Adopción", procesos: [] },
+    ],
+  },
+  {
+    slug: "propiedad-intelectual",
+    titulo: "Propiedad Intelectual",
+    tituloCorto: "PI",
+    pregunta: "Marcas, patentes o derechos de autor — ¿los registro con ustedes?",
+    descripcion:
+      "Registro y defensa de marcas, patentes y derechos de autor en Panamá.",
+    grupos: [
+      { slug: "marcas", titulo: "Marcas", procesos: [] },
+      { slug: "patentes", titulo: "Patentes", procesos: [] },
+      { slug: "derecho-autor", titulo: "Derecho de autor", procesos: [] },
+    ],
+  },
+  {
+    slug: "otras-areas",
+    titulo: "Otras áreas",
+    tituloCorto: "Más áreas",
+    pregunta: "¿Seguros, competencia, energía, salud o internacional?",
+    descripcion:
+      "Seguros, competencia y consumo, energía, salud y regulación, derecho internacional público y privado.",
+    grupos: [
+      { slug: "derecho-de-seguros", titulo: "Seguros", procesos: [] },
+      { slug: "derecho-de-la-competencia", titulo: "Competencia", procesos: [] },
+      { slug: "derecho-internacional", titulo: "Derecho internacional", procesos: [] },
+      { slug: "energia-y-recursos", titulo: "Energía y recursos", procesos: [] },
+      { slug: "salud-y-regulacion", titulo: "Salud y regulación", procesos: [] },
+    ],
+  },
+];
+
+export const AREAS_DESTACADAS = AREAS.filter((a) => a.destacada);

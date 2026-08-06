@@ -1,0 +1,233 @@
+@import "./tokens.css";
+
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  background-image: var(--papiro-gradient);
+  color: var(--texto);
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-serif);
+  color: var(--dtr-navy);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.5em 0;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+h2 {
+  font-size: var(--fs-h2);
+}
+h3 {
+  font-size: var(--fs-h3);
+}
+
+p {
+  margin: 0 0 1em 0;
+  color: var(--texto);
+}
+
+a {
+  color: var(--dtr-navy);
+  text-decoration: underline;
+  text-decoration-color: var(--dtr-line-strong);
+  text-underline-offset: 3px;
+  transition: color var(--transition), text-decoration-color var(--transition);
+}
+
+a:hover {
+  color: var(--dtr-gold-dark);
+  text-decoration-color: var(--dtr-gold);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.container-narrow {
+  max-width: var(--max-width-narrow);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ---- CTA base ---- */
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: var(--radius);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition);
+  letter-spacing: 0.01em;
+}
+
+.cta-primary {
+  background: var(--dtr-navy);
+  color: var(--dtr-white);
+  border-color: var(--dtr-navy);
+}
+.cta-primary:hover {
+  background: var(--dtr-navy-hover);
+  border-color: var(--dtr-navy-hover);
+  color: var(--dtr-white);
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.cta-gold {
+  background: var(--dtr-gold);
+  color: var(--dtr-white);
+  border-color: var(--dtr-gold);
+}
+.cta-gold:hover {
+  background: var(--dtr-gold-dark);
+  border-color: var(--dtr-gold-dark);
+  color: var(--dtr-white);
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.cta-outline {
+  background: transparent;
+  color: var(--dtr-navy);
+  border-color: var(--dtr-navy);
+}
+.cta-outline:hover {
+  background: var(--dtr-navy);
+  color: var(--dtr-white);
+  text-decoration: none;
+}
+
+.cta-whatsapp {
+  background: #25d366;
+  color: var(--dtr-white);
+  border-color: #25d366;
+}
+.cta-whatsapp:hover {
+  background: #1ea856;
+  border-color: #1ea856;
+  color: var(--dtr-white);
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ---- Utilidades ---- */
+.text-center {
+  text-align: center;
+}
+.text-muted {
+  color: var(--texto-claro);
+}
+.text-small {
+  font-size: var(--fs-small);
+}
+.kicker {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--dtr-gold-dark);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.section {
+  padding: 4rem 0;
+}
+@media (min-width: 720px) {
+  .section {
+    padding: 5.5rem 0;
+  }
+}
+.section-tight {
+  padding: 3rem 0;
+}
+.section-navy {
+  background: var(--dtr-navy);
+  color: var(--dtr-white);
+}
+.section-navy h1,
+.section-navy h2,
+.section-navy h3 {
+  color: var(--dtr-white);
+}
+.section-navy p {
+  color: rgba(255, 255, 255, 0.85);
+}
+.section-cream {
+  background: var(--dtr-cream-alt);
+}
+
+hr.divider-gold {
+  border: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--dtr-gold),
+    transparent
+  );
+  margin: 2rem auto;
+  max-width: 200px;
+}
+
+/* ---- Focus visible (accesibilidad WCAG) ---- */
+:focus-visible {
+  outline: 2px solid var(--dtr-gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---- Skip link ---- */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--dtr-navy);
+  color: var(--dtr-white);
+  padding: 0.75rem 1rem;
+  z-index: 999;
+  font-weight: 600;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}

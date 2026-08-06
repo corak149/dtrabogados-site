@@ -1,0 +1,195 @@
+---
+/**
+ * MegaMenu — Decisión V3 #3 (Yeltzin 03.08.26)
+ * Hover en "Áreas de Práctica" despliega sub-tabs por área, cada
+ * proceso clickeable. En mobile funciona con :focus-within.
+ */
+import { AREAS } from "../data/areas";
+---
+
+<div class="mega-wrapper">
+  <button
+    type="button"
+    class="mega-trigger"
+    aria-expanded="false"
+    aria-haspopup="true"
+    aria-controls="mega-panel"
+  >
+    Áreas de práctica
+    <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true">
+      <path d="M1 3 L5 7 L9 3" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" />
+    </svg>
+  </button>
+
+  <div id="mega-panel" class="mega-panel" role="menu" aria-label="Áreas de práctica">
+    <div class="mega-inner">
+      {AREAS.map((area) => (
+        <div class="mega-col">
+          <a href={`/${area.slug}/`} class="mega-col-title">
+            {area.tituloCorto}
+            <span class="mega-col-arrow" aria-hidden="true">→</span>
+          </a>
+          <ul class="mega-col-list">
+            {area.grupos.slice(0, 4).map((g) => (
+              <li>
+                <a href={`/${area.slug}/${g.slug}/`}>{g.titulo}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+    <div class="mega-footer">
+      <a href="/areas-de-practica/" class="mega-footer-link">
+        Ver todas las áreas y procesos →
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .mega-wrapper {
+    position: relative;
+  }
+
+  .mega-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: transparent;
+    border: 0;
+    padding: 0.5rem 0.75rem;
+    font: inherit;
+    font-weight: 600;
+    color: var(--dtr-navy);
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    transition: color var(--transition);
+  }
+  .mega-trigger:hover,
+  .mega-trigger[aria-expanded="true"] {
+    color: var(--dtr-gold-dark);
+  }
+
+  .mega-panel {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 50%;
+    transform: translateX(-50%) translateY(-8px);
+    width: min(96vw, 960px);
+    background: var(--dtr-white);
+    border: 1px solid var(--dtr-line);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: 1.75rem;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 100;
+    transition: opacity var(--transition-slow), transform var(--transition-slow),
+      visibility var(--transition-slow);
+  }
+
+  /* Hover CSS puro (Decisión V3 #3) */
+  .mega-wrapper:hover .mega-panel,
+  .mega-wrapper:focus-within .mega-panel {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .mega-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem 1.75rem;
+  }
+
+  .mega-col-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--dtr-navy);
+    text-decoration: none;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--dtr-line);
+    transition: color var(--transition);
+  }
+  .mega-col-arrow {
+    color: var(--dtr-gold);
+    font-weight: 400;
+    transition: transform var(--transition);
+  }
+  .mega-col-title:hover {
+    color: var(--dtr-gold-dark);
+  }
+  .mega-col-title:hover .mega-col-arrow {
+    transform: translateX(3px);
+  }
+
+  .mega-col-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .mega-col-list a {
+    color: var(--texto-claro);
+    text-decoration: none;
+    font-size: 0.94rem;
+    padding: 0.15rem 0;
+    display: inline-block;
+    transition: color var(--transition);
+  }
+  .mega-col-list a:hover {
+    color: var(--dtr-navy);
+  }
+
+  .mega-footer {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--dtr-line);
+    text-align: center;
+  }
+  .mega-footer-link {
+    color: var(--dtr-gold-dark);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .mega-footer-link:hover {
+    color: var(--dtr-navy);
+  }
+
+  @media (max-width: 900px) {
+    .mega-panel {
+      position: static;
+      transform: none;
+      width: 100%;
+      box-shadow: none;
+      border: 0;
+      padding: 1rem 0;
+    }
+    .mega-wrapper:hover .mega-panel,
+    .mega-wrapper:focus-within .mega-panel {
+      transform: none;
+    }
+  }
+</style>
+
+<script>
+  // Enhance: click-to-toggle on tap devices sin hover, y ARIA updates.
+  const triggers = document.querySelectorAll<HTMLButtonElement>(".mega-trigger");
+  triggers.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const expanded = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", String(!expanded));
+    });
+  });
+</script>

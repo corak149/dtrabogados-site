@@ -1,9 +1,9 @@
-# dependencies
-node_modules/
-
 # build output
 dist/
-.astro/
+.output/
+
+# dependencies
+node_modules/
 
 # logs
 npm-debug.log*
@@ -11,15 +11,16 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-# environment
+# environment variables
 .env
 .env.production
+.env.local
 
-# editor
-.vscode/
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
 .idea/
 
-# OS
-.DS_Store
-_screenshot.py
-preview-home.png
+# Astro cache
+.astro/

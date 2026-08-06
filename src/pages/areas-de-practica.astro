@@ -1,0 +1,55 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AreaCard from "../components/AreaCard.astro";
+import { AREAS } from "../data/areas";
+---
+
+<Layout
+  title="Áreas de práctica — DTR Abogados"
+  description="Todas las áreas de práctica de DTR Abogados: migración, civil, comercial, marítimo, penal, laboral, tributario, familia y propiedad intelectual."
+>
+  <section class="section-tight section-navy">
+    <div class="container container-narrow text-center">
+      <span class="kicker" style="color: var(--dtr-gold-light);">Áreas de práctica</span>
+      <h1 style="color: var(--dtr-white); margin: 0.5rem 0 1rem;">
+        Todas las áreas que atendemos
+      </h1>
+      <p style="color: rgba(255,255,255,0.85); margin: 0;">
+        {AREAS.length} áreas de trabajo, cada una con sus procesos y requisitos claros.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="areas-grid">
+        {AREAS.map((a) => (
+          <AreaCard
+            slug={a.slug}
+            titulo={a.titulo}
+            pregunta={a.pregunta}
+            descripcion={a.descripcion}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .areas-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  @media (min-width: 640px) {
+    .areas-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 960px) {
+    .areas-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

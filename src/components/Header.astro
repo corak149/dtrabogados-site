@@ -1,0 +1,80 @@
+---
+import Logo from "./Logo.astro";
+import MegaMenu from "./MegaMenu.astro";
+
+const WHATSAPP = import.meta.env.PUBLIC_WHATSAPP || "50700000000";
+const waLink = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hola DTR — quisiera una consulta.")}`;
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <Logo variant="full" />
+
+    <nav aria-label="Principal">
+      <ul class="nav-list">
+        <li><MegaMenu /></li>
+        <li><a href="/honorarios/">Honorarios</a></li>
+        <li><a href="/quienes-somos/">Quiénes somos</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contacto/">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <a
+      href={waLink}
+      class="cta cta-gold cta-header"
+      target="_blank"
+      rel="noopener"
+    >
+      WhatsApp
+    </a>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    background: var(--dtr-white);
+    border-bottom: 1px solid var(--dtr-line);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: saturate(150%) blur(6px);
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding-top: 0.85rem;
+    padding-bottom: 0.85rem;
+  }
+  .nav-list {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 0.25rem;
+    align-items: center;
+  }
+  .nav-list li a {
+    color: var(--texto);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-sm);
+    transition: color var(--transition);
+  }
+  .nav-list li a:hover {
+    color: var(--dtr-gold-dark);
+  }
+  .cta-header {
+    padding: 0.55rem 1.15rem;
+    font-size: 0.9rem;
+  }
+
+  @media (min-width: 900px) {
+    .nav-list {
+      display: flex;
+    }
+  }
+</style>
