@@ -4,5 +4,5 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://dtrabogados.com',
   output: 'static',
-  // Cloudflare Pages usa Node 18+; sin adapter por ahora (sitio estático puro)
+  // Cloudflare Pages: build estático puro, sin adapter
 });

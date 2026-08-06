@@ -1,102 +1,258 @@
 ---
-import Layout from '../layouts/Layout.astro';
+/**
+ * HOME V3 — Landing minimalista de 5 bloques (Decisión V3 #4).
+ * Sin casos de éxito (Decisión V3 #2 — info privada).
+ * Copy actual = placeholders. Sprint 1 = sustituir con V3 de Danna
+ * (900-DANNA/02-En-Proceso/web-dtrabogados-v2/00-WEB-DTR-V3-iterativa.md).
+ */
+import Layout from "../layouts/Layout.astro";
+import AreaCard from "../components/AreaCard.astro";
+import GoogleReviewsBadge from "../components/GoogleReviewsBadge.astro";
+import { AREAS, AREAS_DESTACADAS } from "../data/areas";
+
+const WHATSAPP = import.meta.env.PUBLIC_WHATSAPP || "50700000000";
+const waLink = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
+  "Hola DTR — quisiera una consulta inicial."
+)}`;
 ---
 
 <Layout title="DTR Abogados — Panamá">
-  <main class="container">
-    <div class="topnav">
-      <a class="brand" href="/">DTR</a>
-      <nav>
-        <a href="#areas">Áreas</a>
-        <a href="#honorarios">Honorarios</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
+  <!-- BLOQUE 1 · HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <span class="kicker">DTR — Abogados, Consultores y Asociados</span>
+      <h1 class="hero-title">
+        Asesoría legal en Panamá,<br />
+        <em>sin sorpresas ni tecnicismos.</em>
+      </h1>
+      <p class="hero-lede">
+        Migración, propiedad horizontal, sociedades y civil. Procesos claros,
+        honorarios transparentes y consulta inicial sin costo.
+      </p>
+
+      <div class="hero-ctas">
+        <a href={waLink} class="cta cta-whatsapp" target="_blank" rel="noopener">
+          Hablar por WhatsApp
+        </a>
+        <a href="/areas-de-practica/" class="cta cta-outline">
+          Ver áreas de práctica
+        </a>
+      </div>
+
+      <div class="hero-reviews">
+        <GoogleReviewsBadge />
+      </div>
     </div>
+  </section>
 
-    <header class="hero">
-      <p class="kicker">DTR — Abogados, Consultores y Asociados</p>
-      <h1>Asesoría legal en Panamá,<br/>sin sorpresas ni tecnicismos.</h1>
-      <p class="lede">
-        Derecho migratorio, propiedad horizontal, sociedades y civil
-        para personas y empresas en Panamá.
-      </p>
-      <p class="id-line">
-        <strong>Yeltzin Ramírez</strong> · Colegiado · Panamá · Consulta inicial sin costo
-      </p>
-      <div class="cta-row">
-        <a class="cta cta-primary" href="https://wa.me/50700000000?text=Hola%20DTR" target="_blank" rel="noopener">Hablar por WhatsApp</a>
-        <a class="cta cta-secondary" href="#areas">Ver áreas de práctica</a>
+  <!-- BLOQUE 2 · ÁREAS DESTACADAS -->
+  <section class="section section-cream">
+    <div class="container">
+      <div class="section-head text-center">
+        <span class="kicker">Áreas de práctica</span>
+        <h2>Qué hacemos</h2>
+        <p class="section-lede">
+          Áreas de trabajo enfocadas al cliente extranjero y empresarial en
+          Panamá. Cada proceso tiene requisitos claros y plazos honestos.
+        </p>
       </div>
-    </header>
 
-    <section id="areas" class="areas">
-      <h2>Qué hacemos</h2>
-      <div class="cards">
-        <article class="card">
-          <h3>Migración</h3>
-          <p>
-            Visas de trabajo, residencias temporales y definitivas, permisos
-            y naturalización. Tramitación personal, plazos honestos.
-          </p>
-        </article>
-        <article class="card">
-          <h3>Propiedad Horizontal</h3>
-          <p>
-            Asambleas, cobro de cuotas, reglamentos y conflictos de convivencia
-            para juntas directivas y propietarios.
-          </p>
-        </article>
-        <article class="card">
-          <h3>Sociedades</h3>
-          <p>
-            Constitución de sociedades anónimas, compliance corporativo,
-            actas, poderes y disolución ordenada.
-          </p>
-        </article>
-        <article class="card">
-          <h3>Civil y compraventa</h3>
-          <p>
-            Opciones de compra, compraventas de finca y PH, cesiones de derechos
-            y contratos civiles.
-          </p>
-        </article>
+      <div class="areas-grid">
+        {AREAS_DESTACADAS.map((a) => (
+          <AreaCard
+            slug={a.slug}
+            titulo={a.titulo}
+            pregunta={a.pregunta}
+            descripcion={a.descripcion}
+          />
+        ))}
       </div>
-    </section>
 
-    <section id="honorarios" class="honorarios">
-      <h2>Honorarios transparentes</h2>
-      <p>
-        Aplicamos el <strong>Acuerdo CSJ 609-A/2021</strong> (tarifa mínima legal
-        de la Corte Suprema de Justicia). Trabajamos por asunto específico,
-        retainer mensual o cuota litis. Lo que firmamos es lo que pagas.
-      </p>
-    </section>
+      <div class="text-center" style="margin-top: 2.5rem;">
+        <a href="/areas-de-practica/" class="cta cta-outline">
+          Ver todas las áreas ({AREAS.length})
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <section id="contacto" class="contacto">
-      <h2>Conversemos</h2>
-      <p>
-        Te respondemos en menos de 24 horas hábiles.
+  <!-- BLOQUE 3 · CÓMO TRABAJAMOS -->
+  <section class="section">
+    <div class="container container-narrow text-center">
+      <span class="kicker">Cómo trabajamos</span>
+      <h2>Consulta, propuesta, acompañamiento.</h2>
+      <p class="section-lede">
+        Escuchamos tu caso, te decimos si podemos ayudarte y con qué costo,
+        y si avanzamos hacemos el trabajo hasta terminarlo. Sin letra chica.
       </p>
-      <div class="cta-row">
-        <a class="cta cta-primary" href="https://wa.me/50700000000?text=Hola%20DTR" target="_blank" rel="noopener">
+
+      <div class="pasos">
+        <div class="paso">
+          <div class="paso-num">01</div>
+          <h3>Consulta inicial</h3>
+          <p>Nos contás tu caso por WhatsApp o formulario. Sin costo, sin compromiso.</p>
+        </div>
+        <div class="paso">
+          <div class="paso-num">02</div>
+          <h3>Propuesta clara</h3>
+          <p>Te enviamos alcance, plazos y honorarios por escrito según el Acuerdo CNA 609-A.</p>
+        </div>
+        <div class="paso">
+          <div class="paso-num">03</div>
+          <h3>Trabajamos el caso</h3>
+          <p>Tramitación personal y actualizaciones periódicas hasta cerrar el asunto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOQUE 4 · HONORARIOS TRANSPARENTES -->
+  <section class="section section-navy">
+    <div class="container container-narrow text-center">
+      <span class="kicker" style="color: var(--dtr-gold-light);">Honorarios</span>
+      <h2>Precios sin sorpresas.</h2>
+      <p class="section-lede" style="color: rgba(255,255,255,0.85);">
+        Aplicamos el <strong>Acuerdo CNA 609-A/2021</strong> del Colegio Nacional
+        de Abogados de Panamá — tarifa mínima legal. Trabajamos por asunto
+        específico, retainer mensual o cuota litis según el caso.
+        Lo que firmamos es lo que pagás.
+      </p>
+      <div class="cta-row-center">
+        <a href="/honorarios/" class="cta cta-gold">Ver tabla de honorarios</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOQUE 5 · CTA CONTACTO -->
+  <section class="section">
+    <div class="container container-narrow text-center">
+      <span class="kicker">Conversemos</span>
+      <h2>Consulta inicial sin costo.</h2>
+      <p class="section-lede">
+        Te respondemos en menos de 24 horas hábiles. Migración, propiedad,
+        sociedades o cualquier otra área — contanos y vemos si podemos ayudarte.
+      </p>
+      <div class="cta-row-center">
+        <a href={waLink} class="cta cta-whatsapp" target="_blank" rel="noopener">
           WhatsApp
         </a>
-        <a class="cta cta-secondary" href="mailto:info@dtrabogados.com">
-          Correo
+        <a href="mailto:info@dtrabogados.com" class="cta cta-outline">
+          Escribir un correo
         </a>
       </div>
-    </section>
-
-    <footer class="footer">
-      <p>© <span id="year"></span> DTR Abogados · Ciudad de Panamá, Panamá</p>
-      <p class="disclaimer">
-        Esta información es orientativa. Cada caso requiere análisis particular.
-        Servicios migratorios sujetos a plazos y requisitos por nacionalidad.
-      </p>
-    </footer>
-  </main>
+    </div>
+  </section>
 </Layout>
 
-<script is:inline>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+<style>
+  /* Hero */
+  .hero {
+    background: linear-gradient(180deg, var(--dtr-white) 0%, var(--dtr-cream) 100%);
+    padding: 5rem 0 4rem;
+    border-bottom: 1px solid var(--dtr-line);
+  }
+  .hero-inner {
+    text-align: center;
+    max-width: 820px;
+  }
+  .hero-title {
+    font-size: var(--fs-hero);
+    line-height: 1.15;
+    color: var(--dtr-navy);
+    margin-bottom: 1.5rem;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--dtr-gold-dark);
+  }
+  .hero-lede {
+    font-size: 1.15rem;
+    color: var(--texto-claro);
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+  }
+  .hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  .hero-reviews {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Section head */
+  .section-head {
+    margin-bottom: 3rem;
+  }
+  .section-lede {
+    font-size: 1.08rem;
+    color: var(--texto-claro);
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  /* Áreas grid */
+  .areas-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  @media (min-width: 640px) {
+    .areas-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 960px) {
+    .areas-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* Pasos */
+  .pasos {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 3rem;
+    text-align: left;
+  }
+  @media (min-width: 640px) {
+    .pasos {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .paso {
+    padding: 1.5rem;
+    background: var(--dtr-white);
+    border: 1px solid var(--dtr-line);
+    border-radius: var(--radius-lg);
+  }
+  .paso-num {
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--dtr-gold);
+    margin-bottom: 0.5rem;
+  }
+  .paso h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .paso p {
+    color: var(--texto-claro);
+    font-size: 0.95rem;
+    margin: 0;
+  }
+
+  .cta-row-center {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+  }
+</style>

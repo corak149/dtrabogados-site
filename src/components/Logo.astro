@@ -1,0 +1,57 @@
+---
+interface Props {
+  variant?: "full" | "compact";
+  invert?: boolean;
+  href?: string;
+}
+
+const { variant = "full", invert = false, href = "/" } = Astro.props;
+---
+
+<a href={href} class:list={["logo", { "logo-invert": invert }]} aria-label="DTR Abogados — inicio">
+  {variant === "full" ? (
+    <img src="/logo-dtr.svg" alt="DTR Abogados, Consultores y Asociados" width="220" height="110" />
+  ) : (
+    <span class="logo-compact">
+      <span class="logo-mark">DTR</span>
+      <span class="logo-tag">Abogados</span>
+    </span>
+  )}
+</a>
+
+<style>
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    line-height: 1;
+  }
+  .logo img {
+    display: block;
+    height: auto;
+    max-height: 64px;
+    width: auto;
+  }
+  .logo-compact {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    font-family: var(--font-serif);
+  }
+  .logo-mark {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--dtr-gold);
+    letter-spacing: 0.08em;
+  }
+  .logo-tag {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--texto-claro);
+  }
+  .logo-invert .logo-tag {
+    color: rgba(255, 255, 255, 0.85);
+  }
+</style>

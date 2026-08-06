@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Placeholder logo — Reemplazar con SVG oficial exportado del .ai cuando esté disponible. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" role="img" aria-label="DTR Abogados, Consultores y Asociados">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e6c98a"/>
+      <stop offset="50%" stop-color="#b8954a"/>
+      <stop offset="100%" stop-color="#8a6d33"/>
+    </linearGradient>
+  </defs>
+  <!-- Fondo navy con borde blanco -->
+  <rect width="400" height="200" fill="#232a5e"/>
+  <rect x="8" y="8" width="384" height="184" fill="none" stroke="#ffffff" stroke-width="2"/>
+
+  <!-- Balanza simplificada -->
+  <g transform="translate(60,100)" stroke="url(#gold)" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <line x1="0" y1="-40" x2="0" y2="30"/>
+    <line x1="-32" y1="-30" x2="32" y2="-30"/>
+    <path d="M-32,-30 L-42,0 L-22,0 Z" fill="url(#gold)" stroke="none"/>
+    <path d="M32,-30 L22,0 L42,0 Z" fill="url(#gold)" stroke="none"/>
+    <ellipse cx="0" cy="35" rx="18" ry="4" fill="url(#gold)" stroke="none"/>
+  </g>
+
+  <!-- DTR -->
+  <text x="130" y="125" font-family="Georgia, 'Times New Roman', serif" font-size="88" font-weight="700" fill="url(#gold)" letter-spacing="4">DTR</text>
+
+  <!-- Subtítulo -->
+  <text x="200" y="165" font-family="'Source Sans 3', -apple-system, sans-serif" font-size="14" font-weight="400" fill="#ffffff" text-anchor="middle" letter-spacing="2">Abogados, Consultores y Asociados</text>
+</svg>

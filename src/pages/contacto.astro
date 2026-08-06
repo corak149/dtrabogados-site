@@ -1,0 +1,157 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const WHATSAPP = import.meta.env.PUBLIC_WHATSAPP || "50700000000";
+const TALLY_URL =
+  import.meta.env.PUBLIC_TALLY_URL || "https://tally.so/r/dtr-consulta-inicial";
+const waLink = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
+  "Hola DTR — vengo desde el formulario de contacto."
+)}`;
+---
+
+<Layout
+  title="Contacto — DTR Abogados"
+  description="Contactá a DTR Abogados por WhatsApp, correo o formulario. Consulta inicial sin costo, respuesta en menos de 24 horas hábiles."
+>
+  <section class="section-tight section-navy">
+    <div class="container container-narrow text-center">
+      <span class="kicker" style="color: var(--dtr-gold-light);">Contacto</span>
+      <h1 style="color: var(--dtr-white);">Conversemos</h1>
+      <p style="color: rgba(255,255,255,0.85); font-size: 1.1rem;">
+        Consulta inicial sin costo. Te respondemos en menos de 24 horas hábiles.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container-narrow">
+      <div class="contact-grid">
+        <div class="contact-method">
+          <h2>WhatsApp</h2>
+          <p>
+            El canal más rápido. Contanos brevemente tu caso y te derivamos
+            al abogado que corresponda.
+          </p>
+          <a href={waLink} class="cta cta-whatsapp" target="_blank" rel="noopener">
+            Abrir WhatsApp
+          </a>
+        </div>
+
+        <div class="contact-method">
+          <h2>Formulario</h2>
+          <p>
+            Formulario de 4 preguntas para consultas más detalladas.
+            Respondemos por correo.
+          </p>
+          <a href={TALLY_URL} class="cta cta-outline" target="_blank" rel="noopener">
+            Llenar formulario
+          </a>
+        </div>
+
+        <div class="contact-method">
+          <h2>Correo</h2>
+          <p>Para adjuntos, documentos escaneados o consultas escritas largas.</p>
+          <a href="mailto:info@dtrabogados.com" class="cta cta-outline">
+            info@dtrabogados.com
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-info">
+        <h2>Datos oficiales</h2>
+        <dl>
+          <div>
+            <dt>Ubicación</dt>
+            <dd>Ciudad de Panamá, República de Panamá</dd>
+          </div>
+          <div>
+            <dt>Horario de atención</dt>
+            <dd class="todo-inline">
+              <span class="todo">TODO</span> Lun-Vie 8:30-17:00 (a confirmar)
+            </dd>
+          </div>
+          <div>
+            <dt>Idiomas</dt>
+            <dd>Español</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+  @media (min-width: 720px) {
+    .contact-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .contact-method {
+    padding: 2rem 1.75rem;
+    background: var(--dtr-white);
+    border: 1px solid var(--dtr-line);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .contact-method h2 {
+    font-size: 1.25rem;
+    margin: 0;
+  }
+  .contact-method p {
+    color: var(--texto-claro);
+    font-size: 0.95rem;
+    flex: 1;
+    margin: 0;
+  }
+
+  .contact-info {
+    padding: 2rem;
+    background: var(--dtr-cream-alt);
+    border-radius: var(--radius-lg);
+  }
+  .contact-info h2 {
+    margin-bottom: 1.5rem;
+  }
+  .contact-info dl {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 0;
+  }
+  @media (min-width: 640px) {
+    .contact-info dl {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .contact-info dt {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--texto-suave);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  .contact-info dd {
+    margin: 0;
+    color: var(--texto);
+  }
+  .todo {
+    display: inline-block;
+    font-size: 0.7rem;
+    background: rgba(184, 149, 74, 0.2);
+    color: var(--dtr-gold-dark);
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+    font-family: ui-monospace, monospace;
+    font-weight: 600;
+    margin-right: 0.4rem;
+  }
+</style>

@@ -1,0 +1,159 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const WHATSAPP = import.meta.env.PUBLIC_WHATSAPP || "50700000000";
+const waLink = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
+  "Hola DTR — quiero consultar sobre honorarios."
+)}`;
+---
+
+<Layout
+  title="Honorarios — DTR Abogados"
+  description="Honorarios de DTR Abogados según el Acuerdo CNA 609-A/2021 del Colegio Nacional de Abogados de Panamá. Precios claros, sin sorpresas."
+>
+  <section class="section-tight section-navy">
+    <div class="container container-narrow text-center">
+      <span class="kicker" style="color: var(--dtr-gold-light);">Honorarios</span>
+      <h1 style="color: var(--dtr-white);">Precios claros, sin sorpresas.</h1>
+      <p style="color: rgba(255,255,255,0.85); font-size: 1.1rem;">
+        Aplicamos el <strong>Acuerdo CNA 609-A/2021</strong> del Colegio Nacional
+        de Abogados de Panamá — tarifa mínima legal vigente.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container-narrow">
+      <div class="hon-intro">
+        <p>
+          Nuestros honorarios se determinan según el Acuerdo CNA 609-A/2021
+          del Colegio Nacional de Abogados. Antes de iniciar cualquier trabajo
+          te enviamos una propuesta por escrito con alcance, plazos y monto
+          final. Lo que firmamos es lo que pagás.
+        </p>
+      </div>
+
+      <h2>Modalidades de trabajo</h2>
+
+      <div class="hon-grid">
+        <div class="hon-card">
+          <h3>Por asunto específico</h3>
+          <p>
+            Cotizamos el asunto completo (una visa, una compraventa, una
+            constitución de S.A.). Pago único al inicio o en dos partes según
+            el caso.
+          </p>
+          <div class="hon-tag">Ideal para trámites puntuales</div>
+        </div>
+
+        <div class="hon-card">
+          <h3>Retainer mensual</h3>
+          <p>
+            Cuota fija mensual para clientes con demanda continua (empresas,
+            juntas directivas). Incluye asesoría por WhatsApp/correo y horas
+            legales por mes.
+          </p>
+          <div class="hon-tag">Ideal para empresas</div>
+        </div>
+
+        <div class="hon-card">
+          <h3>Cuota litis</h3>
+          <p>
+            Porcentaje sobre el resultado (ejecuciones, cobros, ciertos casos
+            civiles). Solo cobramos si obtenemos resultado.
+          </p>
+          <div class="hon-tag">Casos de recuperación</div>
+        </div>
+      </div>
+
+      <h2 style="margin-top: 3rem;">Consulta inicial</h2>
+      <p>
+        <strong>La primera consulta es sin costo.</strong> Nos contás tu caso,
+        te decimos si podemos ayudarte y con qué costo. Si avanzamos, firmamos
+        propuesta escrita.
+      </p>
+
+      <div class="cta-row" style="margin-top: 2rem;">
+        <a href={waLink} class="cta cta-whatsapp" target="_blank" rel="noopener">
+          Consultar por WhatsApp
+        </a>
+        <a href="/contacto/" class="cta cta-outline">Formulario de contacto</a>
+      </div>
+
+      <div class="hon-note">
+        <p class="text-small text-muted">
+          <strong>Aviso legal.</strong> El Acuerdo CNA 609-A/2021 establece
+          tarifas mínimas obligatorias para abogados en Panamá. Los precios
+          finales dependen de la complejidad del caso y se ajustan siempre
+          por encima del piso legal. <span class="todo">TODO: revisar
+          redacción (A/B/C) con Yeltzin.</span>
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hon-intro {
+    padding: 1.5rem;
+    background: var(--dtr-cream-alt);
+    border-left: 4px solid var(--dtr-gold);
+    border-radius: var(--radius);
+    margin-bottom: 3rem;
+  }
+  .hon-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+  @media (min-width: 720px) {
+    .hon-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .hon-card {
+    padding: 1.75rem;
+    background: var(--dtr-white);
+    border: 1px solid var(--dtr-line);
+    border-radius: var(--radius-lg);
+  }
+  .hon-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+  .hon-card p {
+    color: var(--texto-claro);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  .hon-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    background: rgba(184, 149, 74, 0.12);
+    color: var(--dtr-gold-dark);
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    font-weight: 600;
+  }
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .hon-note {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--dtr-line);
+  }
+  .todo {
+    display: inline-block;
+    font-size: 0.7rem;
+    background: rgba(184, 149, 74, 0.15);
+    color: var(--dtr-gold-dark);
+    padding: 0.1rem 0.4rem;
+    border-radius: 3px;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-weight: 600;
+  }
+</style>

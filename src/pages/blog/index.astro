@@ -1,0 +1,52 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout
+  title="Blog — DTR Abogados"
+  description="Artículos y análisis legales de DTR Abogados sobre migración, sociedades, propiedad horizontal y otras áreas del derecho panameño."
+>
+  <section class="section-tight section-navy">
+    <div class="container container-narrow text-center">
+      <span class="kicker" style="color: var(--dtr-gold-light);">Blog</span>
+      <h1 style="color: var(--dtr-white);">Notas y análisis</h1>
+      <p style="color: rgba(255,255,255,0.85); font-size: 1.1rem;">
+        Actualizaciones legales, análisis de casos y respuestas a preguntas
+        frecuentes.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container-narrow">
+      <div class="empty">
+        <h2>Primeros posts en camino</h2>
+        <p>
+          Estamos preparando la primera tanda de artículos: PPSH 2026,
+          constitución de S.A. express y RUBF explicado en 5 minutos.
+        </p>
+        <p class="text-muted text-small">
+          <strong>Decisión V3 #9:</strong> Blog con CMS simple. Sprint 2:
+          integración con Astro Content Collections (`content/blog/*.md`).
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .empty {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--dtr-cream-alt);
+    border-radius: var(--radius-lg);
+  }
+  .empty h2 {
+    margin-bottom: 1rem;
+  }
+  .empty p {
+    color: var(--texto-claro);
+    max-width: 480px;
+    margin: 0 auto 1rem;
+  }
+</style>

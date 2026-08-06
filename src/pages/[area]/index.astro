@@ -1,0 +1,184 @@
+---
+/**
+ * Hub por área (10 páginas generadas estáticamente).
+ * Ruta: /derecho-migratorio/, /derecho-civil/, etc.
+ */
+import Layout from "../../layouts/Layout.astro";
+import { AREAS } from "../../data/areas";
+
+export function getStaticPaths() {
+  return AREAS.map((area) => ({
+    params: { area: area.slug },
+    props: { area },
+  }));
+}
+
+const { area } = Astro.props;
+const WHATSAPP = import.meta.env.PUBLIC_WHATSAPP || "50700000000";
+const waLink = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
+  `Hola DTR — quisiera una consulta sobre ${area.tituloCorto}.`
+)}`;
+---
+
+<Layout
+  title={`${area.titulo} — DTR Abogados`}
+  description={area.descripcion}
+>
+  <section class="section-tight section-navy">
+    <div class="container container-narrow">
+      <nav class="crumbs" aria-label="breadcrumb">
+        <a href="/">Inicio</a>
+        <span aria-hidden="true">/</span>
+        <a href="/areas-de-practica/">Áreas</a>
+      </nav>
+      <span class="kicker" style="color: var(--dtr-gold-light);">Área de práctica</span>
+      <h1 style="color: var(--dtr-white);">{area.titulo}</h1>
+      <p style="color: rgba(255,255,255,0.85); font-size: 1.1rem;">
+        {area.pregunta}
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container-narrow">
+      <p class="lede-area">{area.descripcion}</p>
+
+      {area.grupos.map((grupo) => (
+        <div class="grupo">
+          <h2 class="grupo-title">
+            <a href={`/${area.slug}/${grupo.slug}/`}>
+              {grupo.titulo}
+            </a>
+          </h2>
+          {grupo.procesos.length > 0 && (
+            <ul class="proceso-list">
+              {grupo.procesos.map((p) => (
+                <li>
+                  <a href={`/${area.slug}/${grupo.slug}/${p.slug}/`}>
+                    {p.titulo}
+                    <span class="proc-arrow" aria-hidden="true">→</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+          {grupo.procesos.length === 0 && (
+            <p class="grupo-empty">
+              Contactanos para consultar por este servicio.
+            </p>
+          )}
+        </div>
+      ))}
+
+      <div class="cta-block">
+        <h3>¿Tenés un caso específico en {area.tituloCorto}?</h3>
+        <p>Consulta inicial sin costo. Te respondemos en menos de 24 horas hábiles.</p>
+        <div class="cta-row">
+          <a href={waLink} class="cta cta-whatsapp" target="_blank" rel="noopener">
+            WhatsApp
+          </a>
+          <a href="/contacto/" class="cta cta-outline">Formulario</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .crumbs {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .crumbs a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.3);
+  }
+  .lede-area {
+    font-size: 1.15rem;
+    color: var(--texto-claro);
+    margin-bottom: 3rem;
+    line-height: 1.6;
+  }
+  .grupo {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--dtr-line);
+  }
+  .grupo:last-of-type {
+    border-bottom: 0;
+  }
+  .grupo-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .grupo-title a {
+    color: var(--dtr-navy);
+    text-decoration: none;
+  }
+  .grupo-title a:hover {
+    color: var(--dtr-gold-dark);
+  }
+  .proceso-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  @media (min-width: 640px) {
+    .proceso-list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .proceso-list li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.85rem 1rem;
+    background: var(--dtr-white);
+    border: 1px solid var(--dtr-line);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: var(--texto);
+    font-weight: 500;
+    transition: all var(--transition);
+  }
+  .proceso-list li a:hover {
+    border-color: var(--dtr-gold);
+    color: var(--dtr-navy);
+    transform: translateX(3px);
+  }
+  .proc-arrow {
+    color: var(--dtr-gold);
+  }
+  .grupo-empty {
+    color: var(--texto-claro);
+    font-style: italic;
+    font-size: 0.95rem;
+  }
+  .cta-block {
+    margin-top: 3rem;
+    padding: 2.5rem;
+    background: var(--dtr-cream-alt);
+    border-radius: var(--radius-lg);
+    text-align: center;
+  }
+  .cta-block h3 {
+    margin-bottom: 0.5rem;
+  }
+  .cta-block p {
+    color: var(--texto-claro);
+    margin-bottom: 1.5rem;
+  }
+  .cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+</style>
