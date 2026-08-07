@@ -37,7 +37,7 @@ plazos:
   vigencia: "Alineado al contrato de trabajo"
   renovacion: "Renovable con demostración de mantenimiento de la relación laboral."
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021. Cotizamos según tamaño de empresa."
-tasas_oficiales: "Tasa MITRADEL B/.300 + tasa SNM B/.250 + B/.1,050 en primera solicitud."
+tasas_oficiales: "Tasa MITRADEL $250.00 primera vez o renovacion + $30.00 duplicados (TIPO 4A Paises especificos / inversion - Tabla oficial MITRADEL). Para empresas acogidas al Acuerdo Marrakech con menos de 10 trabajadores, el regimen MIPE aplica reglas especiales."
 alertas:
   - "Salario mínimo B/.1,000 mensuales. Si es menor, la solicitud es rechazada."
   - "La empresa debe tener MENOS de 10 trabajadores panameños. Si tiene 10 o más, aplica régimen general."

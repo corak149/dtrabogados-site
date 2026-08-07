@@ -34,7 +34,7 @@ plazos:
   vigencia: "Alineado al contrato estatal"
   renovacion: "Renovable mientras se mantenga el contrato con el Estado."
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021. Cotizamos según duración del contrato."
-tasas_oficiales: "Tasa MITRADEL B/.300 + tasa SNM B/.250 + B/.1,050 en primera solicitud."
+tasas_oficiales: "Tasa MITRADEL $250.00 primera vez o renovacion + $30.00 duplicados (TIPO 4D Politicas Especiales Economicas). Si es funcionario diplomatico acreditado, MITRADEL no cobra permiso (gestion de Cancilleria)."
 alertas:
   - "Esta categoría es para EMPRESAS contratistas del Estado, NO para funcionarios directos. Para funcionarios directos, ver slug residencia-contrato-gobierno."
   - "El contrato con el Estado debe estar vigente y documentado (Gaceta Oficial o refrendo Contraloría)."
