@@ -5,6 +5,7 @@
  */
 import Layout from "../../../layouts/Layout.astro";
 import { AREAS } from "../../../data/areas";
+import { waLink } from "../../../utils/whatsapp";
 
 export function getStaticPaths() {
   return AREAS.flatMap((area) =>
@@ -16,10 +17,7 @@ export function getStaticPaths() {
 }
 
 const { area, grupo } = Astro.props;
-const WHATSAPP = import.meta.env.PUBLIC_WHATSAPP || "50700000000";
-const waLink = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
-  `Hola DTR — quisiera una consulta sobre ${grupo.titulo}.`
-)}`;
+const wa = waLink({ tema: `${grupo.titulo} (${area.tituloCorto})` });
 ---
 
 <Layout
@@ -64,7 +62,7 @@ const waLink = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
             Este servicio se atiende directamente por consulta. Contactanos
             para que evaluemos tu caso.
           </p>
-          <a href={waLink} class="cta cta-whatsapp" target="_blank" rel="noopener">
+          <a href={wa} class="cta cta-whatsapp" target="_blank" rel="noopener">
             Consultar por WhatsApp
           </a>
         </div>

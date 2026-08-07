@@ -1,9 +1,9 @@
 ---
 import Logo from "./Logo.astro";
 import MegaMenu from "./MegaMenu.astro";
+import { waLink } from "../utils/whatsapp";
 
-const WHATSAPP = import.meta.env.PUBLIC_WHATSAPP || "50700000000";
-const waLink = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hola DTR — quisiera una consulta.")}`;
+const APP_URL = import.meta.env.PUBLIC_APP_URL || "https://argumento.app";
 ---
 
 <header class="site-header">
@@ -20,14 +20,28 @@ const waLink = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hola DTR �
       </ul>
     </nav>
 
-    <a
-      href={waLink}
-      class="cta cta-gold cta-header"
-      target="_blank"
-      rel="noopener"
-    >
-      WhatsApp
-    </a>
+    <div class="header-ctas">
+      <a
+        href={APP_URL}
+        class="cta cta-outline cta-header"
+        target="_blank"
+        rel="noopener"
+        aria-label="Acceso a clientes — abre Argumento en pestaña nueva"
+      >
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 15v-2a3 3 0 013-3h1a3 3 0 013 3v2M9 21H5a2 2 0 01-2-2V7a2 2 0 012-2h4M12 3v12m0 0l-3-3m3 3l3-3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Acceso clientes
+      </a>
+      <a
+        href={waLink()}
+        class="cta cta-gold cta-header"
+        target="_blank"
+        rel="noopener"
+      >
+        WhatsApp
+      </a>
+    </div>
   </div>
 </header>
 
@@ -67,9 +81,30 @@ const waLink = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hola DTR �
   .nav-list li a:hover {
     color: var(--dtr-gold-dark);
   }
+
+  .header-ctas {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
   .cta-header {
-    padding: 0.55rem 1.15rem;
-    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.88rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .cta-header svg {
+    flex-shrink: 0;
+  }
+
+  /* En mobile: solo WhatsApp, ocultar "Acceso clientes" (queda en el menú si hace falta) */
+  @media (max-width: 720px) {
+    .header-ctas .cta-outline {
+      display: none;
+    }
   }
 
   @media (min-width: 900px) {

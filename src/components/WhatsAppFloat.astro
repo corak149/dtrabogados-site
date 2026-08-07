@@ -2,13 +2,13 @@
 /**
  * Widget flotante WhatsApp (persistente en todas las páginas).
  * Combina con badge de Google Reviews (Decisión V3 #7).
+ * Usa helper `waLink` con template rico.
  */
-const WHATSAPP = import.meta.env.PUBLIC_WHATSAPP || "50700000000";
-const waLink = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hola DTR — vengo desde la web.")}`;
+import { waLink } from "../utils/whatsapp";
 ---
 
 <a
-  href={waLink}
+  href={waLink()}
   target="_blank"
   rel="noopener"
   class="wa-float"

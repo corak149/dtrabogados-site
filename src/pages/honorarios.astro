@@ -1,10 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { waLink } from "../utils/whatsapp";
 
-const WHATSAPP = import.meta.env.PUBLIC_WHATSAPP || "50700000000";
-const waLink = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
-  "Hola DTR — quiero consultar sobre honorarios."
-)}`;
+const wa = waLink({ tema: "Consulta sobre honorarios" });
 ---
 
 <Layout
@@ -16,8 +14,9 @@ const waLink = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
       <span class="kicker" style="color: var(--dtr-gold-light);">Honorarios</span>
       <h1 style="color: var(--dtr-white);">Precios claros, sin sorpresas.</h1>
       <p style="color: rgba(255,255,255,0.85); font-size: 1.1rem;">
-        Aplicamos el <strong>Acuerdo CNA 609-A/2021</strong> del Colegio Nacional
-        de Abogados de Panamá — tarifa mínima legal vigente.
+        Trabajamos bajo el <strong>Acuerdo CNA 609-A/2021</strong> del Colegio
+        Nacional de Abogados de Panamá — la tarifa mínima legal vigente.
+        Te enviamos alcance, plazos y honorarios por escrito antes de empezar.
       </p>
     </div>
   </section>
@@ -68,13 +67,13 @@ const waLink = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
 
       <h2 style="margin-top: 3rem;">Consulta inicial</h2>
       <p>
-        <strong>La primera consulta es sin costo.</strong> Nos contás tu caso,
-        te decimos si podemos ayudarte y con qué costo. Si avanzamos, firmamos
-        propuesta escrita.
+        Nos contás tu caso — te decimos si podemos ayudarte y con qué alcance.
+        Si avanzamos, firmamos <strong>propuesta escrita</strong> con precio
+        cerrado antes de arrancar. Sin sorpresas.
       </p>
 
       <div class="cta-row" style="margin-top: 2rem;">
-        <a href={waLink} class="cta cta-whatsapp" target="_blank" rel="noopener">
+        <a href={wa} class="cta cta-whatsapp" target="_blank" rel="noopener">
           Consultar por WhatsApp
         </a>
         <a href="/contacto/" class="cta cta-outline">Formulario de contacto</a>

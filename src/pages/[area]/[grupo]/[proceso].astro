@@ -12,6 +12,7 @@
  */
 import Layout from "../../../layouts/Layout.astro";
 import { AREAS } from "../../../data/areas";
+import { waLink } from "../../../utils/whatsapp";
 
 export function getStaticPaths() {
   return AREAS.flatMap((area) =>
@@ -29,15 +30,12 @@ export function getStaticPaths() {
 }
 
 const { area, grupo, proceso } = Astro.props;
-const WHATSAPP = import.meta.env.PUBLIC_WHATSAPP || "50700000000";
-const waLink = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
-  `Hola DTR — quisiera una consulta sobre ${proceso.titulo}.`
-)}`;
+const wa = waLink({ tema: `${proceso.titulo} (${area.tituloCorto})` });
 ---
 
 <Layout
   title={`${proceso.titulo} — ${area.titulo} — DTR Abogados`}
-  description={`${proceso.titulo} en Panamá. Requisitos, documentos y honorarios. Consulta inicial sin costo.`}
+  description={`${proceso.titulo} en Panamá. Requisitos, documentos y honorarios. Contactanos por WhatsApp.`}
 >
   <section class="section-tight section-navy">
     <div class="container container-narrow">
@@ -64,7 +62,7 @@ const waLink = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
           Mientras tanto, escribinos por WhatsApp y te contamos tu caso
           concreto en menos de 24 horas.
         </p>
-        <a href={waLink} class="cta cta-whatsapp" target="_blank" rel="noopener">
+        <a href={wa} class="cta cta-whatsapp" target="_blank" rel="noopener">
           Consultar {proceso.titulo}
         </a>
       </div>
@@ -124,13 +122,13 @@ const waLink = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
       </div>
 
       <div class="cta-block">
-        <h3>Consulta inicial sin costo</h3>
+        <h3>Contanos tu caso</h3>
         <p>
-          Contanos tu caso — te decimos qué necesitás, cuánto tarda y cuánto
-          cuesta. Sin compromiso.
+          Te decimos qué necesitás, cuánto tarda y cuánto cuesta antes de
+          arrancar. Respuesta en menos de 24 horas hábiles.
         </p>
         <div class="cta-row">
-          <a href={waLink} class="cta cta-whatsapp" target="_blank" rel="noopener">
+          <a href={wa} class="cta cta-whatsapp" target="_blank" rel="noopener">
             WhatsApp
           </a>
           <a href="/contacto/" class="cta cta-outline">Formulario</a>

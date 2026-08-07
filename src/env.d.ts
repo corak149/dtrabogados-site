@@ -6,6 +6,7 @@ interface ImportMetaEnv {
   readonly PUBLIC_TALLY_URL?: string;
   readonly PUBLIC_INSTAGRAM?: string;
   readonly PUBLIC_GOOGLE_REVIEWS_URL?: string;
+  readonly PUBLIC_APP_URL?: string;
 }
 
 interface ImportMeta {
