@@ -28,13 +28,13 @@ requisitos_persona_natural:
   - "Para abrir cuenta bancaria corporativa: presencia física en Panamá o video Liveness"
 requisitos_empresa:
   - "No aplica — es proceso de creación"
-plazos_estimados:
+plazos:
   tramite: "5 a 10 días hábiles una vez recibida la documentación completa"
   vigencia: "Duración indefinida (perpetua) salvo pacto en contrario"
   renovacion: "Renovación anual ante Registro Público (Aviso de Operación + Paz y Salvo DGI) + declaración anual del agente residente antes del 15 de junio"
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021 del Colegio Nacional de Abogados. Cotizamos por caso considerando complejidad (estructura internacional, nominees requeridos, banca corporativa, Compliance)."
 tasas_oficiales: "**Desde $1,500 USD** (primer año, todo incluido: honorarios DTR, agente residente 12 meses, notaría, inscripción Registro Público, RUBF, traducción al inglés, certificado de Good Standing, apostilla). No incluye: Tasa Única anual DGI $300 desde año 2, apertura cuenta bancaria corporativa, nominees si se requieren (US$300-US$600/año por posición), ni servicios de Compliance para jurisdicciones específicas (US$600-US$1,500/año)."
-alertas_legales:
+alertas:
   - "Panamá NO tiene una figura societaria offshore separada. Lo que el mercado llama 'offsshore' es una S.A. panameña con actividades extraterritoriales regulada por Ley 32/1927."
   - "La S.A. offshore NO puede ser contribuyente fiscal en Panamá (si lo es, pierde el beneficio de la exención territorial)."
   - "Requiere agente residente (obligatorio por Ley 51/2016) — incluso si la sociedad no tiene actividad local."
