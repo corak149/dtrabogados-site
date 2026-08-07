@@ -27,13 +27,13 @@ requisitos_persona_natural:
   - "Para extranjeros: cumplir requisitos migratorios aplicables (residencia o permiso de trabajo)"
 requisitos_empresa:
   - "No aplica — es proceso de creación"
-plazos_estimados:
+plazos:
   tramite: "15 a 30 días hábiles (incluye revisión IPACOOP más inscripción Registro Público)"
   vigencia: "Duración indefinida (perpetua) salvo disolución por IPACOOP"
   renovacion: "Renovación anual ante Registro Público + reportes IPACOOP (trimestrales y anuales)"
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021 del Colegio Nacional de Abogados. Cotizamos por caso considerando complejidad (tipo de cooperativa, número de socios, revisión IPACOOP)."
 tasas_oficiales: "**Desde $1,500 USD** (primer año, todo incluido: honorarios DTR, agente residente 12 meses, notaría, coordinación con IPACOOP, inscripción Registro Público, RUBF). No incluye: Tasa Única anual DGI $300 desde año 2, ni honorarios por modificación de Estatutos."
-alertas_legales:
+alertas:
   - "La cooperativa requiere MÍNIMO 15 socios fundadores (Art. 10 Ley 17/1997). En cooperativas de ahorro y crédito, el mínimo puede ser mayor (25+)."
   - "La aprobación de IPACOOP es OBLIGATORIA antes de la inscripción en Registro Público — esto añade tiempo significativo al proceso."
   - "Las cooperativas tienen régimen fiscal especial: las de primer grado se eximen del ISR bajo condiciones, las de segundo grado también."
