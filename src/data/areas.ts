@@ -37,7 +37,7 @@ export const AREAS: Area[] = [
     tituloCorto: "Migración",
     pregunta: "¿Puedo vivir, trabajar o invertir en Panamá siendo extranjero?",
     descripcion:
-      "Visas, residencias provisionales y permanentes, naturalización. Acompañamos el trámite completo con plazos claros por nacionalidad.",
+      "Visas, residencias provisionales y permanentes, permisos de trabajo, regularizaciones y trámites administrativos. Acompañamos el trámite completo con plazos claros por nacionalidad.",
     destacada: true,
     grupos: [
       {
@@ -46,9 +46,9 @@ export const AREAS: Area[] = [
         procesos: [
           { slug: "visa-profesional", titulo: "Visa profesional" },
           { slug: "visa-confianza", titulo: "Visa de confianza" },
-          { slug: "visa-inversionista", titulo: "Visa inversionista" },
-          { slug: "visa-estudiante", titulo: "Visa estudiante" },
-          { slug: "visa-religioso", titulo: "Visa religioso" },
+          { slug: "visa-inversionista", titulo: "Visa de inversionista" },
+          { slug: "visa-estudiante", titulo: "Visa de estudiante" },
+          { slug: "visa-religioso", titulo: "Visa de religioso o misionero" },
         ],
       },
       {
@@ -56,18 +56,62 @@ export const AREAS: Area[] = [
         titulo: "Residente provisional",
         procesos: [
           { slug: "residencia-inversion-inmobiliaria", titulo: "Inversión inmobiliaria" },
-          { slug: "residencia-pension-jubilacion", titulo: "Pensión / jubilación" },
-          { slug: "residencia-trabajo", titulo: "Trabajo" },
+          { slug: "residencia-pension-jubilacion", titulo: "Pensión o jubilación" },
+          { slug: "residencia-trabajo", titulo: "Trabajo (permiso MITRADEL)" },
           { slug: "residencia-matrimonio", titulo: "Matrimonio con panameño/a" },
           { slug: "residencia-reagrupacion-familiar", titulo: "Reagrupación familiar" },
+          { slug: "residencia-cuenta-propia", titulo: "Trabajador por cuenta propia" },
+          { slug: "residencia-deportista-profesional", titulo: "Deportista profesional" },
+          { slug: "residencia-corresponsal-prensa", titulo: "Corresponsal de prensa" },
+          { slug: "residencia-tratado-panama-italia", titulo: "Tratado Panamá-Italia" },
         ],
       },
       {
         slug: "residente-permanente",
         titulo: "Residente permanente",
         procesos: [
-          { slug: "requisitos", titulo: "Requisitos" },
+          { slug: "requisitos", titulo: "Requisitos generales" },
+          { slug: "rentista-permanente", titulo: "Rentista permanente" },
+          { slug: "jubilado-permanente", titulo: "Jubilado permanente" },
+          { slug: "inversionista-permanente", titulo: "Inversionista calificado permanente" },
           { slug: "naturalizacion", titulo: "Naturalización" },
+        ],
+      },
+      {
+        slug: "permisos-de-trabajo",
+        titulo: "Permisos de trabajo (MITRADEL)",
+        procesos: [
+          { slug: "permiso-profesional", titulo: "Profesional (10% extranjeros)" },
+          { slug: "permiso-ejecutivo-internacional", titulo: "Ejecutivo internacional" },
+          { slug: "permiso-tratado-panama-italia", titulo: "Tratado Panamá-Italia" },
+          { slug: "permiso-deportista-profesional", titulo: "Deportista profesional" },
+          { slug: "permiso-corresponsal-prensa", titulo: "Corresponsal de prensa" },
+          { slug: "permiso-zona-libre-colon", titulo: "Zona Libre de Colón" },
+          { slug: "permiso-panama-pacifico", titulo: "Panamá Pacífico" },
+          { slug: "permiso-ciudad-del-saber", titulo: "Ciudad del Saber" },
+          { slug: "permiso-sede-multinacional", titulo: "Sede de Empresa Multinacional" },
+          { slug: "permiso-trabajador-remoto", titulo: "Trabajador remoto" },
+          { slug: "permiso-gobierno", titulo: "Contrato con gobierno" },
+        ],
+      },
+      {
+        slug: "regularizaciones-y-amnistias",
+        titulo: "Regularizaciones y amnistías",
+        procesos: [
+          { slug: "regularizacion-ppsh", titulo: "PPSH (Protección Humanitaria)" },
+          { slug: "regularizacion-pasaporte-venezolano", titulo: "Pasaporte venezolano" },
+          { slug: "regularizacion-retorno-voluntario", titulo: "Retorno voluntario" },
+          { slug: "regularizacion-refugiados-onpar", titulo: "Refugiados (ONPAR)" },
+          { slug: "regularizacion-multas-migratorias", titulo: "Exoneración de multas" },
+        ],
+      },
+      {
+        slug: "tramites-administrativos",
+        titulo: "Trámites administrativos (SNMT)",
+        procesos: [
+          { slug: "cambio-residencia", titulo: "Cambio de tipo de residencia" },
+          { slug: "movimiento-migratorio", titulo: "Movimiento migratorio" },
+          { slug: "traspaso-registro", titulo: "Traspaso de registro" },
         ],
       },
     ],

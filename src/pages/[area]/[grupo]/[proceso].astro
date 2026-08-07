@@ -1,20 +1,74 @@
 ---
 /**
- * Plantilla dinámica de proceso (~50 rutas generadas).
+ * Plantilla dinámica de proceso (~50+ rutas generadas).
  * Ruta pública: /{area}/{grupo}/{proceso}/
  *
  * Estrategia de contenido (Sprint 1c):
  *   1. Intenta leer contenido rico desde src/content/procesos/{area}/{grupo}/{proceso}.md
- *   2. Si NO existe, cae al TODO placeholder del scaffolding (Sprint 0)
+ *   2. Si NO existe, cae al TODO placeholder (noindex)
  *
- * Danna popula los .md siguiendo el schema en src/content/config.ts.
- * Cada .md debe validarse contra un RESUMEN.md del vault
- * (dtr-vault/800-Knowledge-PA/810-Migracion/...).
+ * Sprint 1c día 1+ — estructura visual definitiva por Danna (CLO).
+ * 9 secciones en orden de conversión comercial:
+ *   HEADER → HERO INFO STRIP → CALLOUT ALERTAS → §1 DIRIGIDO A →
+ *   §2 REQUISITOS → §3 DOCUMENTOS → §4 PLAZOS → §5 HONORARIOS →
+ *   §6 BASE LEGAL → §7 NOTAS DE LA FIRMA → §8 CTA
+ *
+ * Referencia: dtr-vault/900-Inbox/900-DANNA/02-En-Proceso/web-dtrabogados-v2/
+ *             Sprint-1c-Danna/0002-estructura-visual-pagina-proceso.md
  */
 import Layout from "../../../layouts/Layout.astro";
 import { AREAS } from "../../../data/areas";
 import { waLink } from "../../../utils/whatsapp";
 import { getCollection } from "astro:content";
+
+/**
+ * Mini-parser markdown → HTML para el campo `notas_firma`.
+ * Soporta: párrafos, **negrita**, *italic*, listas numeradas, listas con
+ * guiones, y saltos de línea. NO soporta headings, links, code, blockquote.
+ * Es intencionalmente limitado: notas_firma es prosa de la Firma, no
+ * documentación técnica. Si en el futuro se necesita más, importar `marked`.
+ */
+function renderNotasFirma(md: string): string {
+  const escape = (s: string) =>
+    s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  const inline = (s: string) =>
+    escape(s)
+      .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+      .replace(/(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)/g, "<em>$1</em>");
+
+  const lines = md.split(/\r?\n/);
+  const out: string[] = [];
+  let inOl = false;
+  let inUl = false;
+
+  const closeLists = () => {
+    if (inOl) { out.push("</ol>"); inOl = false; }
+    if (inUl) { out.push("</ul>"); inUl = false; }
+  };
+
+  for (const raw of lines) {
+    const line = raw.trim();
+    if (!line) { closeLists(); continue; }
+
+    const ol = /^(\d+)\.\s+(.*)$/.exec(line);
+    const ul = /^-\s+(.*)$/.exec(line);
+
+    if (ol) {
+      if (inUl) { out.push("</ul>"); inUl = false; }
+      if (!inOl) { out.push("<ol>"); inOl = true; }
+      out.push(`<li>${inline(ol[2])}</li>`);
+    } else if (ul) {
+      if (inOl) { out.push("</ol>"); inOl = false; }
+      if (!inUl) { out.push("<ul>"); inUl = true; }
+      out.push(`<li>${inline(ul[1])}</li>`);
+    } else {
+      closeLists();
+      out.push(`<p>${inline(line)}</p>`);
+    }
+  }
+  closeLists();
+  return out.join("\n");
+}
 
 export async function getStaticPaths() {
   const collection = await getCollection("procesos");
@@ -51,10 +105,9 @@ const description =
   data?.descripcion ??
   `${proceso.titulo} en Panamá. Requisitos, documentos y honorarios. Contactanos por WhatsApp.`;
 
-// noindex si el proceso todavía es placeholder (no tiene entry)
+// noindex si el proceso todavía es placeholder (no tiene entry firmado por CLO)
 const noindex = !entry;
 ---
-
 <Layout title={`${title} — ${area.titulo} — DTR Abogados`} description={description} noindex={noindex}>
   <section class="section-tight section-navy">
     <div class="container container-narrow">
@@ -74,6 +127,24 @@ const noindex = !entry;
           {data.resumen}
         </p>
       )}
+
+      {/* === HERO INFO STRIP (NUEVO Sprint 1c) === */}
+      {data && (
+        <div class="hero-info-strip" aria-label="Resumen del proceso">
+          <div class="strip-item">
+            <span class="strip-label">Decreto principal</span>
+            <span class="strip-value">{data.decreto_principal ?? "Marco general: DL 3 de 2008"}</span>
+          </div>
+          <div class="strip-item">
+            <span class="strip-label">Categoría migratoria</span>
+            <span class="strip-value">{data.categoria_migratoria ?? "—"}</span>
+          </div>
+          <div class="strip-item">
+            <span class="strip-label">Plazo del trámite</span>
+            <span class="strip-value">{data.plazos?.tramite ?? "Variable"}</span>
+          </div>
+        </div>
+      )}
     </div>
   </section>
 
@@ -81,19 +152,33 @@ const noindex = !entry;
     <div class="container container-narrow">
       {data ? (
         <>
-          {/* --- CONTENIDO REAL desde el collection --- */}
+          {/* === CALLOUT ALERTAS (NUEVO, condicional) === */}
+          {data.alertas && data.alertas.length > 0 && (
+            <div class="callout-alertas" role="note">
+              <span class="callout-icon" aria-hidden="true">⚠</span>
+              <div class="callout-body">
+                <strong>Antes de continuar, tené en cuenta:</strong>
+                <ul>
+                  {data.alertas.map((item) => <li>{item}</li>)}
+                </ul>
+              </div>
+            </div>
+          )}
+
+          {/* === §1 DIRIGIDO A === */}
           {data.dirigido_a.length > 0 && (
             <div class="proc-section">
-              <h2>Dirigido a</h2>
+              <h2>Es para vos si...</h2>
               <ul>
                 {data.dirigido_a.map((item) => <li>{item}</li>)}
               </ul>
             </div>
           )}
 
+          {/* === §2 REQUISITOS (2 columnas condicionales) === */}
           {(data.requisitos_persona_natural.length > 0 ||
             data.requisitos_empresa.length > 0) && (
-            <div class="proc-section proc-columns">
+            <div class={`proc-section proc-columns ${data.requisitos_persona_natural.length > 0 && data.requisitos_empresa.length > 0 ? "two-cols" : "one-col"}`}>
               {data.requisitos_persona_natural.length > 0 && (
                 <div>
                   <h2>Requisitos para persona natural</h2>
@@ -113,6 +198,7 @@ const noindex = !entry;
             </div>
           )}
 
+          {/* === §3 DOCUMENTOS === */}
           {data.documentos.length > 0 && (
             <div class="proc-section">
               <h2>Documentos que necesitás</h2>
@@ -122,6 +208,7 @@ const noindex = !entry;
             </div>
           )}
 
+          {/* === §4 PLAZOS === */}
           {data.plazos && (
             <div class="proc-section">
               <h2>Plazos</h2>
@@ -133,10 +220,16 @@ const noindex = !entry;
             </div>
           )}
 
+          {/* === §5 HONORARIOS (EXTENDIDO con tasas_oficiales) === */}
           {data.honorarios_ref && (
             <div class="proc-section">
               <h2>Honorarios</h2>
               <p>{data.honorarios_ref}</p>
+              {data.tasas_oficiales && (
+                <p class="text-small text-muted">
+                  <strong>Tasas oficiales aparte:</strong> {data.tasas_oficiales}
+                </p>
+              )}
               <p class="text-small text-muted">
                 Todos los honorarios se determinan según el
                 <a href="/honorarios/">Acuerdo CNA 609-A/2021</a>. Te
@@ -145,24 +238,30 @@ const noindex = !entry;
             </div>
           )}
 
+          {/* === §6 BASE LEGAL (EXTENDIDO con decreto_principal destacado) === */}
           {data.base_legal.length > 0 && (
             <div class="proc-section">
               <h2>Base legal</h2>
+              {data.decreto_principal && (
+                <p class="base-legal-decreto">
+                  <strong>Decreto principal:</strong> {data.decreto_principal}
+                </p>
+              )}
               <ul class="base-legal">
                 {data.base_legal.map((item) => <li>{item}</li>)}
               </ul>
             </div>
           )}
 
-          {Content && (
-            <div class="proc-section proc-notes">
+          {/* === §7 NOTAS DE LA FIRMA (NUEVO Sprint 1c) === */}
+          {data.notas_firma && (
+            <div class="proc-section proc-notes-firma">
               <h2>Notas de la Firma</h2>
-              <div class="prose">
-                <Content />
-              </div>
+              <div class="prose-firma" set:html={renderNotasFirma(data.notas_firma)} />
             </div>
           )}
 
+          {/* === Trazabilidad CLO (mantengo estilo discreto al final) === */}
           {(data.aprobado_por || data.revisar_con) && (
             <div class="proc-meta">
               {data.aprobado_por && <p><strong>Aprobado por:</strong> {data.aprobado_por}</p>}
@@ -173,7 +272,7 @@ const noindex = !entry;
         </>
       ) : (
         <>
-          {/* --- FALLBACK: TODO placeholder mientras Danna popula --- */}
+          {/* === FALLBACK: TODO placeholder mientras Danna popula === */}
           <div class="todo-block">
             <p>
               <strong>Contenido en preparación.</strong> Estamos completando los
@@ -188,6 +287,7 @@ const noindex = !entry;
         </>
       )}
 
+      {/* === §8 CTA FINAL (siempre visible) === */}
       <div class="cta-block">
         <h3>Contanos tu caso</h3>
         <p>
@@ -205,6 +305,11 @@ const noindex = !entry;
   </section>
 </Layout>
 
+{/* === Conversor mínimo de markdown a HTML para notas_firma === */}
+<script is:inline>
+  // No se usa en runtime — la conversión se hace server-side en Astro
+</script>
+
 <style>
   .crumbs {
     font-size: 0.85rem;
@@ -218,6 +323,72 @@ const noindex = !entry;
     color: rgba(255, 255, 255, 0.85);
     text-decoration: underline;
     text-decoration-color: rgba(255, 255, 255, 0.3);
+  }
+
+  /* === HERO INFO STRIP === */
+  .hero-info-strip {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    margin-top: 1.75rem;
+    padding: 1rem 1.25rem;
+    background: var(--dtr-cream);
+    border: 1px solid var(--dtr-gold-light);
+    border-radius: var(--radius);
+  }
+  @media (min-width: 720px) {
+    .hero-info-strip {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+  }
+  .strip-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .strip-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--texto-suave);
+    font-weight: 600;
+  }
+  .strip-value {
+    font-size: 0.92rem;
+    color: var(--dtr-navy);
+    font-weight: 500;
+    line-height: 1.35;
+  }
+
+  /* === CALLOUT ALERTAS === */
+  .callout-alertas {
+    display: flex;
+    gap: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: var(--dtr-cream-alt);
+    border-left: 4px solid var(--dtr-gold);
+    border-radius: var(--radius);
+    margin-bottom: 2.5rem;
+  }
+  .callout-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+  .callout-body strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--dtr-navy);
+  }
+  .callout-body ul {
+    margin: 0;
+    padding-left: 1.25rem;
+  }
+  .callout-body li {
+    margin-bottom: 0.4rem;
+    line-height: 1.5;
+    font-size: 0.95rem;
   }
 
   .todo-block {
@@ -250,13 +421,13 @@ const noindex = !entry;
     margin-bottom: 0.5rem;
     line-height: 1.55;
   }
-  .proc-columns {
+  .proc-columns.two-cols {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
   }
   @media (min-width: 720px) {
-    .proc-columns {
+    .proc-columns.two-cols {
       grid-template-columns: 1fr 1fr;
     }
   }
@@ -279,24 +450,46 @@ const noindex = !entry;
     color: var(--texto);
   }
 
+  .base-legal-decreto {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.95rem;
+    background: var(--dtr-cream-alt);
+    padding: 0.75rem 1rem;
+    border-left: 3px solid var(--dtr-gold);
+    margin-bottom: 1rem;
+  }
   .base-legal li {
     font-family: ui-monospace, "SF Mono", Menlo, monospace;
     font-size: 0.9rem;
     color: var(--texto-claro);
   }
 
-  .proc-notes .prose :global(p) {
+  /* === NOTAS DE LA FIRMA (serif italic, separación visual) === */
+  .proc-notes-firma {
+    border-top: 1px solid var(--dtr-gold-light);
+    padding-top: 2rem;
+  }
+  .proc-notes-firma h2 {
+    font-style: italic;
+  }
+  .prose-firma {
+    font-family: var(--font-serif);
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--texto-claro);
+  }
+  .prose-firma p {
     margin-bottom: 1em;
   }
-  .proc-notes .prose :global(ul) {
+  .prose-firma strong {
+    font-style: normal;
+    color: var(--dtr-navy);
+  }
+  .prose-firma ul {
     padding-left: 1.25rem;
   }
-  .proc-notes .prose :global(blockquote) {
-    border-left: 3px solid var(--dtr-gold);
-    padding: 0.5rem 1rem;
-    color: var(--texto-claro);
-    font-style: italic;
-    margin: 1rem 0;
+  .prose-firma li {
+    margin-bottom: 0.4rem;
   }
 
   .proc-meta {
