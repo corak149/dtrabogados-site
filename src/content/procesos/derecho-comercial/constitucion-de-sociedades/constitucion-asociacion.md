@@ -26,13 +26,13 @@ requisitos_persona_natural:
   - "Para exención fiscal MEF: documentación adicional específica (Ley 33/1984)"
 requisitos_empresa:
   - "No aplica — es proceso de creación"
-plazos_estimados:
+plazos:
   tramite: "7 a 15 días hábiles una vez recibida la documentación completa"
   vigencia: "Duración indefinida (perpetua) salvo disolución voluntaria"
   renovacion: "Renovación anual ante Registro Público (Paz y Salvo DGI) + reportes MEF si aplica exención"
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021 del Colegio Nacional de Abogados. Cotizamos por caso considerando complejidad (número de fundadores, fines, si requiere exención fiscal MEF)."
 tasas_oficiales: "**Desde $1,500 USD** (primer año, todo incluido: honorarios DTR, agente residente 12 meses, notaría, inscripción Registro Público, RUBF). No incluye: Tasa Única anual DGI $300 desde año 2, ni honorarios por trámite de exención fiscal MEF (cotización aparte si aplica)."
-alertas_legales:
+alertas:
   - "La asociación debe tener MÍNIMO 5 miembros fundadores para constituirse (Art. 2 Ley 3/1980)."
   - "NO puede repartir utilidades entre sus miembros. Cualquier excedente debe reinvertirse en los fines de la asociación."
   - "Si busca exención fiscal, debe registrarse ante el MEF bajo la Ley 33/1984 — esto puede duplicar el costo del proceso."
