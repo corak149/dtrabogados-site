@@ -27,13 +27,13 @@ requisitos_persona_natural:
   - "Para extranjeros: prueba de domicilio en Panamá o en país de origen"
 requisitos_empresa:
   - "No aplica — es proceso de creación"
-plazos_estimados:
+plazos:
   tramite: "5 a 10 días hábiles una vez recibida la documentación completa"
   vigencia: "La sociedad se constituye por duración indefinida (perpetua) salvo pacto en contrario"
   renovacion: "Renovación anual ante Registro Público (Aviso de Operación + Paz y Salvo DGI)"
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021 del Colegio Nacional de Abogados. Cotizamos por caso considerando complejidad (estructura societaria, número de accionistas, capital, junta directiva)."
 tasas_oficiales: "**Desde $1,700 USD** (primer año, todo incluido: honorarios DTR, agente residente 12 meses, notaría, inscripción Registro Público, Aviso de Operaciones, RUBF, libros corporativos, certificado de Good Standing). No incluye: Tasa Única anual DGI $300 desde año 2, apertura cuenta bancaria corporativa, ni honorarios por nominees si se requieren."
-alertas_legales:
+alertas:
   - "El capital autorizado NO es necesario desembolsarlo en su totalidad; el capital suscrito y pagado es el mínimo que se desembolsa al inicio (típicamente USD $10,000 autorizado / USD $100 suscrito)."
   - "Toda S.A. panameña requiere mínimo 3 dignatarios (Presidente, Secretario, Tesorero) y un Agente Residente (abogado idóneo)."
   - "Las acciones pueden ser nominativas o al portador. La reforma de 2018 al Código de Comercio exige registro de beneficiario final ante la SSNF."
