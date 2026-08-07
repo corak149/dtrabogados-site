@@ -253,13 +253,22 @@ export const AREAS: Area[] = [
     destacada: true,
     grupos: [
       {
-        slug: "sociedades-anonimas",
-        titulo: "Sociedades Anónimas",
+        slug: "constitucion-de-sociedades",
+        titulo: "Constitución de sociedades",
         procesos: [
           { slug: "constitucion-sa", titulo: "Constitución S.A." },
-          { slug: "acciones-nominativas", titulo: "Acciones nominativas" },
-          { slug: "aumento-capital", titulo: "Aumento de capital" },
-          { slug: "reforma-pacto-social", titulo: "Reforma del pacto social" },
+          { slug: "constitucion-srl", titulo: "Constitución S.R.L." },
+          { slug: "constitucion-fundacion", titulo: "Constitución de Fundación" },
+          { slug: "constitucion-asociacion", titulo: "Constitución de Asociación" },
+          { slug: "constitucion-cooperativa", titulo: "Constitución de Cooperativa" },
+          { slug: "constitucion-offshore", titulo: "Constitución Offshore / IBC" },
+        ],
+      },
+      {
+        slug: "retainer-corporativo",
+        titulo: "Retainer corporativo",
+        procesos: [
+          { slug: "retainer-mensual", titulo: "Retainer mensual" },
         ],
       },
       {
