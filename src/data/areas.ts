@@ -20,6 +20,21 @@ export interface Grupo {
   procesos: Proceso[];
 }
 
+export interface HeadDepto {
+  nombre: string;              // "Lcda. Rosemary S. De León"
+  cargo: string;               // "Socia Fundadora"
+  especialidad: string;        // "Especialista en Derecho Migratorio"
+  bio: string;                 // párrafo corto (2-3 líneas)
+  experiencia_anios: number;   // 20
+  stats?: {
+    expedientes?: string;      // "950+"
+    success_rate?: string;     // "97%"
+    otras?: Array<{ label: string; value: string }>;
+  };
+  foto: string;                // path relativo a /public (ej. "/team/rosemary-de-leon.jpg")
+  foto_alt: string;
+}
+
 export interface Area {
   slug: string;                   // ej. "derecho-migratorio"
   titulo: string;                 // "Migración a Panamá"
@@ -27,6 +42,7 @@ export interface Area {
   pregunta: string;               // pregunta-cliente que responde
   descripcion: string;            // sub para el card + hub
   destacada?: boolean;            // aparece en home V3
+  head?: HeadDepto;               // Head del departamento (opcional)
   grupos: Grupo[];
 }
 
@@ -39,6 +55,22 @@ export const AREAS: Area[] = [
     descripcion:
       "Visas, residencias provisionales y permanentes, permisos de trabajo, regularizaciones y trámites administrativos. Acompañamos el trámite completo con plazos claros por nacionalidad.",
     destacada: true,
+    head: {
+      nombre: "Lcda. Rosemary S. De León",
+      cargo: "Socia Fundadora · Head del Departamento",
+      especialidad: "Especialista en Derecho Migratorio",
+      bio: "Con más de 20 años de experiencia en el régimen migratorio panameño, la Lcda. De León lidera el departamento de Migración de DTR. Su equipo acompaña cada expediente de principio a fin, desde la consulta inicial hasta la entrega del permiso o residencia.",
+      experiencia_anios: 20,
+      stats: {
+        expedientes: "950+",
+        success_rate: "97%",
+        otras: [
+          { label: "Años de experiencia", value: "20+" },
+        ],
+      },
+      foto: "/team/rosemary-de-leon.jpg",
+      foto_alt: "Lcda. Rosemary S. De León — Socia Fundadora de DTR Abogados",
+    },
     grupos: [
       {
         slug: "visas-corta-estancia",
