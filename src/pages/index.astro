@@ -87,7 +87,7 @@ import { waLink } from "../utils/whatsapp";
 
   <!-- BLOQUE 3 · CÓMO TRABAJAMOS con línea dorada conectora -->
   <section class="section">
-    <div class="container container-narrow text-center">
+    <div class="container-content text-center">
       <span class="kicker">Cómo trabajamos</span>
       <h2>Consulta, propuesta, acompañamiento.</h2>
       <p class="section-lede">
@@ -143,7 +143,7 @@ import { waLink } from "../utils/whatsapp";
 
   <!-- BLOQUE 5 · HONORARIOS (centrado, sin sello decorativo) -->
   <section class="section section-navy">
-    <div class="container container-narrow text-center">
+    <div class="container-content text-center">
       <span class="kicker" style="color: var(--dtr-gold-light);">Honorarios</span>
       <h2 style="color: var(--dtr-white);">Precios sin sorpresas.</h2>
       <p style="color: rgba(255,255,255,0.85); max-width: 620px; margin: 0 auto 1.5rem;">
@@ -160,7 +160,7 @@ import { waLink } from "../utils/whatsapp";
 
   <!-- BLOQUE 6 · CTA FINAL con card diferenciada -->
   <section class="section">
-    <div class="container container-narrow">
+    <div class="container-content">
       <div class="cta-card">
         <span class="kicker">Conversemos</span>
         <h2>Contanos tu caso.</h2>
@@ -195,7 +195,7 @@ import { waLink } from "../utils/whatsapp";
     position: relative;
     z-index: 1;
     text-align: center;
-    max-width: 820px;
+    max-width: var(--max-content);
   }
   .hero-title {
     font-size: var(--fs-hero);
@@ -248,7 +248,7 @@ import { waLink } from "../utils/whatsapp";
       grid-template-columns: repeat(2, 1fr);
     }
   }
-  @media (min-width: 960px) {
+  @media (min-width: 880px) {
     .areas-grid {
       grid-template-columns: repeat(3, 1fr);
     }
