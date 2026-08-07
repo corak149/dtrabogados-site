@@ -33,15 +33,41 @@ import Layout from "../layouts/Layout.astro";
 
       <h2>1. Responsable del tratamiento</h2>
       <p>
-        <strong>DTR Abogados, Consultores y Asociados</strong> es el
+        <strong>DTR ABOGADOS CONSULTORES &amp; ASOCIADOS</strong> es el
         responsable del tratamiento de los datos personales recabados a
         través del sitio web <code>dtrabogados.com</code>, del correo
         electrónico y de los canales de mensajería habilitados.
       </p>
+      <div class="data-block">
+        <dl>
+          <dt>Razón Social</dt>
+          <dd>DTR ABOGADOS CONSULTORES &amp; ASOCIADOS</dd>
+          <dt>Representante Legal</dt>
+          <dd>Cecilia Esther Torres Ramos</dd>
+          <dt>RUC · DV</dt>
+          <dd>25043696-3-2020 · DV 2</dd>
+          <dt>Aviso de Operación</dt>
+          <dd>25043696-3-2020-2021-574245509</dd>
+          <dt>Domicilio</dt>
+          <dd>
+            Calle 43, No. 43 Este, Colores de Bella Vista, No. 14,
+            Corregimiento de Bella Vista, Distrito de Panamá.
+          </dd>
+        </dl>
+      </div>
+
+      <h3>Encargado de Protección de Datos (DPO)</h3>
       <p>
-        <strong>Datos de contacto del responsable:</strong><br />
-        Ciudad de Panamá, República de Panamá<br />
-        Correo:
+        Conforme al Art. 24 de la Ley 81 de 2019 y los Arts. 17 a 19 del
+        Decreto Ejecutivo 285 de 2021, DTR designa como responsable interno
+        del tratamiento de datos personales al
+        <strong>Representante Legal de la Firma</strong>,
+        Cecilia Esther Torres Ramos, hasta tanto se comunique formalmente
+        una designación distinta.
+      </p>
+      <p>
+        <strong>Canal oficial para ejercer derechos ARCO y consultas de
+        privacidad:</strong>
         <a href="mailto:privacidad@dtrabogados.com">privacidad@dtrabogados.com</a>
       </p>
 
@@ -125,11 +151,19 @@ import Layout from "../layouts/Layout.astro";
       <h2>7. Transferencias internacionales</h2>
       <p>
         Algunos de nuestros proveedores de servicios técnicos (correo,
-        formularios, alojamiento web) pueden procesar datos fuera de
-        Panamá. Seleccionamos proveedores con estándares equivalentes o
-        superiores al régimen panameño de protección de datos (por
-        ejemplo, adherentes al Reglamento General de Protección de Datos
-        europeo).
+        formularios, alojamiento web) pueden procesar datos fuera de la
+        República de Panamá. Toda transferencia internacional que la Firma
+        realice se sujeta al <strong>Artículo 27 de la Ley 81 de 2019</strong>
+        y a los <strong>Artículos 38 al 41 del Decreto Ejecutivo 285 de
+        2021</strong>, aplicando los mecanismos de garantía allí previstos
+        (nivel adecuado de protección del país receptor, cláusulas
+        contractuales tipo, u otros instrumentos legales equivalentes).
+      </p>
+      <p>
+        A la fecha, DTR selecciona proveedores con estándares equivalentes o
+        superiores al régimen panameño. Puede solicitar el listado
+        actualizado de encargados y sus jurisdicciones escribiendo a
+        <a href="mailto:privacidad@dtrabogados.com">privacidad@dtrabogados.com</a>.
       </p>
 
       <h2>8. Sus derechos (derechos ARCO)</h2>
@@ -148,9 +182,16 @@ import Layout from "../layouts/Layout.astro";
         Para ejercer cualquiera de estos derechos, escriba a
         <a href="mailto:privacidad@dtrabogados.com">privacidad@dtrabogados.com</a>
         adjuntando copia de su documento de identidad y una breve descripción
-        de la solicitud. Respondemos dentro de <strong>10 días hábiles</strong>
-        contados desde la recepción; en casos complejos podemos extender el
-        plazo hasta 15 días hábiles adicionales, informándole por escrito.
+        de la solicitud.
+      </p>
+      <p>
+        Conforme al <strong>Artículo 33 de la Ley 81 de 2019</strong> y
+        concordantes del Decreto Ejecutivo 285 de 2021, damos respuesta en un
+        plazo máximo de <strong>veinte (20) días hábiles</strong> contados
+        desde la recepción de la solicitud, con una única prórroga de hasta
+        <strong>diez (10) días hábiles adicionales</strong> cuando la
+        complejidad del caso lo justifique, notificándole por escrito la
+        prórroga dentro de los primeros cinco (5) días hábiles.
       </p>
 
       <h2>9. Conservación de los datos</h2>
@@ -237,5 +278,42 @@ import Layout from "../layouts/Layout.astro";
     border-left: 4px solid var(--dtr-gold);
     border-radius: var(--radius);
     margin: 2rem 0;
+  }
+  h3 {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    color: var(--dtr-navy);
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .data-block {
+    background: var(--dtr-cream-alt);
+    border: 1px solid var(--dtr-line);
+    border-radius: var(--radius);
+    padding: 1.5rem 1.75rem;
+    margin: 1.5rem 0;
+  }
+  .data-block dl {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem 1.5rem;
+    margin: 0;
+  }
+  @media (min-width: 640px) {
+    .data-block dl {
+      grid-template-columns: 220px 1fr;
+    }
+  }
+  .data-block dt {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--texto-suave);
+    font-weight: 600;
+  }
+  .data-block dd {
+    margin: 0;
+    color: var(--texto);
+    font-size: 0.95rem;
   }
 </style>
