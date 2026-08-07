@@ -246,7 +246,7 @@ export const AREAS: Area[] = [
   {
     slug: "derecho-comercial",
     titulo: "Derecho Comercial",
-    tituloCorto: "Sociedades",
+    tituloCorto: "Comercial",
     pregunta: "Quiero abrir mi S.A., fundación o hacer compliance — ¿por dónde empiezo?",
     descripcion:
       "Constitución de sociedades, fundaciones de interés privado, compliance corporativo y resolución de conflictos societarios.",
