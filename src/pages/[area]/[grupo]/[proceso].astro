@@ -261,13 +261,11 @@ const noindex = !entry;
             </div>
           )}
 
-          {/* === Trazabilidad CLO (mantengo estilo discreto al final) === */}
+          {/* Trazabilidad CLO — sale como comentario HTML (no visible al usuario),
+              solo consultable inspeccionando el código fuente. La info completa
+              vive en el frontmatter del .md correspondiente. */}
           {(data.aprobado_por || data.revisar_con) && (
-            <div class="proc-meta">
-              {data.aprobado_por && <p><strong>Aprobado por:</strong> {data.aprobado_por}</p>}
-              {data.revisar_con && <p><strong>Consultar con:</strong> {data.revisar_con}</p>}
-              {data.ultima_actualizacion && <p><strong>Última actualización:</strong> {data.ultima_actualizacion}</p>}
-            </div>
+            <Fragment set:html={`<!-- CLO Trazabilidad · aprobado_por: ${data.aprobado_por ?? "—"} · revisar_con: ${data.revisar_con ?? "—"} · ultima_actualizacion: ${data.ultima_actualizacion ?? "—"} -->`} />
           )}
         </>
       ) : (
@@ -464,44 +462,43 @@ const noindex = !entry;
     color: var(--texto-claro);
   }
 
-  /* === NOTAS DE LA FIRMA (serif italic, separación visual) === */
+  /* === NOTAS DE LA FIRMA — sans normal legible, acento dorado sutil === */
   .proc-notes-firma {
     border-top: 1px solid var(--dtr-gold-light);
     padding-top: 2rem;
+    margin-top: 1rem;
   }
   .proc-notes-firma h2 {
-    font-style: italic;
-  }
-  .prose-firma {
-    font-family: var(--font-serif);
-    font-style: italic;
-    line-height: 1.7;
-    color: var(--texto-claro);
-  }
-  .prose-firma p {
-    margin-bottom: 1em;
-  }
-  .prose-firma strong {
-    font-style: normal;
+    /* mismo estilo que las otras h2 — sin italic */
     color: var(--dtr-navy);
   }
-  .prose-firma ul {
+  .prose-firma {
+    font-family: var(--font-sans);
+    line-height: 1.7;
+    color: var(--texto);
+    background: var(--dtr-cream-alt);
+    border-left: 3px solid var(--dtr-gold);
+    padding: 1.25rem 1.5rem;
+    border-radius: 0 var(--radius) var(--radius) 0;
+  }
+  .prose-firma p {
+    margin: 0 0 1em 0;
+  }
+  .prose-firma p:last-child {
+    margin-bottom: 0;
+  }
+  .prose-firma strong {
+    color: var(--dtr-navy);
+    font-weight: 600;
+  }
+  .prose-firma ul,
+  .prose-firma ol {
     padding-left: 1.25rem;
+    margin: 0.5em 0 1em 0;
   }
   .prose-firma li {
     margin-bottom: 0.4rem;
-  }
-
-  .proc-meta {
-    margin-top: 2rem;
-    padding: 1rem 1.25rem;
-    background: var(--dtr-cream-alt);
-    border-radius: var(--radius);
-    font-size: 0.85rem;
-    color: var(--texto-claro);
-  }
-  .proc-meta p {
-    margin: 0.25rem 0;
+    line-height: 1.6;
   }
 
   .cta-block {
