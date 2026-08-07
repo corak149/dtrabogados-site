@@ -1,6 +1,6 @@
 ---
 titulo: Visa profesional
-descripcion: "Residencia y permiso de trabajo en Panamá para extranjeros con título universitario. Base legal: DL 3/2008 + DE 6/2023. Requisitos, plazos y honorarios."
+descripcion: "Residencia y permiso de trabajo en Panama para extranjeros con titulo universitario. Combina permiso MITRADEL con residencia SNM. DE 6/2023."
 resumen: Es la vía habitual para el extranjero con título universitario que consigue una oferta laboral en Panamá. Combina un permiso de trabajo del MITRADEL con una residencia temporal del Servicio Nacional de Migración (SNM).
 decreto_principal: "Decreto Ejecutivo 6 de 2023 (permisos de trabajo MITRADEL) + Decreto Ley 3 de 2008 (régimen migratorio)"
 categoria_migratoria: "Residente temporal con permiso de trabajo"
