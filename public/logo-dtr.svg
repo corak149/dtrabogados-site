@@ -1,49 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Placeholder logo mejorado, fiel al PNG entregado por Yeltzin 06.08.26.
-     Reemplazar con SVG oficial exportado del .ai cuando esté. -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 220" role="img" aria-label="DTR Abogados, Consultores y Asociados">
+<!-- Logo DTR — placeholder v3 (mejor aproximación al PNG oficial).
+     Reemplazar con SVG oficial cuando llegue export del .ai. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 400" role="img" aria-label="DTR Abogados, Consultores y Asociados">
   <defs>
-    <linearGradient id="goldGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#f0d99a"/>
-      <stop offset="30%" stop-color="#e6c98a"/>
-      <stop offset="65%" stop-color="#b8954a"/>
-      <stop offset="100%" stop-color="#8a6d33"/>
+    <linearGradient id="goldMain" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f2dda3"/>
+      <stop offset="18%" stop-color="#e6c98a"/>
+      <stop offset="55%" stop-color="#b8954a"/>
+      <stop offset="88%" stop-color="#8a6d33"/>
+      <stop offset="100%" stop-color="#6e5527"/>
+    </linearGradient>
+    <linearGradient id="goldSoft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e6c98a"/>
+      <stop offset="100%" stop-color="#b8954a"/>
     </linearGradient>
   </defs>
 
-  <!-- Fondo navy con doble borde -->
-  <rect width="460" height="220" fill="#232a5e"/>
-  <rect x="4" y="4" width="452" height="212" fill="none" stroke="#ffffff" stroke-width="3"/>
-  <rect x="12" y="12" width="436" height="196" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.4"/>
+  <!-- Fondo navy con doble marco -->
+  <rect width="780" height="400" fill="#232a5e"/>
+  <rect x="14" y="14" width="752" height="372" fill="none" stroke="#ffffff" stroke-width="6" opacity="0.9"/>
+  <rect x="26" y="26" width="728" height="348" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.35"/>
 
   <!-- Balanza detallada -->
-  <g transform="translate(75,110)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <g transform="translate(150,205)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Punto de suspensión -->
+    <circle cx="0" cy="-98" r="5" fill="url(#goldMain)"/>
     <!-- Poste vertical -->
-    <line x1="0" y1="-52" x2="0" y2="34" stroke="url(#goldGrad)" stroke-width="3"/>
-    <!-- Punto superior -->
-    <circle cx="0" cy="-52" r="3" fill="url(#goldGrad)"/>
-    <!-- Brazo horizontal -->
-    <line x1="-38" y1="-42" x2="38" y2="-42" stroke="url(#goldGrad)" stroke-width="2.5"/>
+    <line x1="0" y1="-98" x2="0" y2="72" stroke="url(#goldMain)" stroke-width="5"/>
+    <!-- Brazo horizontal con detalle en extremos -->
+    <line x1="-72" y1="-82" x2="72" y2="-82" stroke="url(#goldMain)" stroke-width="4"/>
+    <circle cx="-72" cy="-82" r="3.5" fill="url(#goldMain)"/>
+    <circle cx="72" cy="-82" r="3.5" fill="url(#goldMain)"/>
     <!-- Cuerdas izquierdas -->
-    <line x1="-38" y1="-42" x2="-42" y2="-14" stroke="url(#goldGrad)" stroke-width="1.2"/>
-    <line x1="-38" y1="-42" x2="-26" y2="-14" stroke="url(#goldGrad)" stroke-width="1.2"/>
+    <line x1="-72" y1="-82" x2="-80" y2="-30" stroke="url(#goldSoft)" stroke-width="1.6"/>
+    <line x1="-72" y1="-82" x2="-52" y2="-30" stroke="url(#goldSoft)" stroke-width="1.6"/>
     <!-- Cuerdas derechas -->
-    <line x1="38" y1="-42" x2="42" y2="-14" stroke="url(#goldGrad)" stroke-width="1.2"/>
-    <line x1="38" y1="-42" x2="26" y2="-14" stroke="url(#goldGrad)" stroke-width="1.2"/>
-    <!-- Plato izquierdo -->
-    <ellipse cx="-34" cy="-12" rx="14" ry="3.5" fill="url(#goldGrad)"/>
-    <path d="M-48,-12 Q-34,4 -20,-12" fill="url(#goldGrad)"/>
-    <!-- Plato derecho -->
-    <ellipse cx="34" cy="-12" rx="14" ry="3.5" fill="url(#goldGrad)"/>
-    <path d="M20,-12 Q34,4 48,-12" fill="url(#goldGrad)"/>
-    <!-- Base circular -->
-    <ellipse cx="0" cy="40" rx="22" ry="5" fill="url(#goldGrad)"/>
-    <ellipse cx="0" cy="34" rx="8" ry="2.5" fill="url(#goldGrad)"/>
+    <line x1="72" y1="-82" x2="80" y2="-30" stroke="url(#goldSoft)" stroke-width="1.6"/>
+    <line x1="72" y1="-82" x2="52" y2="-30" stroke="url(#goldSoft)" stroke-width="1.6"/>
+    <!-- Platillo izquierdo (elipse + curva copa) -->
+    <ellipse cx="-66" cy="-28" rx="28" ry="5.5" fill="url(#goldMain)"/>
+    <path d="M-94,-28 Q-66,10 -38,-28 Z" fill="url(#goldMain)"/>
+    <!-- Platillo derecho -->
+    <ellipse cx="66" cy="-28" rx="28" ry="5.5" fill="url(#goldMain)"/>
+    <path d="M38,-28 Q66,10 94,-28 Z" fill="url(#goldMain)"/>
+    <!-- Base -->
+    <ellipse cx="0" cy="80" rx="44" ry="8" fill="url(#goldMain)"/>
+    <ellipse cx="0" cy="72" rx="18" ry="4" fill="url(#goldMain)"/>
   </g>
 
-  <!-- DTR grande -->
-  <text x="155" y="138" font-family="Georgia, 'Times New Roman', serif" font-size="98" font-weight="700" fill="url(#goldGrad)" letter-spacing="6">DTR</text>
+  <!-- DTR — letras grandes con gradient dorado -->
+  <text x="290" y="270" font-family="Georgia, 'Times New Roman', serif" font-size="200" font-weight="700" fill="url(#goldMain)" letter-spacing="10">DTR</text>
 
   <!-- Subtítulo -->
-  <text x="230" y="180" font-family="'Source Sans 3', -apple-system, sans-serif" font-size="14" font-weight="400" fill="#ffffff" text-anchor="middle" letter-spacing="4">ABOGADOS, CONSULTORES Y ASOCIADOS</text>
+  <text x="390" y="350" font-family="'Source Sans 3', -apple-system, sans-serif" font-size="26" font-weight="400" fill="#ffffff" text-anchor="middle" letter-spacing="6">ABOGADOS, CONSULTORES Y ASOCIADOS</text>
 </svg>
