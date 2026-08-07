@@ -25,13 +25,13 @@ requisitos_persona_natural:
   - "2 a 3 alternativas de nombre (no requiere sufijo S.A., debe ser único)"
 requisitos_empresa:
   - "No aplica — es proceso de creación"
-plazos_estimados:
+plazos:
   tramite: "5 a 10 días hábiles una vez recibida la documentación completa"
   vigencia: "Duración indefinida o por plazos según la voluntad del fundador"
   renovacion: "Renovación anual ante Registro Público (Aviso de Operación + Paz y Salvo DGI + franquicia fundación $400/año)"
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021 del Colegio Nacional de Abogados. Cotizamos por caso considerando complejidad (estructura del Consejo, número de Beneficiarios, tipo de patrimonio)."
 tasas_oficiales: "**Desde $1,800 USD** (primer año, todo incluido: honorarios DTR, agente residente 12 meses, notaría, inscripción Registro Público, RUBF, franquicia fundación). No incluye: Tasa Única anual DGI $300 desde año 2, franquicia fundación anual $400 desde año 2, ni honorarios por modificación de la Carta Fundamental."
-alertas_legales:
+alertas:
   - "La Fundación de Interés Privado NO puede ejercer actos de comercio habituales (Art. 4 Ley 25/1995). Si necesita operar comercialmente, use S.A."
   - "Requiere un Consejo de Fundación de mínimo 3 miembros, con mayoría de panameños o residentes. Sus decisiones se formalizan en Acta."
   - "El fundador debe inscribir el patrimonio inicial (no hay mínimo legal pero sí debe estar identificado)."
