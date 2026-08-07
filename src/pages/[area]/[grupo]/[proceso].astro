@@ -157,7 +157,7 @@ const noindex = !entry;
             <div class="callout-alertas" role="note">
               <span class="callout-icon" aria-hidden="true">⚠</span>
               <div class="callout-body">
-                <strong>Antes de continuar, tené en cuenta:</strong>
+                <strong>Antes de continuar, tenga en cuenta:</strong>
                 <ul>
                   {data.alertas.map((item) => <li>{item}</li>)}
                 </ul>
@@ -168,7 +168,7 @@ const noindex = !entry;
           {/* === §1 DIRIGIDO A === */}
           {data.dirigido_a.length > 0 && (
             <div class="proc-section">
-              <h2>Es para vos si...</h2>
+              <h2>Es para usted si...</h2>
               <ul>
                 {data.dirigido_a.map((item) => <li>{item}</li>)}
               </ul>
@@ -220,21 +220,36 @@ const noindex = !entry;
             </div>
           )}
 
-          {/* === §5 HONORARIOS (EXTENDIDO con tasas_oficiales) === */}
-          {data.honorarios_ref && (
-            <div class="proc-section">
-              <h2>Honorarios</h2>
-              <p>{data.honorarios_ref}</p>
-              {data.tasas_oficiales && (
-                <p class="text-small text-muted">
-                  <strong>Tasas oficiales aparte:</strong> {data.tasas_oficiales}
-                </p>
-              )}
-              <p class="text-small text-muted">
-                Todos los honorarios se determinan según el
-                <a href="/honorarios/">Acuerdo CNA 609-A/2021</a>. Te
-                enviamos propuesta escrita antes de arrancar.
-              </p>
+          {/* === §5 COSTOS Y HONORARIOS === */}
+          {(data.honorarios_ref || data.tasas_oficiales) && (
+            <div class="proc-section proc-costos">
+              <h2>Costos y honorarios</h2>
+              <div class="costos-grid">
+                {data.tasas_oficiales && (
+                  <div class="costos-card">
+                    <h3>Costos directos oficiales</h3>
+                    <p>{data.tasas_oficiales}</p>
+                    <p class="text-small text-muted">
+                      Tasas que se pagan directamente al SNM, MITRADEL u
+                      otras instituciones. Se abonan aparte de los
+                      honorarios profesionales de la Firma.
+                    </p>
+                  </div>
+                )}
+                {data.honorarios_ref && (
+                  <div class="costos-card costos-card-honor">
+                    <h3>Honorarios profesionales</h3>
+                    <p>{data.honorarios_ref}</p>
+                    <p class="text-small text-muted">
+                      Determinados según el
+                      <a href="/honorarios/">Acuerdo CNA 609-A/2021</a>
+                      del Colegio Nacional de Abogados. Le enviamos
+                      propuesta escrita con precio cerrado antes de
+                      iniciar el trámite.
+                    </p>
+                  </div>
+                )}
+              </div>
             </div>
           )}
 
@@ -275,7 +290,7 @@ const noindex = !entry;
             <p>
               <strong>Contenido en preparación.</strong> Estamos completando los
               requisitos, documentos y plazos para <em>{proceso.titulo}</em>.
-              Mientras tanto, escribinos por WhatsApp y te contamos tu caso
+              Mientras tanto, escríbanos por WhatsApp y le contamos tu caso
               concreto en menos de 24 horas.
             </p>
             <a href={wa} class="cta cta-whatsapp" target="_blank" rel="noopener">
@@ -287,7 +302,7 @@ const noindex = !entry;
 
       {/* === §8 CTA FINAL (siempre visible) === */}
       <div class="cta-block">
-        <h3>Contanos tu caso</h3>
+        <h3>Cuéntenos su caso</h3>
         <p>
           Te decimos qué necesitás, cuánto tarda y cuánto cuesta antes de
           arrancar. Respuesta en menos de 24 horas hábiles.
@@ -446,6 +461,43 @@ const noindex = !entry;
   .plazos dd {
     margin: 0;
     color: var(--texto);
+  }
+
+  .costos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  @media (min-width: 720px) {
+    .costos-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .costos-card {
+    padding: 1.5rem 1.5rem 1.25rem;
+    background: var(--dtr-cream-alt);
+    border: 1px solid var(--dtr-line);
+    border-radius: var(--radius-lg);
+  }
+  .costos-card-honor {
+    background: var(--dtr-cream);
+    border-color: var(--dtr-gold-light);
+    border-left: 4px solid var(--dtr-gold);
+  }
+  .costos-card h3 {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    color: var(--dtr-navy);
+    margin: 0 0 0.75rem 0;
+  }
+  .costos-card > p:first-of-type {
+    font-size: 0.98rem;
+    margin: 0 0 0.75rem 0;
+  }
+  .costos-card .text-small {
+    font-size: 0.82rem;
+    margin: 0;
+    line-height: 1.5;
   }
 
   .base-legal-decreto {
