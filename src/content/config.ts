@@ -26,6 +26,7 @@ const procesos = defineCollection({
     base_legal: z.array(z.string()).default([]),      // lista completa, va al pie
     decreto_principal: z.string().optional(),         // string destacado, va al hero info strip
     categoria_migratoria: z.string().optional(),      // ej: "Visa de corta estancia"
+    categoria_comercial: z.string().optional(),       // ej: "Constitución societaria" (Sprint 2 Comercial)
 
     // === Audiencia ===
     dirigido_a: z.array(z.string()).default([]),      // bullets del "es para vos si..."
