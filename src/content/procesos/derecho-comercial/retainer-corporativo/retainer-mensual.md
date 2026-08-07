@@ -27,13 +27,13 @@ requisitos_empresa:
   - "La sociedad debe estar al día con sus obligaciones legales (Tasa Única DGI, RUBF, agente residente)"
   - "Para tier Premium/Custom: Pacto Social vigente y libros corporativos actualizados"
   - "Si la sociedad aún no está constituida, consulte primero los servicios de Constitución"
-plazos_estimados:
+plazos:
   tramite: "Activación inmediata (24-48 horas) tras firma del contrato de retainer"
   vigencia: "Mensual, renovable automáticamente"
   renovacion: "Renovación tácita; cancelación con 30 días de aviso previo"
 honorarios_ref: "**4 tiers de retainer corporativo mensual** — cada tier se cotiza según el rubro de la empresa, la cantidad de horas mensuales requeridas y la documentación a realizar. Acuerdo CNA 609-A/2021 del Colegio Nacional de Abogados como tarifa mínima obligatoria."
 tasas_oficiales: "**Micro empresas:** desde **$300/mes** (4h, agente residente + KYC + recordatorios). **Regular:** desde **$500/mes** (6h, +actas simples + 1 reunión/mes). **Estándar:** desde **$1,000/mes** (8h, +juntas directivas + reformas de pacto social). **Premium:** desde **$1,200/mes** (16h, +Compliance anual + marca + pactos ilimitados). **Custom:** desde **$1,800+/mes** (negociable según rubro, holdings múltiples, fiscal controversy, litigio societario)."
-alertas_legales:
+alertas:
   - "El retainer reemplaza la contratación anual de agente residente ($300-$500/año) + declaración RUBF (SSNF) + recordatorios DGI. Valor aproximado de los servicios por separado: $600-$1,000/año. El retainer los incluye y agrega horas jurídicas."
   - "NO incluye: constitución de nueva sociedad, redacción de contratos complejos, due diligence de M&A, litigio, arbitraje, fiscal controversy. Estos servicios se cotizan aparte."
   - "Para tier Premium: la asistencia incluye 1 proceso de registro de marca al año (DIGERPI) sin costo adicional; procesos adicionales se cotizan aparte."
