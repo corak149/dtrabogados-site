@@ -29,7 +29,7 @@ plazos:
   vigencia: "Duración indefinida (perpetua) salvo pacto en contrario"
   renovacion: "Renovación anual ante Registro Público (Aviso de Operación + Paz y Salvo DGI)"
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021 del Colegio Nacional de Abogados. Cotizamos por caso considerando complejidad (número de socios, capital, distribución de cuotas)."
-tasas_oficiales: "**Desde $1,400 USD** (primer año, todo incluido: honorarios DTR, agente residente 12 meses, notaría, inscripción Registro Público, Aviso de Operaciones, RUBF, libro de cuotas). No incluye: Tasa Única anual DGI $300 desde año 2, apertura cuenta bancaria corporativa, ni honorarios por modificaciones posteriores."
+tasas_oficiales: "**Desde $1,400 USD** (primer año, todo incluido: honorarios DTR, agente residente 12 meses, notaría, inscripción Registro Público, solicitud de RUC ante DGI, Aviso de Operaciones ante Panamá Emprende, RUBF, libro de cuotas). No incluye: Tasa Única anual DGI $300 desde año 2, apertura cuenta bancaria corporativa, ni honorarios por modificaciones posteriores."
 alertas:
   - "La S.R.L. requiere MÍNIMO 2 socios; si queda un solo socio, la sociedad debe disolverse o transformarse en S.A. (Art. 14 Ley 4/2009)."
   - "Las cuotas de participación no son libremente transferibles: la Cesión requiere consentimiento de la mayoría de los demás socios (Art. 22 Ley 4/2009)."
@@ -44,14 +44,11 @@ notas_firma: |
   1. **Reserva de nombre** y redacción del Contrato Social.
   2. **Protocolización notarial** del contrato.
   3. **Inscripción en el Registro Público de Panamá**.
-  4. **Aviso de Operaciones** ante Panamá Emprende (genera RUC automático).
-  5. **Registro de Beneficiario Final** ante la SSNF.
-  6. **Emisión del libro de cuotas** y asignaciones.
+  4. **Inscripción ante la DGI y solicitud del RUC** (Registro Único de Contribuyentes).
+  5. **Aviso de Operaciones** ante Panamá Emprende.
+  6. **Registro de Beneficiario Final** ante la SSNF.
+  7. **Emisión del libro de cuotas** y asignaciones.
 
-  **Casos donde ESTA VÍA NO es la correcta:**
-  - Si necesita S.A. para cotización en bolsa o emisión de acciones al portador.
-  - Si va a tener muchos socios pequeños (la S.A. es más eficiente).
-  - Si necesita vehículos de inversión privados (considere Fundación de Interés Privado).
 aprobado_por: "Danna (CLO), 08.08.2026"
 revisar_con: "800-Knowledge-PA/850-Derecho-Comercial/851-Bloque-1-Norma-Supra-y-Tipos-Societarios/851.2-SRL/ + 100-HQ-DTR/150-Catalogo-Servicios/154-Benchmark-Precios-Mercado/2026-08-Rangos-Constitucion-Sociedades.md"
 ultima_actualizacion: 8 de agosto de 2026
