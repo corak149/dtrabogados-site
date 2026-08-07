@@ -37,8 +37,54 @@ const wa = waLink({ tema: area.titulo });
     </div>
   </section>
 
+  {area.head && (
+    <section class="section-tight section-cream">
+      <div class="container">
+        <div class="head-card">
+          <div class="head-photo">
+            <img
+              src={area.head.foto}
+              alt={area.head.foto_alt}
+              width="800"
+              height="450"
+              loading="eager"
+            />
+          </div>
+          <div class="head-info">
+            <div class="head-role">{area.head.cargo}</div>
+            <h2 class="head-name">{area.head.nombre}</h2>
+            <p class="head-specialty">{area.head.especialidad}</p>
+            <p class="head-bio">{area.head.bio}</p>
+            {area.head.stats && (
+              <div class="head-stats">
+                {area.head.stats.expedientes && (
+                  <div class="stat">
+                    <div class="stat-value">{area.head.stats.expedientes}</div>
+                    <div class="stat-label">Expedientes tramitados</div>
+                  </div>
+                )}
+                {area.head.stats.success_rate && (
+                  <div class="stat">
+                    <div class="stat-value">{area.head.stats.success_rate}</div>
+                    <div class="stat-label">Tasa de éxito</div>
+                  </div>
+                )}
+                {area.head.stats.otras?.map((s) => (
+                  <div class="stat">
+                    <div class="stat-value">{s.value}</div>
+                    <div class="stat-label">{s.label}</div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
   <section class="section">
-    <div class="container-content">
+    <div class="container">
       <p class="lede-area">{area.descripcion}</p>
 
       {area.grupos.map((grupo) => (
@@ -178,5 +224,91 @@ const wa = waLink({ tema: area.titulo });
     flex-wrap: wrap;
     gap: 0.75rem;
     justify-content: center;
+  }
+
+  /* === Head Card === */
+  .head-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    background: var(--dtr-white);
+    border: 1px solid var(--dtr-line);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    align-items: center;
+  }
+  @media (min-width: 720px) {
+    .head-card {
+      grid-template-columns: 340px 1fr;
+      gap: 2.5rem;
+      padding: 2.25rem 2.5rem;
+    }
+  }
+  @media (min-width: 1080px) {
+    .head-card {
+      grid-template-columns: 400px 1fr;
+    }
+  }
+  .head-photo {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    background: var(--dtr-cream-alt);
+  }
+  .head-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .head-role {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--dtr-gold-dark);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .head-name {
+    font-family: var(--font-serif);
+    font-size: clamp(1.4rem, 3vw, 1.75rem);
+    color: var(--dtr-navy);
+    margin: 0 0 0.35rem 0;
+    line-height: 1.2;
+  }
+  .head-specialty {
+    color: var(--dtr-navy);
+    font-weight: 500;
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+  }
+  .head-bio {
+    color: var(--texto-claro);
+    line-height: 1.65;
+    margin: 0 0 1.5rem 0;
+    font-size: 0.98rem;
+  }
+  .head-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--dtr-line);
+  }
+  .stat {
+    text-align: left;
+  }
+  .stat-value {
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--dtr-gold-dark);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+  .stat-label {
+    font-size: 0.8rem;
+    color: var(--texto-claro);
+    line-height: 1.35;
   }
 </style>
