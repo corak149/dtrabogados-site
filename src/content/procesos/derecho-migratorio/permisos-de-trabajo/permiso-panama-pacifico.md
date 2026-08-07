@@ -34,7 +34,7 @@ plazos:
   vigencia: "Alineado al contrato con la empresa Panamá Pacífico"
   renovacion: "Renovable mientras se mantenga la relación laboral."
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021. Cotizamos según categoría del puesto."
-tasas_oficiales: "Tasa MITRADEL B/.300 + tasa SNM B/.250 + tasa Panamá Pacífico específica."
+tasas_oficiales: "Tasa MITRADEL varía según subcategoría TIPO 3C: 3C-1 (ordinario 10%) / 3C-2 (técnico 15%) / 3C-3 (sobrepasa 15%) / 3C-4 (MIPE) = $80.00; 3C-5 (oficinas exterior) = $100.00. Renovación + $30.00 duplicados (Tabla oficial MITRADEL). Si requiere residencia SNM asociada: B/.250 Tesoro + B/.800 SNM = B/.1,050."
 alertas:
   - "La empresa DEBE estar autorizada en Panamá Pacífico. Sin esta autorización, solicitud rechazada."
   - "El régimen Panamá Pacífico tiene beneficios migratorios preferenciales."

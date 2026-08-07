@@ -1,6 +1,6 @@
 ---
-titulo: Visa de tránsito
-descripcion: "Visa de corta estancia para ciudadanos haitianos en tránsito por el área internacional del aeropuerto de Panamá. Hasta 24 horas. Base legal: DE 451/2020."
+titulo: "Visa de Turista en Tránsito"
+descripcion: "Visa de Turista en Tránsito (DE 451/2020)"
 resumen: Visa de tránsito para ciudadanos haitianos no residentes que permanecen en el área de tránsito internacional del aeropuerto de Tocumen mientras esperan su vuelo de conexión.
 decreto_principal: "Decreto Ejecutivo 451 de 24 de junio de 2020, artículos 2 y 3"
 categoria_migratoria: "No residente — tránsito aeroportuario"

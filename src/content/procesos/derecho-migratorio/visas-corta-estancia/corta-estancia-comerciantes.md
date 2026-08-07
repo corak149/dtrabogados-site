@@ -1,6 +1,6 @@
 ---
-titulo: Corta estancia para comerciantes
-descripcion: "Visa de corta estancia para comerciantes e inversionistas que vienen a Panama a analizar oportunidades en ZPE, call centers, cine y audiovisual. Ley 25/1992."
+titulo: "Visa de Corta Estancia — Comerciantes e Inversionistas (Leyes Especiales)"
+descripcion: "Visa de Corta Estancia — Comerciantes e Inversionistas (Leyes Especiales, Ley 25/1992). Tasa SNM B/.250 + tasa consular (orientativo, verificar SNM)."
 resumen: Visa para comerciantes e inversionistas extranjeros que vienen a Panamá a analizar oportunidades de inversión en las áreas designadas por la Ley 25/1992 (ZPE, call centers, industria cinematográfica y audiovisual).
 decreto_principal: "Decreto Ejecutivo 320 de 2008, artículo 54 + Ley 25 de 1992 (zonas especiales)"
 categoria_migratoria: "No residente — comerciante o inversionista en exploración"

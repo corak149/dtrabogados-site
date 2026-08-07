@@ -1,6 +1,6 @@
 ---
-titulo: Corta estancia para trabajador remoto
-descripcion: "Visa de corta estancia para trabajadores remotos de empresas extranjeras o trabajadores autónomos en teletrabajo. 9 meses renovables. Base legal: DE 198/2021."
+titulo: "Visa de Corta Estancia — Trabajador Remoto (DE 198/2021)"
+descripcion: "Visa de Corta Estancia — Trabajador Remoto (DE 198/2021). Tasa SNM B/.300 + tasa consular (orientativo, verificar SNM)."
 resumen: Visa muy popular para profesionales que trabajan remotamente desde Panamá para empresas extranjeras. Ingresos anuales mínimos B/.36,000 de fuente 100% extranjera. 9 meses renovables.
 decreto_principal: "Decreto Ejecutivo 198 de 2021 (corta estancia para trabajador remoto)"
 categoria_migratoria: "No residente — trabajador remoto de fuente extranjera"

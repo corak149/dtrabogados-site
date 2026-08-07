@@ -35,7 +35,7 @@ plazos:
   vigencia: "Alineado al contrato con la empresa ZLC"
   renovacion: "Renovable mientras se mantenga la relación laboral con la empresa ZLC."
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021. Cotizamos según categoría del puesto."
-tasas_oficiales: "Tasa MITRADEL B/.300 + tasa SNM B/.250 + tasa ZLC específica."
+tasas_oficiales: "Tasa MITRADEL $80.00 primera vez o renovación + $30.00 duplicados (TIPO 3A Ejecutivo ZLC - Tabla oficial MITRADEL). Si requiere residencia SNM asociada: B/.250 Tesoro + B/.800 SNM = B/.1,050."
 alertas:
   - "La empresa DEBE estar autorizada para operar en Zona Libre de Colón. Sin esta autorización, la solicitud es rechazada."
   - "El régimen ZLC es preferencial pero requiere Certificación ZLC específica."

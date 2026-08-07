@@ -33,7 +33,7 @@ plazos:
   vigencia: "Alineado a la asignación diplomática"
   renovacion: "Renovable mientras se mantenga la acreditación."
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021. Cotizamos según complejidad diplomática."
-tasas_oficiales: "Tasa MITRADEL B/.300 + tasa SNM B/.250. Misiones diplomáticas tienen regimenes especiales."
+tasas_oficiales: "Tasa MITRADEL $100.00 primera vez o renovación + $30.00 duplicados (TIPO 1F Personal diplomático / organismos internacionales - Tabla oficial MITRADEL). Misiones con inmunidades diplomáticas plenas tienen régimen propio (gestión Cancillería). Si requiere residencia SNM asociada: B/.250 Tesoro + B/.800 SNM = B/.1,050."
 alertas:
   - "Este permiso es para personal diplomático SIN inmunidades plenas. Los diplomáticos con inmunidades tienen régimen propio."
   - "La acreditación del MIRE es OBLIGATORIA. Sin ella, no procede."

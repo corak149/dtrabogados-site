@@ -34,7 +34,7 @@ plazos:
   vigencia: "Alineado al contrato con la entidad CDS"
   renovacion: "Renovable mientras se mantenga la relación con CDS."
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021. Cotizamos según categoría."
-tasas_oficiales: "Tasa MITRADEL B/.300 + tasa SNM B/.250 + tasas CDS específicas."
+tasas_oficiales: "Tasa MITRADEL $100.00 primera vez o renovación + $30.00 duplicados (TIPO 3B Fundación Ciudad del Saber - Tabla oficial MITRADEL). Si requiere residencia SNM asociada: B/.250 Tesoro + B/.800 SNM = B/.1,050."
 alertas:
   - "La empresa DEBE estar afiliada a la Fundación Ciudad del Saber. Sin afiliación, solicitud rechazada."
   - "El régimen CDS tiene beneficios migratorios preferenciales para personal técnico, investigadores y académicos."

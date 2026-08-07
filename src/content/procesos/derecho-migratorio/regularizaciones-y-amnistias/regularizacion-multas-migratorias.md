@@ -52,7 +52,7 @@ notas_firma: |
   multa NO es migratoria (es tributaria u otra), debe
   canalizarse por la vía correspondiente.
 aprobado_por: "Danna (CLO), 08.08.2026"
-revisar_con: "800-Knowledge-PA/810-Migracion/812-Bloque-2-Residencias/812.5-Regularizaciones-y-Amnistias/810-resoluciones-exoneracion-multas/810-resoluciones-exoneracion-multas-RESUMEN.md"
+revisar_con: "800-Knowledge-PA/810-Migracion/811-Bloque-1-Normativa-y-Requisitos/811.7-Requisitos-SNM/810.5-exoneracion-multas-migratorias.md"
 ultima_actualizacion: 8 de agosto de 2026
 ---
 

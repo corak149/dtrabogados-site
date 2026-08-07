@@ -1,9 +1,9 @@
 ---
-titulo: Residencia para trabajador por cuenta propia
+titulo: "Permiso de trabajo para trabajador por cuenta propia (TIPO 2B)"
 descripcion: "Residencia temporal para trabajador independiente con actividad economica formal en Panama. Requiere RUC activo y Paz y Salvo DGI. DE 6/2023."
 resumen: Residencia temporal para extranjero que ejerce actividad profesional o comercial por cuenta propia en Panamá. Requiere demostración de actividad económica formal y cumplimiento de obligaciones tributarias.
-decreto_principal: "Decreto Ejecutivo 6 de 2023 (régimen de trabajador por cuenta propia) + Decreto Ley 3 de 2008"
-categoria_migratoria: "Residente temporal por cuenta propia"
+decreto_principal: "Decreto Ejecutivo 6 de 2023 (Arts. 46-70 — TIPO 2B Trabajador por cuenta propia) + Decreto Ley 3 de 2008"
+categoria_migratoria: "Permiso de trabajo — Trabajador por cuenta propia (TIPO 2B, DE 6/2023)"
 base_legal:
   - Decreto Ley 3 de 22 de febrero de 2008, régimen migratorio de Panamá
   - Decreto Ejecutivo 320 de 2008, reglamento del régimen migratorio

@@ -1,6 +1,6 @@
 ---
-titulo: Visa de servicio doméstico
-descripcion: "Visa para trabajadores extranjeros del servicio doméstico contratados por empleador panameño o residente. Hasta 4 prórrogas. Base: DE 320/2008 art. 43."
+titulo: "Visa de Trabajadores Domésticos"
+descripcion: "Visa de Trabajadores Domésticos. Tasa SNM B/.250 + tasa consular (orientativo, verificar SNM)."
 resumen: Visa para trabajadores extranjeros del servicio doméstico contratados por empleador panameño o residente temporal o permanente en Panamá. Prorrogable mientras se mantenga el vínculo laboral con el mismo empleador.
 decreto_principal: "Decreto Ejecutivo 320 de 2008, artículo 43 (régimen de trabajadores domésticos)"
 categoria_migratoria: "No residente — trabajador doméstico"

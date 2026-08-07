@@ -1,7 +1,7 @@
 ---
 titulo: Residencia permanente como rentista
 descripcion: "Residencia permanente como rentista retirado. Renta mensual >=B/.850 de intereses de DPF en Banco Nacional. NO permite trabajo. DE 320/2008 art. 196."
-resumen: Es la vía para el extranjero que vive de ingresos de inversiones, alquileres, dividendos o cualquier renta que NO requiere trabajar activamente en Panamá. La renta mínima es de USD 2,000 mensuales, vitalicia, demostrable con 12 meses de historial.
+resumen: "Residencia permanente como rentista retirado. Requiere demostrar ingresos vitalicios por intereses de Depósito a Plazo Fijo (DPF) en Banco Nacional de Panamá o Caja de Ahorros por monto mínimo de B/.850.00 mensuales (Art. 196 DE 320/2008)."
 decreto_principal: "Decreto Ejecutivo 722 de 17 de septiembre de 2020 (requisitos de inversión para residencia, categoría rentista permanente)"
 categoria_migratoria: "Residente permanente como rentista"
 base_legal:

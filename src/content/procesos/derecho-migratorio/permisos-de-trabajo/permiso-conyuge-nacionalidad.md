@@ -35,7 +35,7 @@ plazos:
   vigencia: "Alineado al contrato de trabajo"
   renovacion: "Renovable mientras se mantenga la relación laboral."
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021. Cotizamos según complejidad."
-tasas_oficiales: "Tasa MITRADEL B/.300 + tasa SNM B/.250."
+tasas_oficiales: "Tasa MITRADEL $50.00 primera vez o renovación + $30.00 duplicados (TIPO 1B-1 Cónyuge de nacionalidad panameña - Tabla oficial MITRADEL). Si requiere residencia SNM asociada: B/.250 Tesoro + B/.800 SNM = B/.1,050."
 alertas:
   - "Esta categoría es para el CÓNYUGE de panameño, no para hijos u otros familiares."
   - "La base es el matrimonio civil con nacional panameño, NO con residente."

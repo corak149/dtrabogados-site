@@ -34,7 +34,7 @@ plazos:
   vigencia: "Alineado al carné de refugiado (6 meses o 1 año)"
   renovacion: "Renovable con carné actualizado."
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021. Cotizamos según complejidad del caso."
-tasas_oficiales: "Registro B/.5 + Carné B/.10."
+tasas_oficiales: "Tasa MITRADEL varía según subcategoría TIPO 5A: 5A-1 (admitido a trámite) $30.00, 5A-2 (reconocido) $50.00, 5A-3 (residencia permanente) $100.00 + $30.00 duplicados. Carné de refugiado B/.30.00 primera vez y renovación (Tabla oficial MITRADEL)."
 alertas:
   - "El trámite de refugio es paralelo al régimen migratorio general, gestionado por ONPAR (Oficina Nacional para la Atención de Refugiados)."
   - "El carné de refugiado permite permanencia legal mientras se procesa la solicitud de asilo."

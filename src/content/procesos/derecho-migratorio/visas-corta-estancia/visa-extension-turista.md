@@ -1,6 +1,6 @@
 ---
-titulo: Extensión de visa de turista
-descripcion: "Extensión de estadía para extranjeros con visa de turista vigente. Hasta 90 días adicionales. Base legal: DE 320/2008. Debe solicitarse antes del vencimiento."
+titulo: "Extensión de Visa de Turista"
+descripcion: "Extensión de Visa de Turista hasta por 90 días adicionales. B/.100 SNM + B/.50 sellado (orientativo, verificar SNM)."
 resumen: Permite extender la estadía del visitante con visa de turista hasta completar 90 días adicionales a los 90 iniciales. Debe solicitarse antes del vencimiento de la visa original.
 decreto_principal: "Decreto Ejecutivo 320 de 2008 (régimen general de extensiones de visa de turista)"
 categoria_migratoria: "No residente — extensión de corta estancia"

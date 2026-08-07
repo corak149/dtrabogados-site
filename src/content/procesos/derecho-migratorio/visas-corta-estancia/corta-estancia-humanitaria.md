@@ -1,6 +1,6 @@
 ---
-titulo: Corta estancia humanitaria
-descripcion: "Visa de corta estancia bajo regimen excepcional para misiones humanitarias de organismos internacionales y ONG acreditadas en Panama. DE 320/2008."
+titulo: "Visa de Corta Estancia — Asistencia Humanitaria Internacional"
+descripcion: "Visa de Corta Estancia — Asistencia Humanitaria Internacional. Variable según MINREX (frecuentemente exonerada)."
 resumen: Visa bajo régimen excepcional para representantes de organismos internacionales, ONG acreditadas y personal humanitario que vienen a Panamá en misiones de asistencia ante desastres o emergencias declaradas.
 decreto_principal: "Decreto Ejecutivo 320 de 2008, artículos 56-58 (régimen excepcional humanitario)"
 categoria_migratoria: "No residente — misión humanitaria internacional"

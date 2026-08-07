@@ -1,6 +1,6 @@
 ---
-titulo: Visa VTET (técnicos especializados)
-descripcion: "Visa para trabajadores eventuales y técnicos especializados en proyectos específicos en Panamá. 1 año prorrogable. Base: DE 320/2008 art. 39."
+titulo: "Visa VTET — Trabajadores Eventuales y Técnicos"
+descripcion: "Visa VTET — Trabajadores Eventuales y Técnicos. Tasa SNM B/.250 + tasa MITRADEL B/.300 (orientativo, verificar SNM)."
 resumen: Visa para trabajadores eventuales y técnicos que vienen a Panamá por una obra o proyecto específico. 1 año, prorrogable anualmente hasta 5 veces.
 decreto_principal: "Decreto Ejecutivo 320 de 2008, artículo 39 (modificado por Decreto 547/2013)"
 categoria_migratoria: "No residente — trabajador eventual o técnico especializado"

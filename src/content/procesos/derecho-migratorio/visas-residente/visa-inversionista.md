@@ -2,7 +2,7 @@
 titulo: Visa de inversionista
 descripcion: "Visa de residente permanente para inversionista calificado. Inversión mínima B/.300,000. Mantenimiento 5 años. Base: DE 722/2020 y DE 193/2024."
 resumen: Visa de residente permanente para extranjeros que realizan una inversión calificada de mínimo B/.300,000 en Panamá. Mantenimiento obligatorio de 5 años. Resolución en 30 días hábiles por ventanilla especial.
-decreto_principal: "Decreto Ejecutivo 722 de 15 de octubre de 2020 (crea subcategoría inversionista calificado) + Decreto Ejecutivo 193 de 2024 (modificación)"
+decreto_principal: "Decreto Ejecutivo 722 de 15 de octubre de 2020 + Decreto Ejecutivo 193 de 2024 (régimen de Inversionista Calificado)"
 categoria_migratoria: "Residente permanente por razones económicas — inversionista calificado"
 base_legal:
   - Decreto Ley 3 de 22 de febrero de 2008, régimen migratorio de Panamá
@@ -36,7 +36,7 @@ plazos:
   vigencia: "Residencia permanente (sin caducidad mientras se mantenga la inversión)"
   renovacion: "Mantenimiento obligatorio de la inversión por 5 años. Si la inversión cesa antes, se puede cancelar el permiso."
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021. Cotizamos según tipo de inversión (inmobiliaria vs. accionaria) y complejidad de la documentación."
-tasas_oficiales: "Tasa SNM por residente permanente + tasas de Registro Público + honorarios notariales + peritaje CPA + certificación MICI."
+tasas_oficiales: "Tasa MITRADEL/Tesoro + B/.5,000 SNM (Art. 4 DE 193/2024) + B/.1,000 por dependiente. Total primera solicitud: B/.5,000 Tesoro + B/.5,000 SNM + B/.1,000 por dependiente."
 alertas:
   - "Inversión mínima B/.300,000.00 (reducido de B/.500,000 original por DE 193/2024). Debe provenir de FUENTE EXTRANJERA."
   - "Mantenimiento obligatorio de la inversión por 5 años. Si la inversión se vende antes de 5 años, el SNM puede cancelar el permiso."

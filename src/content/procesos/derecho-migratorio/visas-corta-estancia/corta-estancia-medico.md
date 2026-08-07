@@ -1,6 +1,6 @@
 ---
-titulo: Corta estancia médica
-descripcion: "Visa de corta estancia para pacientes extranjeros en tratamiento medico que no exceda 9 meses. Carta del centro medico panameno. DE 320/2008 art. 52."
+titulo: "Visa de Corta Estancia — Tratamiento Médico"
+descripcion: "Visa de Corta Estancia — Tratamiento Médico. Tasa SNM B/.250 + tasa consular (orientativo, verificar SNM)."
 resumen: Visa para pacientes extranjeros que vienen a Panamá para tratamiento médico que no exceda 9 meses. Requiere carta de aceptación del centro médico panameño.
 decreto_principal: "Decreto Ejecutivo 320 de 2008, artículo 52 (corta estancia para tratamiento médico)"
 categoria_migratoria: "No residente — paciente en tratamiento médico"

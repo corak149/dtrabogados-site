@@ -3,7 +3,7 @@ titulo: Residencia por matrimonio con panameño
 descripcion: "Residencia temporal para conyuge extranjero de nacional panameno. 2 anos prorrogable. Investigacion de fraude migratorio. DL 3/2008 art. 23."
 resumen: Residencia temporal para cónyuge extranjero de nacional panameño. El SNM investiga la autenticidad del matrimonio para evitar fraude migratorio. 2 años, prorrogable.
 decreto_principal: "Decreto Ley 3 de 22 de febrero de 2008, artículo 23 (residencia por matrimonio con panameño)"
-categoria_migratoria: "Residente temporal por razones demográficas"
+categoria_migratoria: "Residente permanente por matrimonio con panameño"
 base_legal:
   - Decreto Ley 3 de 22 de febrero de 2008, artículo 23, residencia por matrimonio
   - Decreto Ejecutivo 320 de 2008, reglamento del régimen migratorio

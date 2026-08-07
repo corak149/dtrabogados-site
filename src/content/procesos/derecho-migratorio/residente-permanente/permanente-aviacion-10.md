@@ -1,9 +1,9 @@
 ---
-titulo: Residente permanente aviación (10% extranjeros)
-descripcion: "Residencia permanente para extranjeros bajo cuota 10% en empresa del sector aviacion. Regimen especial del sector aeronautico con cuota limite. DL 3/2008."
-resumen: Residencia permanente para extranjero bajo cuota de 10% en empresa del sector aviación. Régimen especial del sector con requisitos técnicos propios.
-decreto_principal: "Decreto Ley 3 de 22 de febrero de 2008 (régimen demográfico — aviación 10%)"
-categoria_migratoria: "Residente permanente por razones laborales — aviación 10%"
+titulo: "Residente permanente para empleados de aviación comercial"
+descripcion: "Residencia permanente para extranjeros en empresas de aviación comercial. Salario mínimo B/.1,000/mes. TIPO 3F (PRT-EA). DE 320/2008."
+resumen: "Residencia permanente para extranjeros en empresas de aviación comercial con licencia AAC. Categoría TIPO 3F (PRT-EA) en Tabla MITRADEL. Salario mínimo B/.1,000.00 mensuales."
+decreto_principal: "Decreto Ejecutivo 320 de 2008 (régimen migratorio) + DE 6/2023 (TIPO 3F Empresas de Aviación)"
+categoria_migratoria: "Residente permanente por razones laborales — Empresas de Aviación Comercial (TIPO 3F)"
 base_legal:
   - Decreto Ley 3 de 22 de febrero de 2008, régimen migratorio de Panamá
   - Decreto Ejecutivo 320 de 2008, reglamento del régimen migratorio

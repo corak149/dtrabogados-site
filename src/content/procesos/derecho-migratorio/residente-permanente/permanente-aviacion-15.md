@@ -1,9 +1,9 @@
 ---
-titulo: Residente permanente aviación (15% extranjeros)
-descripcion: "Residencia permanente para extranjeros que ocupen cuotas del 15% en empresas de aviación comercial o especializada. Vigencia indefinida. Base legal: DL 3/2008."
-resumen: Residencia permanente para extranjero bajo cuota de 15% en empresa del sector aviación especializada. Aplica a posiciones técnicas altamente especializadas.
-decreto_principal: "Decreto Ley 3 de 22 de febrero de 2008 (régimen demográfico — aviación 15%)"
-categoria_migratoria: "Residente permanente por razones laborales — aviación 15%"
+titulo: "Residente permanente para personal técnico especializado (15%)"
+descripcion: "Residencia permanente para personal experto o técnico (15% de la planilla). Salario mínimo B/.850/mes. TIPO 2B (PPT-TEC). DE 6/2023."
+resumen: "Residencia permanente para personal técnico o experto extranjero en empresas generales (no régimen SEM ni aviación). Cuota 15% de la planilla. TIPO 2B (PPT-TEC)."
+decreto_principal: "Decreto Ejecutivo 6 de 2023 (TIPO 2B Personal Experto/Técnico)"
+categoria_migratoria: "Residente permanente por razones laborales — Personal Experto/Técnico 15% (TIPO 2B)"
 base_legal:
   - Decreto Ley 3 de 22 de febrero de 2008, régimen migratorio de Panamá
   - Decreto Ejecutivo 320 de 2008, reglamento del régimen migratorio
