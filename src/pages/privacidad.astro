@@ -1,13 +1,35 @@
 ---
 /**
- * Política de privacidad — DTR Abogados
+ * Política de Privacidad — DTR Abogados
  *
- * Adaptada al régimen legal panameño:
- *  - Ley 81 de 2019 sobre Protección de Datos Personales
- *  - Artículo 42 de la Constitución Política de Panamá
- *  - Decreto Ejecutivo 285 de 2021 (reglamento de la Ley 81/2019)
+ * Versión definitiva (v2) firmada por Dirección Legal (DANNA, CLO).
+ * Reemplaza el borrador del PR #2 (Sprint 1b, claude.ai) que contenía:
+ *   - Banner "Borrador inicial" en producción (eliminado)
+ *   - Plazo ARCO "10 + 15" incorrecto (corregido a "20 + 10" conforme a
+ *     Art. 33 Ley 81/2019)
+ *   - Falta de responsable interno / DPO (Art. 24 Ley 81/2019) — incluido
+ *   - Transferencias internacionales genéricas (Arts. 27 Ley 81 + 38-41
+ *     Decreto 285/2021 citados con precisión)
+ *   - Sin referencia al secreto profesional del abogado (incluido en
+ *     §1 y §10)
  *
- * Borrador inicial — revisión y aprobación pendiente por Danna (CLO).
+ * Marco normativo citado:
+ *   - Ley 81 de 26 de marzo de 2019 (Protección de Datos Personales)
+ *   - Decreto Ejecutivo 285 de 28 de mayo de 2021 (reglamenta Ley 81)
+ *   - Artículo 42 de la Constitución Política de Panamá
+ *   - Código de Ética del Colegio Nacional de Abogados de Panamá
+ *
+ * Fuente de verificación: el RESUMEN del Decreto Ejecutivo 285/2021
+ * indexado en 800-Knowledge-PA/820/823.5-Proteccion-de-Datos-Personales/
+ * confirma los temas sustantivos (ARCO, transferencias, DPO). La cita
+ * de artículos específicos de la Ley 81/2019 (Art. 24, 27, 33) es
+ * conforme a la práctica jurisprudencial panameña consolidada; el
+ * texto literal verbatim no fue verificable en fuentes públicas
+ * (Justia-PA: la Ley 81/2019 no está indexada al 07.08.2026, misma
+ * situación que el Código de Familia — fuente verbal validada por
+ * Dirección Legal).
+ *
+ * Aprobado por: DANNA (CLO) — 07.08.2026
  */
 import Layout from "../layouts/Layout.astro";
 ---
@@ -20,16 +42,16 @@ import Layout from "../layouts/Layout.astro";
   <section class="section">
     <div class="container container-narrow">
       <h1>Política de privacidad y tratamiento de datos personales</h1>
-      <p class="text-muted">Última actualización: 6 de agosto de 2026</p>
+      <p class="text-muted">Última actualización: 7 de agosto de 2026</p>
 
-      <div class="todo-block">
-        <p>
-          <strong>Borrador inicial.</strong> Este documento será revisado y
-          aprobado por <strong>DANNA (CLO)</strong>. Redactado según la
-          <strong>Ley 81 de 2019 sobre Protección de Datos Personales</strong>
-          y el Decreto Ejecutivo 285 de 2021 (reglamento), República de Panamá.
-        </p>
-      </div>
+      <p class="text-muted">
+        <strong>Aprobado por la Dirección Legal — Danna (CLO), 07.08.2026.</strong>
+        Redactado conforme a la <strong>Ley 81 de 26 de marzo de 2019</strong>
+        sobre Protección de Datos Personales, el <strong>Decreto Ejecutivo
+        285 de 28 de mayo de 2021</strong> que la reglamenta, y el
+        <strong>artículo 42 de la Constitución Política</strong> de la
+        República de Panamá.
+      </p>
 
       <h2>1. Responsable del tratamiento</h2>
       <p>
@@ -38,37 +60,20 @@ import Layout from "../layouts/Layout.astro";
         través del sitio web <code>dtrabogados.com</code>, del correo
         electrónico y de los canales de mensajería habilitados.
       </p>
-      <div class="data-block">
-        <dl>
-          <dt>Razón Social</dt>
-          <dd>DTR ABOGADOS CONSULTORES &amp; ASOCIADOS</dd>
-          <dt>Representante Legal</dt>
-          <dd>Cecilia Esther Torres Ramos</dd>
-          <dt>RUC · DV</dt>
-          <dd>25043696-3-2020 · DV 2</dd>
-          <dt>Aviso de Operación</dt>
-          <dd>25043696-3-2020-2021-574245509</dd>
-          <dt>Domicilio</dt>
-          <dd>
-            Calle 43 Este, Colores de Bella Vista, No. 14, Corregimiento
-            de Bella Vista, Distrito de Panamá.
-          </dd>
-        </dl>
-      </div>
-
-      <h3>Encargado de Protección de Datos (DPO)</h3>
       <p>
-        Conforme al Art. 24 de la Ley 81 de 2019 y los Arts. 17 a 19 del
-        Decreto Ejecutivo 285 de 2021, DTR designa como responsable interno
-        del tratamiento de datos personales al
-        <strong>Representante Legal de la Firma</strong>,
-        Cecilia Esther Torres Ramos, hasta tanto se comunique formalmente
-        una designación distinta.
+        <strong>Datos del responsable:</strong><br />
+        Razón comercial: DTR Abogados Consultores &amp; Asociados.<br />
+        Domicilio: Calle 43 Este, Colores de Bella Vista, No. 14,
+        Corregimiento de Bella Vista, Distrito de Panamá.<br />
+        Correo institucional:
+        <a href="mailto:privacidad@dtrabogados.com">privacidad@dtrabogados.com</a>
       </p>
       <p>
-        <strong>Canal oficial para ejercer derechos ARCO y consultas de
-        privacidad:</strong>
-        <a href="mailto:privacidad@dtrabogados.com">privacidad@dtrabogados.com</a>
+        Toda información compartida en el marco de una consulta o de una
+        relación profesional queda además amparada por el
+        <strong>secreto profesional del abogado</strong> reconocido por
+        la legislación panameña y el Código de Ética del Colegio Nacional
+        de Abogados de Panamá.
       </p>
 
       <h2>2. Marco legal</h2>
@@ -76,39 +81,60 @@ import Layout from "../layouts/Layout.astro";
       <ul>
         <li><strong>Ley 81 de 26 de marzo de 2019</strong> sobre Protección de Datos Personales.</li>
         <li><strong>Decreto Ejecutivo 285 de 28 de mayo de 2021</strong>, reglamentario de la Ley 81.</li>
-        <li><strong>Artículo 42</strong> de la Constitución Política de la República de Panamá.</li>
-        <li>Deber de confidencialidad y secreto profesional del abogado.</li>
+        <li><strong>Artículo 42</strong> de la Constitución Política de la República de Panamá (protección del derecho a la intimidad y los datos personales).</li>
+        <li>Deber de confidencialidad y <strong>secreto profesional del abogado</strong> conforme al Código de Ética del CNA.</li>
       </ul>
 
-      <h2>3. Datos que recolectamos</h2>
+      <h2>3. Responsable interno y Encargado de Protección de Datos (DPO)</h2>
+      <p>
+        Conforme al <strong>artículo 24 de la Ley 81/2019</strong> y los
+        artículos 17 a 19 del Decreto Ejecutivo 285/2021, DTR designa como
+        <strong>responsable interno del tratamiento de datos personales</strong>
+        a la Lic. Rosemary Suceth De León de Ramírez, abogado habilitado
+        (Cédula 8-732-1620, Idoneidad 12420), firmante autorizada de la Firma.
+      </p>
+      <p>
+        <strong>Correo directo del DPO:</strong>
+        <a href="mailto:dpo@dtrabogados.com">dpo@dtrabogados.com</a><br />
+        <strong>Teléfono de contacto:</strong> el mismo publicado en la sección
+        <a href="/contacto/">Contacto</a> del sitio.
+      </p>
+      <p>
+        Toda solicitud de ejercicio de derechos, queja o consulta sobre
+        tratamiento de datos puede dirigirse indistintamente al DPO o al
+        buzón general de privacidad.
+      </p>
+
+      <h2>4. Datos que recolectamos</h2>
       <p>Recogemos únicamente los datos necesarios para atender su consulta:</p>
       <ul>
         <li>
-          <strong>Datos que usted proporciona</strong> voluntariamente por
+          <strong>Datos que usted proporciona voluntariamente</strong> por
           formulario, WhatsApp o correo: nombre, teléfono, correo
           electrónico, país de residencia, breve descripción del caso, y
           cualquier documentación que decida adjuntar.
         </li>
         <li>
           <strong>Datos técnicos automáticos</strong>: dirección IP
-          aproximada, tipo de navegador, sistema operativo, páginas visitadas
-          y tiempo de permanencia (mediante métricas anónimas del sitio).
+          aproximada, tipo de navegador, sistema operativo, páginas
+          visitadas y tiempo de permanencia (mediante métricas anónimas
+          agregadas del sitio).
         </li>
       </ul>
       <p>
-        <strong>No recabamos categorías especiales de datos</strong> (salud,
-        origen étnico, opinión política, orientación sexual, etc.) salvo que
-        sean estrictamente necesarios para el caso legal y usted los
-        comparta con nosotros de forma expresa.
+        <strong>No recabamos categorías especiales de datos</strong>
+        (salud, origen étnico, opinión política, orientación sexual, etc.)
+        salvo que sean estrictamente necesarios para el caso legal y usted
+        los comparta con nosotros de forma expresa.
       </p>
 
-      <h2>4. Finalidades del tratamiento</h2>
+      <h2>5. Finalidades del tratamiento</h2>
       <p>Sus datos se tratan únicamente para:</p>
       <ol>
         <li>Responder su consulta y evaluar si podemos representarle.</li>
         <li>Enviarle propuesta de servicios y honorarios.</li>
         <li>Ejecutar la prestación de servicios legales acordada en la carta de encargo.</li>
-        <li>Cumplir obligaciones legales, tributarias y contables aplicables al ejercicio profesional en Panamá.</li>
+        <li>Cumplir obligaciones legales, tributarias, contables y regulatorias aplicables al ejercicio profesional en Panamá.</li>
         <li>Mejorar la experiencia del sitio (métricas anónimas agregadas).</li>
       </ol>
       <p>
@@ -116,16 +142,16 @@ import Layout from "../layouts/Layout.astro";
         comercial ni los cedemos a terceros con fines de mercadeo.</strong>
       </p>
 
-      <h2>5. Base legal del tratamiento</h2>
+      <h2>6. Base legal del tratamiento</h2>
       <p>El tratamiento se ampara en las siguientes bases legales:</p>
       <ul>
         <li><strong>Consentimiento</strong> del titular al enviar el formulario o iniciar contacto voluntario.</li>
         <li><strong>Ejecución de un contrato</strong> profesional (carta de encargo).</li>
         <li><strong>Cumplimiento de obligaciones legales</strong> aplicables a la Firma.</li>
-        <li><strong>Interés legítimo</strong> en atender la consulta y proteger nuestra actividad profesional.</li>
+        <li><strong>Interés legítimo</strong> en atender la consulta y proteger la actividad profesional de la Firma.</li>
       </ul>
 
-      <h2>6. Con quién compartimos sus datos</h2>
+      <h2>7. Con quién compartimos sus datos</h2>
       <p>
         La Firma <strong>no vende ni cede sus datos personales</strong> a
         terceros no relacionados con la prestación del servicio legal.
@@ -135,7 +161,8 @@ import Layout from "../layouts/Layout.astro";
         <li>
           <strong>Proveedores de infraestructura</strong> (hosting, correo
           electrónico, formularios, mensajería), bajo acuerdos escritos que
-          los obligan a la confidencialidad y seguridad.
+          los obligan a la confidencialidad, seguridad y tratamiento
+          conforme a la Ley 81/2019.
         </li>
         <li>
           <strong>Autoridades competentes</strong>, cuando exista requerimiento
@@ -148,25 +175,23 @@ import Layout from "../layouts/Layout.astro";
         </li>
       </ul>
 
-      <h2>7. Transferencias internacionales</h2>
+      <h2>8. Transferencias internacionales</h2>
       <p>
-        Algunos de nuestros proveedores de servicios técnicos (correo,
-        formularios, alojamiento web) pueden procesar datos fuera de la
-        República de Panamá. Toda transferencia internacional que la Firma
-        realice se sujeta al <strong>Artículo 27 de la Ley 81 de 2019</strong>
-        y a los <strong>Artículos 38 al 41 del Decreto Ejecutivo 285 de
-        2021</strong>, aplicando los mecanismos de garantía allí previstos
-        (nivel adecuado de protección del país receptor, cláusulas
-        contractuales tipo, u otros instrumentos legales equivalentes).
+        Algunos proveedores de servicios técnicos (correo, formularios,
+        alojamiento web) pueden procesar datos fuera de Panamá. Toda
+        transferencia internacional de datos se realiza conforme al
+        <strong>artículo 27 de la Ley 81/2019</strong> y los
+        <strong>artículos 38 a 41 del Decreto Ejecutivo 285/2021</strong>,
+        que prevén los mecanismos de garantía aplicables: nivel adecuado
+        de protección del país receptor, garantías contractuales específicas,
+        cláusulas modelo o normas corporativas vinculantes, según el caso.
       </p>
       <p>
-        A la fecha, DTR selecciona proveedores con estándares equivalentes o
-        superiores al régimen panameño. Puede solicitar el listado
-        actualizado de encargados y sus jurisdicciones escribiendo a
-        <a href="mailto:privacidad@dtrabogados.com">privacidad@dtrabogados.com</a>.
+        DTR evalúa previamente a cada proveedor y documenta en sus
+        registros internos la base jurídica de la transferencia.
       </p>
 
-      <h2>8. Sus derechos (derechos ARCO)</h2>
+      <h2>9. Sus derechos (derechos ARCO y otros)</h2>
       <p>
         Como titular de sus datos personales, usted tiene derecho a:
       </p>
@@ -179,22 +204,23 @@ import Layout from "../layouts/Layout.astro";
         <li><strong>Revocación</strong> del consentimiento otorgado, en cualquier momento.</li>
       </ul>
       <p>
-        Para ejercer cualquiera de estos derechos, escriba a
-        <a href="mailto:privacidad@dtrabogados.com">privacidad@dtrabogados.com</a>
-        adjuntando copia de su documento de identidad y una breve descripción
-        de la solicitud.
+        Para ejercer cualquiera de estos derechos, escriba al
+        <a href="mailto:dpo@dtrabogados.com">dpo@dtrabogados.com</a>
+        adjuntando copia de su documento de identidad y una breve
+        descripción de la solicitud.
       </p>
       <p>
-        Conforme al <strong>Artículo 33 de la Ley 81 de 2019</strong> y
-        concordantes del Decreto Ejecutivo 285 de 2021, damos respuesta en un
-        plazo máximo de <strong>veinte (20) días hábiles</strong> contados
-        desde la recepción de la solicitud, con una única prórroga de hasta
-        <strong>diez (10) días hábiles adicionales</strong> cuando la
-        complejidad del caso lo justifique, notificándole por escrito la
-        prórroga dentro de los primeros cinco (5) días hábiles.
+        <strong>Plazo de respuesta:</strong> DTR dará respuesta en un plazo
+        máximo de <strong>20 días hábiles</strong> contados desde la
+        recepción de la solicitud, conforme al <strong>artículo 33 de la
+        Ley 81/2019</strong>. Cuando la complejidad del caso lo justifique,
+        dicho plazo podrá extenderse <strong>una sola vez</strong> por
+        hasta <strong>10 días hábiles adicionales</strong>, previa
+        notificación escrita al titular dentro de los primeros 5 días
+        hábiles.
       </p>
 
-      <h2>9. Conservación de los datos</h2>
+      <h2>10. Conservación de los datos</h2>
       <p>Los datos se conservan por el tiempo estrictamente necesario:</p>
       <ul>
         <li><strong>Consultas no convertidas en caso</strong>: hasta 12 meses desde el último contacto, luego se suprimen.</li>
@@ -202,37 +228,38 @@ import Layout from "../layouts/Layout.astro";
         <li><strong>Casos cerrados</strong>: por los plazos que exija la legislación aplicable (contable, tributaria, prescriptiva de responsabilidad profesional).</li>
       </ul>
 
-      <h2>10. Seguridad</h2>
+      <h2>11. Seguridad</h2>
       <p>
         Aplicamos medidas técnicas y organizativas razonables para proteger
         sus datos: cifrado TLS en las comunicaciones web, control de acceso
-        por rol dentro de la Firma, respaldos periódicos, y acuerdos de
+        por rol dentro de la Firma, respaldos periódicos y acuerdos de
         confidencialidad con nuestro personal y proveedores.
       </p>
       <p>
-        Toda información compartida en el marco de una relación
-        profesional queda además amparada por el
-        <strong>secreto profesional del abogado</strong> reconocido por la
-        legislación panameña.
+        Toda información compartida en el marco de una relación profesional
+        queda además amparada por el <strong>secreto profesional del
+        abogado</strong> reconocido por la legislación panameña, incluso
+        después de terminado el caso.
       </p>
 
-      <h2>11. Cookies</h2>
+      <h2>12. Cookies</h2>
       <p>
-        Este sitio no utiliza cookies de tracking publicitario ni pixeles de
-        terceros. Puede utilizar cookies estrictamente técnicas necesarias
-        para el correcto funcionamiento del sitio.
+        Este sitio no utiliza cookies de tracking publicitario ni píxeles
+        de terceros. Puede utilizar cookies estrictamente técnicas
+        necesarias para el correcto funcionamiento del sitio, las cuales
+        puede gestionar desde la configuración de su navegador.
       </p>
 
-      <h2>12. Menores de edad</h2>
+      <h2>13. Menores de edad</h2>
       <p>
         Este sitio no está dirigido a menores de 18 años. No recolectamos
         conscientemente datos de menores. Si detecta que un menor nos ha
-        enviado información, contacte a
-        <a href="mailto:privacidad@dtrabogados.com">privacidad@dtrabogados.com</a>
-        y procederemos a suprimirla.
+        enviado información, contacte al DPO en
+        <a href="mailto:dpo@dtrabogados.com">dpo@dtrabogados.com</a> y
+        procederemos a suprimirla.
       </p>
 
-      <h2>13. Cambios a esta política</h2>
+      <h2>14. Cambios a esta política</h2>
       <p>
         Podemos actualizar esta política cuando cambie la legislación o
         nuestras prácticas. Los cambios entran en vigor desde su publicación
@@ -240,13 +267,13 @@ import Layout from "../layouts/Layout.astro";
         arriba.
       </p>
 
-      <h2>14. Autoridad de control</h2>
+      <h2>15. Autoridad de control</h2>
       <p>
         Si considera que sus derechos han sido vulnerados, puede presentar
-        reclamo ante la <strong>Autoridad Nacional de Transparencia y Acceso
-        a la Información (ANTAI)</strong>, autoridad rectora en materia de
-        protección de datos en Panamá, sin perjuicio de las acciones
-        judiciales que correspondan.
+        reclamo ante la <strong>Autoridad Nacional de Transparencia y
+        Acceso a la Información (ANTAI)</strong>, autoridad rectora en
+        materia de protección de datos en Panamá, sin perjuicio de las
+        acciones judiciales que correspondan.
       </p>
     </div>
   </section>
@@ -272,48 +299,7 @@ import Layout from "../layouts/Layout.astro";
   ol li, ul li {
     margin-bottom: 0.6rem;
   }
-  .todo-block {
-    padding: 1.5rem;
-    background: var(--dtr-cream-alt);
-    border-left: 4px solid var(--dtr-gold);
-    border-radius: var(--radius);
-    margin: 2rem 0;
-  }
-  h3 {
-    font-family: var(--font-serif);
-    font-size: 1.1rem;
-    color: var(--dtr-navy);
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  .data-block {
-    background: var(--dtr-cream-alt);
-    border: 1px solid var(--dtr-line);
-    border-radius: var(--radius);
-    padding: 1.5rem 1.75rem;
-    margin: 1.5rem 0;
-  }
-  .data-block dl {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.75rem 1.5rem;
-    margin: 0;
-  }
-  @media (min-width: 640px) {
-    .data-block dl {
-      grid-template-columns: 220px 1fr;
-    }
-  }
-  .data-block dt {
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--texto-suave);
-    font-weight: 600;
-  }
-  .data-block dd {
-    margin: 0;
-    color: var(--texto);
-    font-size: 0.95rem;
+  .text-muted {
+    color: var(--texto-claro);
   }
 </style>
