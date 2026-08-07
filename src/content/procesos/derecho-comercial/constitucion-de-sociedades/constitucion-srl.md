@@ -24,13 +24,13 @@ requisitos_persona_natural:
   - "Para extranjeros: prueba de domicilio en Panamá o en país de origen"
 requisitos_empresa:
   - "No aplica — es proceso de creación"
-plazos_estimados:
+plazos:
   tramite: "5 a 10 días hábiles una vez recibida la documentación completa"
   vigencia: "Duración indefinida (perpetua) salvo pacto en contrario"
   renovacion: "Renovación anual ante Registro Público (Aviso de Operación + Paz y Salvo DGI)"
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021 del Colegio Nacional de Abogados. Cotizamos por caso considerando complejidad (número de socios, capital, distribución de cuotas)."
 tasas_oficiales: "**Desde $1,400 USD** (primer año, todo incluido: honorarios DTR, agente residente 12 meses, notaría, inscripción Registro Público, Aviso de Operaciones, RUBF, libro de cuotas). No incluye: Tasa Única anual DGI $300 desde año 2, apertura cuenta bancaria corporativa, ni honorarios por modificaciones posteriores."
-alertas_legales:
+alertas:
   - "La S.R.L. requiere MÍNIMO 2 socios; si queda un solo socio, la sociedad debe disolverse o transformarse en S.A. (Art. 14 Ley 4/2009)."
   - "Las cuotas de participación no son libremente transferibles: la Cesión requiere consentimiento de la mayoría de los demás socios (Art. 22 Ley 4/2009)."
   - "La S.R.L. NO tiene junta directiva obligatoria — la administración puede ejercerse por uno o más gerentes designados en el Contrato Social."
