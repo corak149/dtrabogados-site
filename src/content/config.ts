@@ -49,6 +49,15 @@ const procesos = defineCollection({
     honorarios_ref: z.string().optional(),            // texto con referencia al Acuerdo CNA 609-A
     tasas_oficiales: z.string().optional(),           // ej: "SNM B/.250 + MITRADEL B/.300"
 
+    // === Tiers (para retainer y planes escalonados) — Sprint 2 día 4 ===
+    // Cuando se define, la plantilla renderiza un sidebar izquierdo con los tiers
+    // y un CTA a WhatsApp para elegir el plan.
+    tiers: z.array(z.object({
+      nombre: z.string(),                             // "Micro empresas"
+      precio: z.string(),                             // "desde $300/mes"
+      resumen: z.string().optional(),                 // "4h · KYC · recordatorios"
+    })).optional(),
+
     // === Alertas operativas (NUEVO Sprint 1c) ===
     alertas: z.array(z.string()).default([]),         // callout amarillo, va antes de "Dirigido a"
     notas_firma: z.string().optional(),               // párrafo libre "Notas de la Firma", tipografía serif
