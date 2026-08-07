@@ -32,7 +32,7 @@ plazos:
   vigencia: "La sociedad se constituye por duración indefinida (perpetua) salvo pacto en contrario"
   renovacion: "Renovación anual ante Registro Público (Aviso de Operación + Paz y Salvo DGI)"
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021 del Colegio Nacional de Abogados. Cotizamos por caso considerando complejidad (estructura societaria, número de accionistas, capital, junta directiva)."
-tasas_oficiales: "**Desde $1,700 USD** (primer año, todo incluido: honorarios DTR, agente residente 12 meses, notaría, inscripción Registro Público, Aviso de Operaciones, RUBF, libros corporativos, certificado de Good Standing). No incluye: Tasa Única anual DGI $300 desde año 2, apertura cuenta bancaria corporativa, ni honorarios por nominees si se requieren."
+tasas_oficiales: "**Desde $1,700 USD** (primer año, todo incluido: honorarios DTR, agente residente 12 meses, notaría, inscripción Registro Público, solicitud de RUC ante DGI, Aviso de Operaciones ante Panamá Emprende, RUBF, libros corporativos, certificado de Good Standing). No incluye: Tasa Única anual DGI $300 desde año 2, apertura cuenta bancaria corporativa, ni honorarios por nominees si se requieren."
 alertas:
   - "El capital autorizado NO es necesario desembolsarlo en su totalidad; el capital suscrito y pagado es el mínimo que se desembolsa al inicio (típicamente USD $10,000 autorizado / USD $100 suscrito)."
   - "Toda S.A. panameña requiere mínimo 3 dignatarios (Presidente, Secretario, Tesorero) y un Agente Residente (abogado idóneo)."
@@ -47,9 +47,10 @@ notas_firma: |
   1. **Reserva de nombre** y redacción del Pacto Social.
   2. **Protocolización notarial** de la escritura pública.
   3. **Inscripción en el Registro Público de Panamá**.
-  4. **Aviso de Operaciones** ante Panamá Emprende (genera RUC automático).
-  5. **Registro de Beneficiario Final** ante la SSNF.
-  6. **Emisión de libros corporativos** y certificados de acciones.
+  4. **Inscripción ante la DGI y solicitud del RUC** (Registro Único de Contribuyentes).
+  5. **Aviso de Operaciones** ante Panamá Emprende.
+  6. **Registro de Beneficiario Final** ante la SSNF.
+  7. **Emisión de libros corporativos** y certificados de acciones.
 
   **Casos donde ESTA VÍA NO es la correcta:**
   - Si necesita una sociedad con menos formalidades (considere S.R.L.).
