@@ -1,6 +1,6 @@
 ---
-titulo: Visa de trabajadores de espectáculos
-descripcion: "Visa para artistas, deportistas y trabajadores del espectaculo. Maximo 9 meses NO prorrogables. Solo la empresa contratante puede solicitarla."
+titulo: "Visa de Trabajadores de Espectáculos"
+descripcion: "Visa de Trabajadores de Espectáculos Públicos. Tasa SNM B/.250 + tasas consulares (orientativo, verificar SNM)."
 resumen: Visa para artistas, deportistas y trabajadores del espectáculo que vienen a Panamá para una presentación o temporada específica. Máximo 9 meses, no prorrogable.
 decreto_principal: "Decreto Ejecutivo 320 de 2008, artículo 35 (trabajadores de espectáculos)"
 categoria_migratoria: "No residente — trabajador de espectáculos"

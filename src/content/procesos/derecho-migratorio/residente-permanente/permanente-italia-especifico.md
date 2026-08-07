@@ -1,8 +1,8 @@
 ---
-titulo: Residente permanente Italia y países específicos
+titulo: "Residente permanente por Tratado Panamá-Italia o Países Específicos/Amigos"
 descripcion: "Residencia permanente para nacionales de paises con relaciones amistosas especificas con Panama. Lista cerrada. Provisional 2 anos. DL 3/2008."
-resumen: Residencia permanente para nacionales de países específicos que mantienen relaciones amistosas con Panamá. Lista cerrada. Provisional 2 años primero, luego permanente.
-decreto_principal: "Decreto Ejecutivo 320 de 2008 + Decreto Ejecutivo (régimen de Países Específicos)"
+resumen: "Residencia permanente bajo dos regímenes: (a) Tratado Panamá-Italia (PRP-CPI, 810.4.1.02) para nacionales italianos; (b) Países Específicos/Amigos (PPT-PE, 810.4.1.03) creado por DE 197/2021 (modifica DE 416/2012). Ambos permiten residencia permanente directa."
+decreto_principal: "Decreto Ejecutivo 320 de 2008 + Decreto Ejecutivo 197 de 2021 (Países Específicos/Amigos) + DL 3 de 2008"
 categoria_migratoria: "Residente permanente por razones demográficas — países específicos"
 base_legal:
   - Decreto Ley 3 de 22 de febrero de 2008, régimen migratorio de Panamá

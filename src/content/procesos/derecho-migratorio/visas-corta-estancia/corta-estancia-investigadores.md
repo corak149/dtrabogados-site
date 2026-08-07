@@ -1,6 +1,6 @@
 ---
-titulo: Corta estancia para investigadores
-descripcion: "Visa de corta estancia para investigadores y cientificos con convenio formal. Sin animo de lucro. Intercambios academicos. DE 320/2008 art. 50."
+titulo: "Visa de Corta Estancia — Investigadores y Científicos"
+descripcion: "Visa de Corta Estancia — Investigadores y Científicos. Tasa SNM B/.250 + tasa consular (orientativo, verificar SNM)."
 resumen: Visa para investigadores, científicos y académicos que vienen a Panamá por intercambios académicos, misiones científicas o pasantías, siempre con convenio formal con institución panameña.
 decreto_principal: "Decreto Ejecutivo 320 de 2008, artículo 50 (corta estancia para investigadores y científicos)"
 categoria_migratoria: "No residente — investigador o científico"

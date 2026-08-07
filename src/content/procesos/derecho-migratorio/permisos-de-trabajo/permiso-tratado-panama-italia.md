@@ -31,7 +31,7 @@ plazos:
   vigencia: "Alineado al contrato de trabajo"
   renovacion: "Renovable mientras se mantenga la relación laboral."
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021. Cotizamos según complejidad."
-tasas_oficiales: "Tasa MITRADEL B/.300 + tasa SNM B/.250."
+tasas_oficiales: "Tasa MITRADEL $500.00 primera vez o renovación + $30.00 duplicados (TIPO 1E Tratado Panamá-Italia - Tabla oficial MITRADEL). Si requiere residencia SNM asociada: B/.250 Tesoro + B/.800 SNM = B/.1,050."
 alertas:
   - "EXCLUSIVO para nacionales italianos. Otros nacionales deben usar las vías generales."
   - "El Tratado Panamá-Italia es la base legal. Su modificación o denuncia afectaría a esta categoría."

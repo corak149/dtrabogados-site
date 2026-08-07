@@ -1,6 +1,6 @@
 ---
-titulo: Visa de marino
-descripcion: "Visa para marinos extranjeros embarcados como tripulantes en naves con licencia internacional. Por duración de embarque. Base: DE 320/2008 art. 27."
+titulo: "Visa de Marino"
+descripcion: "Visa de Marino por duración del embarque. Tasas variables según país de origen y duración (orientativo, verificar SNM)."
 resumen: Visa simplificada para marinos profesionales extranjeros que se embarcarán como tripulantes en naves con licencia de navegación internacional. Vigente por la duración del embarque.
 decreto_principal: "Decreto Ejecutivo 320 de 2008, artículo 27 (modificado por Decreto 26/2009) + Ley 38 de 2000"
 categoria_migratoria: "No residente — marino tripulante"

@@ -28,7 +28,7 @@ plazos:
   vigencia: "Alineado a la nueva categoría"
   renovacion: "Alineado a la nueva categoría."
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021. Cotizamos según complejidad del cambio."
-tasas_oficiales: "Tasa SNM B/.250 + tasas específicas del nuevo trámite."
+tasas_oficiales: "Tasa según Resolución SNM vigente (no indexada en vault 4.14-FIX); consultar SNM al momento de la solicitud. Tasas del nuevo trámite aplican según corresponda."
 alertas:
   - "El cambio de categoría NO es automático. Requiere solicitud formal y aprobación del SNM."
   - "El plazo para solicitar cambio desde turista es ANTES del vencimiento de la visa (10 días hábiles)."
@@ -53,7 +53,7 @@ notas_firma: |
   procede. Algunos cambios requieren salir del país y
   regresar con la nueva visa.
 aprobado_por: "Danna (CLO), 08.08.2026"
-revisar_con: "800-Knowledge-PA/810-Migracion/813-Bloque-3-Permisos-de-Trabajo-y-Tramites/813.9-Tramites-SNMT/810-cambio-residencia/ (o equivalente)"
+revisar_con: "800-Knowledge-PA/810-Migracion/813-Bloque-3-Permisos-de-Trabajo-y-Tramites/813.9-Tramites-Administrativos-SNMT/810-cambio-de-residencia/810-cambio-de-residencia-RESUMEN.md"
 ultima_actualizacion: 8 de agosto de 2026
 ---
 

@@ -54,7 +54,7 @@ notas_firma: |
   procede traspaso. La comunicación debe ser directa
   cliente-abogado.
 aprobado_por: "Danna (CLO), 08.08.2026"
-revisar_con: "800-Knowledge-PA/810-Migracion/813-Bloque-3-Permisos-de-Trabajo-y-Tramites/813.9-Tramites-SNMT/810-traspaso-registro/"
+revisar_con: "800-Knowledge-PA/810-Migracion/813-Bloque-3-Permisos-de-Trabajo-y-Tramites/813.9-Tramites-Administrativos-SNMT/810-traspaso-registro/810-traspaso-registro-RESUMEN.md"
 ultima_actualizacion: 8 de agosto de 2026
 ---
 

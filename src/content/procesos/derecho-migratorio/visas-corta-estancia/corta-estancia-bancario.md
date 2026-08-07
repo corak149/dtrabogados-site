@@ -1,6 +1,6 @@
 ---
-titulo: Corta estancia sector bancario
-descripcion: "Visa de corta estancia para personal de bancos con licencia general o internacional. Cubre multiples actividades bancarias. DE 320/2008 art. 59."
+titulo: "Visa de Corta Estancia — Sector Bancario"
+descripcion: "Visa de Corta Estancia — Sector Bancario. Tasa SNM B/.250 + tasa consular (orientativo, verificar SNM)."
 resumen: Visa para personal de instituciones bancarias con licencia general, internacional o de representación, que vienen a Panamá por actividades bancarias específicas como entrenamientos, reuniones, auditorías o seminarios.
 decreto_principal: "Decreto Ejecutivo 320 de 2008, artículo 59 (régimen bancario)"
 categoria_migratoria: "No residente — personal bancario internacional"

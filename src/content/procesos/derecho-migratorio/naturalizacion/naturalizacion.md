@@ -33,7 +33,7 @@ plazos:
   vigencia: "Una vez otorgada, la nacionalidad es irrevocable"
   renovacion: "No requiere renovación (es irrevocable)."
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021. Cotizamos según complejidad del expediente."
-tasas_oficiales: "Tasa Tribunal Electoral + tasas del Registro Civil."
+tasas_oficiales: "Timbres fiscales: B/.8.00 declaración jurada, B/.2.00 copias autenticadas, B/.3.00 certificados de matrimonio/nacimiento, B/.8.00 certificación de estatus migratorio. Tasa Tribunal Electoral + tasas del Registro Civil aplican al finalizar."
 alertas:
   - "La naturalización es IRREVOCABLE una vez otorgada. La decisión debe ser meditada."
   - "El requisito principal es la RESIDENCIA PERMANENTE previa, NO la residencia temporal."

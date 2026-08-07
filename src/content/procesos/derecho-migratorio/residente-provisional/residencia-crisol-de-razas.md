@@ -1,5 +1,5 @@
 ---
-titulo: Residencia bajo Decreto Crisol de Razas
+titulo: "Regularización Migratoria Extraordinaria (Crisol de Razas)"
 descripcion: "Residencia temporal bajo Decreto Crisol de Razas. Regularizacion migratoria extraordinaria para extranjeros con estadia previa al DE 235/2021."
 resumen: Residencia temporal bajo el Decreto 235/2021 (Crisol de Razas), proceso de regularización migratoria extraordinaria para extranjeros en Panamá antes de la fecha de corte. Conduce a permanencia.
 decreto_principal: "Decreto Ejecutivo 235 de 2021 (Crisol de Razas — regularización migratoria extraordinaria)"
@@ -33,7 +33,7 @@ plazos:
   vigencia: "Permiso de residencia provisional por 10 años"
   renovacion: "Al cabo del periodo, puede solicitar residencia permanente si cumple requisitos."
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021. Cotizamos según situación migratoria del cliente y complejidad del expediente."
-tasas_oficiales: "Tasas variables según el proceso. Consultar SNMT al momento de la solicitud."
+tasas_oficiales: "B/.250 Tesoro (req. 7) + B/.800 SNM repatriación (req. 8) + B/.250 Tesoro garantía (req. 9) + B/.50 carné. Total primera solicitud: B/.1,350 (Art. 8 DE 235/2021)."
 alertas:
   - "Esta categoría aplica SOLO a extranjeros con estadía previa a la fecha de corte del DE 235/2021. Verificar elegibilidad caso por caso."
   - "Es un proceso de regularización, NO una vía para nuevas inmigraciones. Quien ingrese al país después del DE 235/2021 no aplica."

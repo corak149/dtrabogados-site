@@ -1,6 +1,6 @@
 ---
-titulo: Visa transeúnte artistas (versión 2)
-descripcion: "Visa VIGENTE para artistas y trabajadores del espectáculo con proyecto cultural específico. 1 año prorrogable. Base legal: DE 320/2008 art. 39 + DE 547/2013."
+titulo: "Visa Transeúnte — Artistas (versión 2 actualizada)"
+descripcion: "Visa Transeúnte — Artistas (versión 2 actualizada). Tasa SNM B/.250 + tasa MITRADEL B/.300 cuando aplique (orientativo, verificar SNM)."
 resumen: Versión VIGENTE (preferida por SNM) de la visa para artistas con proyecto cultural específico. Reemplaza a la versión 1. 1 año, prorrogable anualmente hasta 5 veces.
 decreto_principal: "Decreto Ejecutivo 320 de 2008, artículo 39 (modificado por Decreto 547/2013)"
 categoria_migratoria: "No residente — trabajador artístico con proyecto"

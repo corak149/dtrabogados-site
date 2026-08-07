@@ -32,7 +32,7 @@ plazos:
   vigencia: "Alineado al contrato de trabajo"
   renovacion: "Renovable con mantenimiento de la relación laboral."
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021. Cotizamos según país de origen y complejidad."
-tasas_oficiales: "Tasa MITRADEL B/.300 + tasa SNM B/.250."
+tasas_oficiales: "Tasa MITRADEL $250.00 primera vez o renovación + $30.00 duplicados (TIPO 4A Países específicos / inversión - Tabla oficial MITRADEL). Si requiere residencia SNM asociada: B/.250 Tesoro + B/.800 SNM = B/.1,050."
 alertas:
   - "La lista de PAÍSES AMIGOS es CERRADA. Verificar elegibilidad del país de origen en el SNM antes de solicitar."
   - "Deben demostrarse RELACIONES amistosas, profesionales, económicas o de inversión con Panamá."

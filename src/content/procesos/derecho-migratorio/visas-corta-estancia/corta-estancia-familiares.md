@@ -1,6 +1,6 @@
 ---
-titulo: Corta estancia para familiares
-descripcion: "Visa de corta estancia para familiares de nacionales o residentes en Panama (conyuge, parientes hasta 2 grado de consanguinidad). DE 320/2008 art. 48."
+titulo: "Visa de Corta Estancia — Familiares"
+descripcion: "Visa de Corta Estancia — Familiares. Tasa SNM B/.250 + tasa consular (orientativo, verificar SNM)."
 resumen: Visa de corta estancia para cónyuge, parientes consanguíneos en línea recta (padres, hijos, abuelos, nietos) o colaterales hasta 2° grado (hermanos) de nacional panameño o residente temporal o permanente.
 decreto_principal: "Decreto Ejecutivo 320 de 2008, artículo 48 (régimen de corta estancia para familiares)"
 categoria_migratoria: "No residente — familiar de nacional o residente"

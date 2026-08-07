@@ -33,7 +33,7 @@ plazos:
   vigencia: "Alineado al contrato SEM"
   renovacion: "Renovable mientras se mantenga la condición SEM y el contrato."
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021. Cotizamos según categoría."
-tasas_oficiales: "Tasa MITRADEL B/.300 + tasa SNM B/.250."
+tasas_oficiales: "Régimen SEM Ley 159/2019 — sin entrada TIPO propia en Tabla MITRADEL. Aplican tasas según subcategoría del ejecutivo (TIPO 2A ordinario $80.00 / 2B técnico $80.00 / 2C confianza $80.00) + $30.00 duplicados. Residencia SNM asociada: B/.250 Tesoro + B/.800 SNM = B/.1,050."
 alertas:
   - "La empresa DEBE tener Resolución SEM vigente. Sin esta calificación, solicitud rechazada."
   - "El régimen SEM ofrece cuota preferencial de extranjeros respecto al régimen general."

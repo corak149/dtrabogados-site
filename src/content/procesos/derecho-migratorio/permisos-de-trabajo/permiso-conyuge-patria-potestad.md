@@ -34,7 +34,7 @@ plazos:
   vigencia: "Alineado al contrato de trabajo"
   renovacion: "Renovable mientras se mantenga la patria potestad y la relación laboral."
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021. Cotizamos según complejidad."
-tasas_oficiales: "Tasa MITRADEL B/.300 + tasa SNM B/.250."
+tasas_oficiales: "Tasa MITRADEL $50.00 primera vez o renovación + $30.00 duplicados (TIPO 1B-2 Patria potestad por divorcio / 1B-3 Patria potestad por viudez - Tabla oficial MITRADEL). Si requiere residencia SNM asociada: B/.250 Tesoro + B/.800 SNM = B/.1,050."
 alertas:
   - "Esta categoría requiere PATRIA POTESTAD acreditada judicialmente sobre hijo de cónyuge panameño."
   - "La resolución judicial de patria potestad debe estar apostillada si proviene del exterior."

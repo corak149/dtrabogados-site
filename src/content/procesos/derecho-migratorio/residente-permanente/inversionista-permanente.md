@@ -2,7 +2,7 @@
 titulo: Residencia permanente como inversionista calificado
 descripcion: "Residencia permanente como inversionista calificado. Inversion minima B/.300,000, mantenimiento 5 anos. Ventanilla especial 30 dias. DE 722/2020."
 resumen: Residencia permanente por inversión calificada. Monto mínimo B/.300,000 (reducido de B/.500K original). Mantenimiento obligatorio 5 años. Ventanilla especial con resolución en 30 días hábiles.
-decreto_principal: "Decreto Ejecutivo 722 de 2020 + Decreto Ejecutivo 193 de 2024 (reducción a B/.300K)"
+decreto_principal: "Decreto Ejecutivo 722 de 15 de octubre de 2020 (Gaceta Oficial 29136) + Decreto Ejecutivo 193 de 2024 (modifica régimen de Inversionista Calificado)"
 categoria_migratoria: "Residente permanente por razones económicas — inversionista calificado"
 base_legal:
   - Decreto Ley 3 de 22 de febrero de 2008, régimen migratorio de Panamá
@@ -35,7 +35,7 @@ plazos:
   vigencia: "Residencia permanente (sin caducidad mientras se mantenga la inversión)"
   renovacion: "Mantenimiento obligatorio de la inversión por 5 años. Si cesa antes, se puede cancelar el permiso."
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021. Cotizamos según tipo de inversión y complejidad."
-tasas_oficiales: "Tasa SNM por residente permanente + tasas registrales + peritaje CPA + MICI + honorarios notariales."
+tasas_oficiales: "Tasa MITRADEL/ Tesoro + B/.5,000 SNM (Art. 4 DE 193/2024) + B/.1,000 por dependiente. Total primera solicitud: B/.5,000 Tesoro + B/.5,000 SNM + B/.1,000 por dependiente."
 alertas:
   - "Inversión mínima B/.300,000.00 (definitivo tras DE 193/2024). Fuente EXTRANJERA obligatoria."
   - "Mantenimiento obligatorio 5 años. Venta o disposición antes = cancelación del permiso."
@@ -63,7 +63,7 @@ notas_firma: |
   rentista permanente (USD 1,000/mes) o jubilado permanente
   (pensión del exterior).
 aprobado_por: "Danna (CLO), 08.08.2026"
-revisar_con: "800-Knowledge-PA/810-Migracion/811-Bloque-1-Normativa-y-Requisitos/811.1-Normativa-Matriz/810-decreto-ejecutivo-722-2020/810-decreto-ejecutivo-722-2020-RESUMEN.md"
+revisar_con: "800-Knowledge-PA/810-Migracion/811-Bloque-1-Normativa-y-Requisitos/811.7-Requisitos-SNM/811.7.2-Requisitos-Residente-Permanente/810.4.1.01-inversionista-calificado-RESUMEN.md + DE 193/2024 (modificaciones al régimen)"
 ultima_actualizacion: 8 de agosto de 2026
 ---
 

@@ -51,7 +51,7 @@ notas_firma: |
   movimiento es rutinario y se registró correctamente, no
   requiere intervención legal.
 aprobado_por: "Danna (CLO), 08.08.2026"
-revisar_con: "800-Knowledge-PA/810-Migracion/813-Bloque-3-Permisos-de-Trabajo-y-Tramites/813.9-Tramites-SNMT/810-movimiento-migratorio/"
+revisar_con: "800-Knowledge-PA/810-Migracion/813-Bloque-3-Permisos-de-Trabajo-y-Tramites/813.9-Tramites-Administrativos-SNMT/810-movimiento-migratorio-adulto/810-movimiento-migratorio-adulto-RESUMEN.md"
 ultima_actualizacion: 8 de agosto de 2026
 ---
 

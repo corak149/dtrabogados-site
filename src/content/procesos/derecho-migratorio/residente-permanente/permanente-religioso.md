@@ -1,8 +1,8 @@
 ---
-titulo: Residente permanente religioso
+titulo: "Residente permanente religioso (Católico/Ortodoxo u Otras Denominaciones)"
 descripcion: "Residencia permanente para ministros religiosos, sacerdotes ordenados y miembros de comunidades religiosas con asignacion pastoral estable en Panama."
 resumen: Residencia permanente para ministros religiosos, sacerdotes ordenados y miembros de comunidades religiosas con asignación pastoral estable en Panamá.
-decreto_principal: "Decreto Ejecutivo 320 de 2008 + Decreto Ejecutivo 197 de 2021 (categoría religiosa)"
+decreto_principal: "Decreto Ejecutivo 320 de 2008 (Arts. régimen religioso) + DE 6/2023 (TIPO 1D reagrupación religiosa)"
 categoria_migratoria: "Residente permanente por razones religiosas"
 base_legal:
   - Decreto Ley 3 de 22 de febrero de 2008, régimen migratorio de Panamá

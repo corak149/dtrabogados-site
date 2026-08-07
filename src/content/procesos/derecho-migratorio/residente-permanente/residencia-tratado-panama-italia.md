@@ -3,7 +3,7 @@ titulo: Residencia bajo Tratado Panamá-Italia
 descripcion: "Residencia temporal para nacionales italianos amparados en el Tratado Panamá-Italia. Vigencia por 1 año prorrogable. Base legal: DE 67/2013."
 resumen: Residencia temporal para nacionales italianos bajo el Tratado de Amistad, Comercio y Navegación Panamá-Italia. Facilita la estadía legal en Panamá para italianos con actividad económica o profesional.
 decreto_principal: "Decreto Ejecutivo 67 de 2013 (implementación Tratado Panamá-Italia) + Decreto Ley 3 de 2008"
-categoria_migratoria: "Residente temporal por Tratado — Panamá-Italia"
+categoria_migratoria: "Residente permanente por Tratado Panamá-Italia"
 base_legal:
   - Decreto Ley 3 de 22 de febrero de 2008, régimen migratorio de Panamá
   - Decreto Ejecutivo 67 de 2013, implementación del Tratado Panamá-Italia

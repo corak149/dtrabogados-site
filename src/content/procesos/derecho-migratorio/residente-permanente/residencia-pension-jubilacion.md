@@ -3,7 +3,7 @@ titulo: Residencia por pensión o jubilación
 descripcion: "Residencia temporal por pension o jubilacion del exterior con ingresos vitalicios >=B/.1,000 mensuales. NO permite trabajo remunerado. DE 722/2020."
 resumen: Es la vía más común para extranjeros retirados o pensionados que quieren vivir en Panamá. Requiere demostrar un ingreso mensual vitalicio (no retornable) de al menos USD 1,000, idealmente USD 2,000 si incluye dependientes.
 decreto_principal: "Decreto Ejecutivo 722 de 17 de septiembre de 2020 (requisitos de inversión para residencia)"
-categoria_migratoria: "Residente provisional por pensión o jubilación"
+categoria_migratoria: "Residente permanente por pensión o jubilación"
 base_legal:
   - Decreto Ley 3 de 22 de febrero de 2008, arts. 17-19 (residencia por razones de inversión)
   - Decreto Ejecutivo 320 de 2008, arts. 38-42 (reglamento de residencia por inversión)
