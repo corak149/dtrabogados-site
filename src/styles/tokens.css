@@ -42,7 +42,7 @@
 
   /* --- Layout — sistema de 3 escalas de ancho (Sprint 1c día 2) --- */
   --max-prose: 720px;          /* legales, blog, texto largo — 60-80 char/linea */
-  --max-content: 1040px;       /* hero, áreas, procesos, secciones estándar */
+  --max-content: 1120px;       /* hero, áreas, procesos, secciones estándar */
   --max-wide: 1240px;          /* grids amplios, catálogos, 3+ cards */
 
   /* alias legacy — mantener por retro-compatibilidad */
