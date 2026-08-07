@@ -72,11 +72,16 @@ import { AREAS } from "../data/areas";
   }
 
   .mega-panel {
-    position: absolute;
-    top: calc(100% + 0.5rem);
+    /* fixed respecto al viewport para no depender de la posición del trigger.
+       Así el panel siempre queda perfectamente centrado en pantalla y con
+       márgenes visibles en ambos lados (feedback Yeltzin 07.08.2026). */
+    position: fixed;
+    top: calc(var(--header-h, 68px) + 0.5rem);
     left: 50%;
     transform: translateX(-50%) translateY(-8px);
-    width: min(96vw, 960px);
+    width: min(94vw, 960px);
+    max-height: calc(100vh - var(--header-h, 68px) - 2rem);
+    overflow-y: auto;
     background: var(--dtr-white);
     border: 1px solid var(--dtr-line);
     border-radius: var(--radius-lg);

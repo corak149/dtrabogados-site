@@ -6,17 +6,15 @@
  *  - Cards de área SIN iconos (mantener como scaffolding)
  *  - Cómo trabajamos con línea conectora dorada entre 3 pasos
  *  - Bloque nuevo "Confianza" SIN mencionar "sin costo"
- *  - Honorarios (navy) con sello CNA lateral
+ *  - Honorarios (navy) centrado sin sello decorativo (feedback Yeltzin 07.08)
  *  - CTA final con card diferenciada
- *  - Hero rediseñado con SVG decorativo (columnas + balanza)
+ *  - Hero centrado limpio (SVG decorativo retirado — feedback Yeltzin 07.08)
  *
  * Copy real V3 de Danna pendiente commit — placeholders quedan documentados.
  */
 import Layout from "../layouts/Layout.astro";
 import AreaCard from "../components/AreaCard.astro";
 import GoogleReviewsBadge from "../components/GoogleReviewsBadge.astro";
-import HeroArt from "../components/HeroArt.astro";
-import SealCNA from "../components/SealCNA.astro";
 import { AREAS, AREAS_DESTACADAS } from "../data/areas";
 import { waLink } from "../utils/whatsapp";
 ---
@@ -24,7 +22,6 @@ import { waLink } from "../utils/whatsapp";
 <Layout title="DTR Abogados — Panamá">
   <!-- BLOQUE 1 · HERO -->
   <section class="hero">
-    <HeroArt />
     <div class="container hero-inner">
       <span class="kicker">DTR — Abogados, Consultores y Asociados</span>
       <h1 class="hero-title">
@@ -144,26 +141,19 @@ import { waLink } from "../utils/whatsapp";
     </div>
   </section>
 
-  <!-- BLOQUE 5 · HONORARIOS con sello CNA lateral -->
+  <!-- BLOQUE 5 · HONORARIOS (centrado, sin sello decorativo) -->
   <section class="section section-navy">
-    <div class="container">
-      <div class="hon-layout">
-        <div class="hon-copy">
-          <span class="kicker" style="color: var(--dtr-gold-light);">Honorarios</span>
-          <h2 style="color: var(--dtr-white);">Precios sin sorpresas.</h2>
-          <p style="color: rgba(255,255,255,0.85);">
-            Aplicamos el <strong style="color: var(--dtr-gold-light);">Acuerdo CNA 609-A/2021</strong>
-            del Colegio Nacional de Abogados de Panamá — tarifa mínima legal.
-            Trabajamos por asunto específico, retainer mensual o cuota litis
-            según el caso. Lo que firmamos es lo que pagás.
-          </p>
-          <div class="hon-ctas">
-            <a href="/honorarios/" class="cta cta-gold">Ver tabla de honorarios</a>
-          </div>
-        </div>
-        <div class="hon-seal">
-          <SealCNA />
-        </div>
+    <div class="container container-narrow text-center">
+      <span class="kicker" style="color: var(--dtr-gold-light);">Honorarios</span>
+      <h2 style="color: var(--dtr-white);">Precios sin sorpresas.</h2>
+      <p style="color: rgba(255,255,255,0.85); max-width: 620px; margin: 0 auto 1.5rem;">
+        Aplicamos el <strong style="color: var(--dtr-gold-light);">Acuerdo CNA 609-A/2021</strong>
+        del Colegio Nacional de Abogados de Panamá — tarifa mínima legal.
+        Trabajamos por asunto específico, retainer mensual o cuota litis
+        según el caso. Lo que firmamos es lo que pagás.
+      </p>
+      <div class="cta-row-center">
+        <a href="/honorarios/" class="cta cta-gold">Ver tabla de honorarios</a>
       </div>
     </div>
   </section>
@@ -368,29 +358,6 @@ import { waLink } from "../utils/whatsapp";
   .confianza-sub {
     font-size: 0.9rem;
     color: var(--texto-claro);
-  }
-
-  /* Honorarios layout */
-  .hon-layout {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    align-items: center;
-  }
-  @media (min-width: 720px) {
-    .hon-layout {
-      grid-template-columns: 2fr 1fr;
-    }
-  }
-  .hon-copy h2 {
-    margin-bottom: 1rem;
-  }
-  .hon-ctas {
-    margin-top: 1.5rem;
-  }
-  .hon-seal {
-    display: flex;
-    justify-content: center;
   }
 
   /* CTA card final */
