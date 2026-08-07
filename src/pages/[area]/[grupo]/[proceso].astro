@@ -1,42 +1,61 @@
 ---
 /**
- * Plantilla de proceso (~50 páginas generadas).
- * Ruta: /derecho-migratorio/visas/visa-profesional/, etc.
- * Decisión V3 #10: cada proceso = URL propia con requisitos completos
- * separados por rol (persona natural vs empresa).
+ * Plantilla dinámica de proceso (~50 rutas generadas).
+ * Ruta pública: /{area}/{grupo}/{proceso}/
  *
- * TODO: Copy real por proceso pendiente. Sprint 1 substituye placeholders
- * con datos de:
- *   - 900-DANNA/02-En-Proceso/web-dtrabogados-v2/00-WEB-DTR-V3-iterativa.md
- *   - 800-Knowledge-PA/810-Migracion/... para requisitos técnicos
+ * Estrategia de contenido (Sprint 1c):
+ *   1. Intenta leer contenido rico desde src/content/procesos/{area}/{grupo}/{proceso}.md
+ *   2. Si NO existe, cae al TODO placeholder del scaffolding (Sprint 0)
+ *
+ * Danna popula los .md siguiendo el schema en src/content/config.ts.
+ * Cada .md debe validarse contra un RESUMEN.md del vault
+ * (dtr-vault/800-Knowledge-PA/810-Migracion/...).
  */
 import Layout from "../../../layouts/Layout.astro";
 import { AREAS } from "../../../data/areas";
 import { waLink } from "../../../utils/whatsapp";
+import { getCollection } from "astro:content";
 
-export function getStaticPaths() {
+export async function getStaticPaths() {
+  const collection = await getCollection("procesos");
+  const bySlug = new Map(
+    collection.map((entry) => [entry.slug, entry])
+  );
+
   return AREAS.flatMap((area) =>
     area.grupos.flatMap((grupo) =>
-      grupo.procesos.map((proceso) => ({
-        params: {
-          area: area.slug,
-          grupo: grupo.slug,
-          proceso: proceso.slug,
-        },
-        props: { area, grupo, proceso },
-      }))
+      grupo.procesos.map((proceso) => {
+        const slug = `${area.slug}/${grupo.slug}/${proceso.slug}`;
+        const entry = bySlug.get(slug);
+        return {
+          params: {
+            area: area.slug,
+            grupo: grupo.slug,
+            proceso: proceso.slug,
+          },
+          props: { area, grupo, proceso, entry: entry ?? null },
+        };
+      })
     )
   );
 }
 
-const { area, grupo, proceso } = Astro.props;
-const wa = waLink({ tema: `${proceso.titulo} (${area.tituloCorto})` });
+const { area, grupo, proceso, entry } = Astro.props;
+const data = entry?.data ?? null;
+const Content = entry ? (await entry.render()).Content : null;
+
+const wa = waLink({ tema: data?.titulo ?? `${proceso.titulo} (${area.tituloCorto})` });
+
+const title = data?.titulo ?? proceso.titulo;
+const description =
+  data?.descripcion ??
+  `${proceso.titulo} en Panamá. Requisitos, documentos y honorarios. Contactanos por WhatsApp.`;
+
+// noindex si el proceso todavía es placeholder (no tiene entry)
+const noindex = !entry;
 ---
 
-<Layout
-  title={`${proceso.titulo} — ${area.titulo} — DTR Abogados`}
-  description={`${proceso.titulo} en Panamá. Requisitos, documentos y honorarios. Contactanos por WhatsApp.`}
->
+<Layout title={`${title} — ${area.titulo} — DTR Abogados`} description={description} noindex={noindex}>
   <section class="section-tight section-navy">
     <div class="container container-narrow">
       <nav class="crumbs" aria-label="breadcrumb">
@@ -49,77 +68,125 @@ const wa = waLink({ tema: `${proceso.titulo} (${area.tituloCorto})` });
       <span class="kicker" style="color: var(--dtr-gold-light);">
         {grupo.titulo}
       </span>
-      <h1 style="color: var(--dtr-white);">{proceso.titulo}</h1>
+      <h1 style="color: var(--dtr-white);">{title}</h1>
+      {data?.resumen && (
+        <p style="color: rgba(255,255,255,0.85); font-size: 1.1rem; margin-top: 0.5rem;">
+          {data.resumen}
+        </p>
+      )}
     </div>
   </section>
 
   <section class="section">
     <div class="container container-narrow">
-      <div class="todo-block">
-        <p>
-          <strong>Contenido en preparación.</strong> Estamos completando los
-          requisitos, documentos y plazos para <em>{proceso.titulo}</em>.
-          Mientras tanto, escribinos por WhatsApp y te contamos tu caso
-          concreto en menos de 24 horas.
-        </p>
-        <a href={wa} class="cta cta-whatsapp" target="_blank" rel="noopener">
-          Consultar {proceso.titulo}
-        </a>
-      </div>
+      {data ? (
+        <>
+          {/* --- CONTENIDO REAL desde el collection --- */}
+          {data.dirigido_a.length > 0 && (
+            <div class="proc-section">
+              <h2>Dirigido a</h2>
+              <ul>
+                {data.dirigido_a.map((item) => <li>{item}</li>)}
+              </ul>
+            </div>
+          )}
 
-      <!-- Estructura base para copy V3 de Danna -->
-      <div class="proc-section">
-        <h2>Qué es</h2>
-        <p class="placeholder">
-          Descripción breve del proceso <em>{proceso.titulo}</em>.
-          <span class="todo">TODO: copy V3 pendiente de Danna</span>
-        </p>
-      </div>
+          {(data.requisitos_persona_natural.length > 0 ||
+            data.requisitos_empresa.length > 0) && (
+            <div class="proc-section proc-columns">
+              {data.requisitos_persona_natural.length > 0 && (
+                <div>
+                  <h2>Requisitos para persona natural</h2>
+                  <ul>
+                    {data.requisitos_persona_natural.map((item) => <li>{item}</li>)}
+                  </ul>
+                </div>
+              )}
+              {data.requisitos_empresa.length > 0 && (
+                <div>
+                  <h2>Requisitos para empresa</h2>
+                  <ul>
+                    {data.requisitos_empresa.map((item) => <li>{item}</li>)}
+                  </ul>
+                </div>
+              )}
+            </div>
+          )}
 
-      <div class="proc-section proc-columns">
-        <div>
-          <h2>Requisitos para persona natural</h2>
-          <ul class="placeholder-list">
-            <li>Requisito 1 — <span class="todo">TODO</span></li>
-            <li>Requisito 2 — <span class="todo">TODO</span></li>
-            <li>Requisito 3 — <span class="todo">TODO</span></li>
-          </ul>
-        </div>
-        <div>
-          <h2>Requisitos para empresa</h2>
-          <ul class="placeholder-list">
-            <li>Requisito 1 — <span class="todo">TODO</span></li>
-            <li>Requisito 2 — <span class="todo">TODO</span></li>
-            <li>Requisito 3 — <span class="todo">TODO</span></li>
-          </ul>
-        </div>
-      </div>
+          {data.documentos.length > 0 && (
+            <div class="proc-section">
+              <h2>Documentos que necesitás</h2>
+              <ul>
+                {data.documentos.map((item) => <li set:html={item} />)}
+              </ul>
+            </div>
+          )}
 
-      <div class="proc-section">
-        <h2>Documentos que necesitás</h2>
-        <ul class="placeholder-list">
-          <li>Pasaporte vigente (extranjeros)</li>
-          <li>Cédula (nacionales)</li>
-          <li class="todo">Otros documentos — TODO por proceso</li>
-        </ul>
-      </div>
+          {data.plazos && (
+            <div class="proc-section">
+              <h2>Plazos</h2>
+              <dl class="plazos">
+                {data.plazos.tramite && <><dt>Trámite</dt><dd>{data.plazos.tramite}</dd></>}
+                {data.plazos.vigencia && <><dt>Vigencia</dt><dd>{data.plazos.vigencia}</dd></>}
+                {data.plazos.renovacion && <><dt>Renovación</dt><dd>{data.plazos.renovacion}</dd></>}
+              </dl>
+            </div>
+          )}
 
-      <div class="proc-section">
-        <h2>Plazos estimados</h2>
-        <p class="placeholder">
-          <span class="todo">TODO: plazos varían por caso.</span> Te confirmamos
-          los tiempos exactos en la consulta inicial.
-        </p>
-      </div>
+          {data.honorarios_ref && (
+            <div class="proc-section">
+              <h2>Honorarios</h2>
+              <p>{data.honorarios_ref}</p>
+              <p class="text-small text-muted">
+                Todos los honorarios se determinan según el
+                <a href="/honorarios/">Acuerdo CNA 609-A/2021</a>. Te
+                enviamos propuesta escrita antes de arrancar.
+              </p>
+            </div>
+          )}
 
-      <div class="proc-section">
-        <h2>Honorarios</h2>
-        <p>
-          Los honorarios se calculan según el <a href="/honorarios/">
-          Acuerdo CNA 609-A/2021</a> del Colegio Nacional de Abogados. Te
-          enviamos propuesta por escrito antes de arrancar.
-        </p>
-      </div>
+          {data.base_legal.length > 0 && (
+            <div class="proc-section">
+              <h2>Base legal</h2>
+              <ul class="base-legal">
+                {data.base_legal.map((item) => <li>{item}</li>)}
+              </ul>
+            </div>
+          )}
+
+          {Content && (
+            <div class="proc-section proc-notes">
+              <h2>Notas de la Firma</h2>
+              <div class="prose">
+                <Content />
+              </div>
+            </div>
+          )}
+
+          {(data.aprobado_por || data.revisar_con) && (
+            <div class="proc-meta">
+              {data.aprobado_por && <p><strong>Aprobado por:</strong> {data.aprobado_por}</p>}
+              {data.revisar_con && <p><strong>Consultar con:</strong> {data.revisar_con}</p>}
+              {data.ultima_actualizacion && <p><strong>Última actualización:</strong> {data.ultima_actualizacion}</p>}
+            </div>
+          )}
+        </>
+      ) : (
+        <>
+          {/* --- FALLBACK: TODO placeholder mientras Danna popula --- */}
+          <div class="todo-block">
+            <p>
+              <strong>Contenido en preparación.</strong> Estamos completando los
+              requisitos, documentos y plazos para <em>{proceso.titulo}</em>.
+              Mientras tanto, escribinos por WhatsApp y te contamos tu caso
+              concreto en menos de 24 horas.
+            </p>
+            <a href={wa} class="cta cta-whatsapp" target="_blank" rel="noopener">
+              Consultar {proceso.titulo}
+            </a>
+          </div>
+        </>
+      )}
 
       <div class="cta-block">
         <h3>Contanos tu caso</h3>
@@ -176,6 +243,13 @@ const wa = waLink({ tema: `${proceso.titulo} (${area.tituloCorto})` });
     font-size: 1.35rem;
     margin-bottom: 1rem;
   }
+  .proc-section ul {
+    padding-left: 1.25rem;
+  }
+  .proc-section ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.55;
+  }
   .proc-columns {
     display: grid;
     grid-template-columns: 1fr;
@@ -187,25 +261,54 @@ const wa = waLink({ tema: `${proceso.titulo} (${area.tituloCorto})` });
     }
   }
 
-  .placeholder {
-    color: var(--texto-claro);
+  .plazos {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 0.5rem 1rem;
+    margin: 0;
   }
-  .placeholder-list {
-    padding-left: 1.25rem;
-    color: var(--texto-claro);
-  }
-  .placeholder-list li {
-    margin-bottom: 0.5rem;
-  }
-  .todo {
-    display: inline-block;
-    font-size: 0.75rem;
-    background: rgba(184, 149, 74, 0.15);
-    color: var(--dtr-gold-dark);
-    padding: 0.1rem 0.5rem;
-    border-radius: 3px;
-    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+  .plazos dt {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--texto-suave);
     font-weight: 600;
+  }
+  .plazos dd {
+    margin: 0;
+    color: var(--texto);
+  }
+
+  .base-legal li {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.9rem;
+    color: var(--texto-claro);
+  }
+
+  .proc-notes .prose :global(p) {
+    margin-bottom: 1em;
+  }
+  .proc-notes .prose :global(ul) {
+    padding-left: 1.25rem;
+  }
+  .proc-notes .prose :global(blockquote) {
+    border-left: 3px solid var(--dtr-gold);
+    padding: 0.5rem 1rem;
+    color: var(--texto-claro);
+    font-style: italic;
+    margin: 1rem 0;
+  }
+
+  .proc-meta {
+    margin-top: 2rem;
+    padding: 1rem 1.25rem;
+    background: var(--dtr-cream-alt);
+    border-radius: var(--radius);
+    font-size: 0.85rem;
+    color: var(--texto-claro);
+  }
+  .proc-meta p {
+    margin: 0.25rem 0;
   }
 
   .cta-block {
