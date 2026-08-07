@@ -1,24 +1,22 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { waLink } from "../utils/whatsapp";
 
-const WHATSAPP = import.meta.env.PUBLIC_WHATSAPP || "50700000000";
 const TALLY_URL =
   import.meta.env.PUBLIC_TALLY_URL || "https://tally.so/r/dtr-consulta-inicial";
-const waLink = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
-  "Hola DTR — vengo desde el formulario de contacto."
-)}`;
+const wa = waLink({ tema: "Consulta general" });
 ---
 
 <Layout
   title="Contacto — DTR Abogados"
-  description="Contactá a DTR Abogados por WhatsApp, correo o formulario. Consulta inicial sin costo, respuesta en menos de 24 horas hábiles."
+  description="Contactá a DTR Abogados por WhatsApp, correo o formulario. Respuesta en menos de 24 horas hábiles."
 >
   <section class="section-tight section-navy">
     <div class="container container-narrow text-center">
       <span class="kicker" style="color: var(--dtr-gold-light);">Contacto</span>
       <h1 style="color: var(--dtr-white);">Conversemos</h1>
       <p style="color: rgba(255,255,255,0.85); font-size: 1.1rem;">
-        Consulta inicial sin costo. Te respondemos en menos de 24 horas hábiles.
+        Contanos tu caso — te respondemos en menos de 24 horas hábiles.
       </p>
     </div>
   </section>
@@ -32,7 +30,7 @@ const waLink = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
             El canal más rápido. Contanos brevemente tu caso y te derivamos
             al abogado que corresponda.
           </p>
-          <a href={waLink} class="cta cta-whatsapp" target="_blank" rel="noopener">
+          <a href={wa} class="cta cta-whatsapp" target="_blank" rel="noopener">
             Abrir WhatsApp
           </a>
         </div>

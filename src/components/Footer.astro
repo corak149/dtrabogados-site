@@ -2,11 +2,12 @@
 /**
  * Footer — Decisión V3 #5: disclaimer INTEGRADO al footer,
  * NO página separada.
+ * Update 06.08.26: quitar mención "sin costo" (feedback Yeltzin).
  */
 import { AREAS } from "../data/areas";
+import { WA_NUMBER_HUMAN, waLink } from "../utils/whatsapp";
 
 const year = new Date().getFullYear();
-const WHATSAPP = import.meta.env.PUBLIC_WHATSAPP || "50700000000";
 ---
 
 <footer class="site-footer">
@@ -44,8 +45,8 @@ const WHATSAPP = import.meta.env.PUBLIC_WHATSAPP || "50700000000";
       <h3 class="footer-title">Contacto</h3>
       <ul class="footer-list">
         <li>
-          <a href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noopener">
-            WhatsApp
+          <a href={waLink()} target="_blank" rel="noopener">
+            WhatsApp {WA_NUMBER_HUMAN}
           </a>
         </li>
         <li><a href="mailto:info@dtrabogados.com">info@dtrabogados.com</a></li>
@@ -65,6 +66,8 @@ const WHATSAPP = import.meta.env.PUBLIC_WHATSAPP || "50700000000";
       del Colegio Nacional de Abogados de Panamá.
     </p>
     <p class="privacy-note">
+      <a href="/terminos/">Términos y condiciones</a>
+      <span aria-hidden="true"> · </span>
       <a href="/privacidad/">Política de privacidad</a>
       <span aria-hidden="true"> · </span>
       © {year} DTR Abogados, Consultores y Asociados

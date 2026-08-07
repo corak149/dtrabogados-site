@@ -5,6 +5,7 @@
  */
 import Layout from "../../layouts/Layout.astro";
 import { AREAS } from "../../data/areas";
+import { waLink } from "../../utils/whatsapp";
 
 export function getStaticPaths() {
   return AREAS.map((area) => ({
@@ -14,10 +15,7 @@ export function getStaticPaths() {
 }
 
 const { area } = Astro.props;
-const WHATSAPP = import.meta.env.PUBLIC_WHATSAPP || "50700000000";
-const waLink = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
-  `Hola DTR — quisiera una consulta sobre ${area.tituloCorto}.`
-)}`;
+const wa = waLink({ tema: area.titulo });
 ---
 
 <Layout
@@ -72,9 +70,9 @@ const waLink = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
 
       <div class="cta-block">
         <h3>¿Tenés un caso específico en {area.tituloCorto}?</h3>
-        <p>Consulta inicial sin costo. Te respondemos en menos de 24 horas hábiles.</p>
+        <p>Contanos tu caso — te respondemos en menos de 24 horas hábiles.</p>
         <div class="cta-row">
-          <a href={waLink} class="cta cta-whatsapp" target="_blank" rel="noopener">
+          <a href={wa} class="cta cta-whatsapp" target="_blank" rel="noopener">
             WhatsApp
           </a>
           <a href="/contacto/" class="cta cta-outline">Formulario</a>

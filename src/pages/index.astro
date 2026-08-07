@@ -1,24 +1,30 @@
 ---
 /**
- * HOME V3 — Landing minimalista de 5 bloques (Decisión V3 #4).
- * Sin casos de éxito (Decisión V3 #2 — info privada).
- * Copy actual = placeholders. Sprint 1 = sustituir con V3 de Danna
- * (900-DANNA/02-En-Proceso/web-dtrabogados-v2/00-WEB-DTR-V3-iterativa.md).
+ * HOME V3 — Sprint 1b (06.08.26)
+ *
+ * Cambios pedidos por Yeltzin:
+ *  - Cards de área SIN iconos (mantener como scaffolding)
+ *  - Cómo trabajamos con línea conectora dorada entre 3 pasos
+ *  - Bloque nuevo "Confianza" SIN mencionar "sin costo"
+ *  - Honorarios (navy) con sello CNA lateral
+ *  - CTA final con card diferenciada
+ *  - Hero rediseñado con SVG decorativo (columnas + balanza)
+ *
+ * Copy real V3 de Danna pendiente commit — placeholders quedan documentados.
  */
 import Layout from "../layouts/Layout.astro";
 import AreaCard from "../components/AreaCard.astro";
 import GoogleReviewsBadge from "../components/GoogleReviewsBadge.astro";
+import HeroArt from "../components/HeroArt.astro";
+import SealCNA from "../components/SealCNA.astro";
 import { AREAS, AREAS_DESTACADAS } from "../data/areas";
-
-const WHATSAPP = import.meta.env.PUBLIC_WHATSAPP || "50700000000";
-const waLink = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
-  "Hola DTR — quisiera una consulta inicial."
-)}`;
+import { waLink } from "../utils/whatsapp";
 ---
 
 <Layout title="DTR Abogados — Panamá">
   <!-- BLOQUE 1 · HERO -->
   <section class="hero">
+    <HeroArt />
     <div class="container hero-inner">
       <span class="kicker">DTR — Abogados, Consultores y Asociados</span>
       <h1 class="hero-title">
@@ -27,11 +33,17 @@ const waLink = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
       </h1>
       <p class="hero-lede">
         Migración, propiedad horizontal, sociedades y civil. Procesos claros,
-        honorarios transparentes y consulta inicial sin costo.
+        honorarios transparentes y acompañamiento personal por un abogado
+        colegiado.
       </p>
 
       <div class="hero-ctas">
-        <a href={waLink} class="cta cta-whatsapp" target="_blank" rel="noopener">
+        <a
+          href={waLink({ tema: "Consulta general" })}
+          class="cta cta-whatsapp"
+          target="_blank"
+          rel="noopener"
+        >
           Hablar por WhatsApp
         </a>
         <a href="/areas-de-practica/" class="cta cta-outline">
@@ -76,7 +88,7 @@ const waLink = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
     </div>
   </section>
 
-  <!-- BLOQUE 3 · CÓMO TRABAJAMOS -->
+  <!-- BLOQUE 3 · CÓMO TRABAJAMOS con línea dorada conectora -->
   <section class="section">
     <div class="container container-narrow text-center">
       <span class="kicker">Cómo trabajamos</span>
@@ -86,59 +98,95 @@ const waLink = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
         y si avanzamos hacemos el trabajo hasta terminarlo. Sin letra chica.
       </p>
 
-      <div class="pasos">
-        <div class="paso">
-          <div class="paso-num">01</div>
-          <h3>Consulta inicial</h3>
-          <p>Nos contás tu caso por WhatsApp o formulario. Sin costo, sin compromiso.</p>
-        </div>
-        <div class="paso">
-          <div class="paso-num">02</div>
-          <h3>Propuesta clara</h3>
-          <p>Te enviamos alcance, plazos y honorarios por escrito según el Acuerdo CNA 609-A.</p>
-        </div>
-        <div class="paso">
-          <div class="paso-num">03</div>
-          <h3>Trabajamos el caso</h3>
-          <p>Tramitación personal y actualizaciones periódicas hasta cerrar el asunto.</p>
+      <div class="pasos-wrapper">
+        <div class="pasos-line" aria-hidden="true"></div>
+        <div class="pasos">
+          <div class="paso">
+            <div class="paso-num">01</div>
+            <h3>Consulta inicial</h3>
+            <p>Nos contás tu caso por WhatsApp o formulario. Vemos si podemos ayudarte y con qué alcance.</p>
+          </div>
+          <div class="paso">
+            <div class="paso-num">02</div>
+            <h3>Propuesta clara</h3>
+            <p>Te enviamos alcance, plazos y honorarios por escrito según el Acuerdo CNA 609-A.</p>
+          </div>
+          <div class="paso">
+            <div class="paso-num">03</div>
+            <h3>Trabajamos el caso</h3>
+            <p>Tramitación personal y actualizaciones periódicas hasta cerrar el asunto.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- BLOQUE 4 · HONORARIOS TRANSPARENTES -->
+  <!-- BLOQUE 4 · CONFIANZA (nuevo, sin mencionar 'sin costo') -->
+  <section class="section-tight section-cream">
+    <div class="container">
+      <div class="confianza-grid">
+        <div class="confianza-item">
+          <div class="confianza-num">{AREAS.length}</div>
+          <div class="confianza-label">Áreas de práctica</div>
+          <div class="confianza-sub">Migración, civil, comercial, laboral y más</div>
+        </div>
+        <div class="confianza-item">
+          <div class="confianza-num">24h</div>
+          <div class="confianza-label">Respuesta hábil</div>
+          <div class="confianza-sub">Te contestamos en menos de un día</div>
+        </div>
+        <div class="confianza-item">
+          <div class="confianza-num">609-A</div>
+          <div class="confianza-label">Acuerdo CNA</div>
+          <div class="confianza-sub">Adherimos a la tarifa del Colegio</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOQUE 5 · HONORARIOS con sello CNA lateral -->
   <section class="section section-navy">
-    <div class="container container-narrow text-center">
-      <span class="kicker" style="color: var(--dtr-gold-light);">Honorarios</span>
-      <h2>Precios sin sorpresas.</h2>
-      <p class="section-lede" style="color: rgba(255,255,255,0.85);">
-        Aplicamos el <strong>Acuerdo CNA 609-A/2021</strong> del Colegio Nacional
-        de Abogados de Panamá — tarifa mínima legal. Trabajamos por asunto
-        específico, retainer mensual o cuota litis según el caso.
-        Lo que firmamos es lo que pagás.
-      </p>
-      <div class="cta-row-center">
-        <a href="/honorarios/" class="cta cta-gold">Ver tabla de honorarios</a>
+    <div class="container">
+      <div class="hon-layout">
+        <div class="hon-copy">
+          <span class="kicker" style="color: var(--dtr-gold-light);">Honorarios</span>
+          <h2 style="color: var(--dtr-white);">Precios sin sorpresas.</h2>
+          <p style="color: rgba(255,255,255,0.85);">
+            Aplicamos el <strong style="color: var(--dtr-gold-light);">Acuerdo CNA 609-A/2021</strong>
+            del Colegio Nacional de Abogados de Panamá — tarifa mínima legal.
+            Trabajamos por asunto específico, retainer mensual o cuota litis
+            según el caso. Lo que firmamos es lo que pagás.
+          </p>
+          <div class="hon-ctas">
+            <a href="/honorarios/" class="cta cta-gold">Ver tabla de honorarios</a>
+          </div>
+        </div>
+        <div class="hon-seal">
+          <SealCNA />
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- BLOQUE 5 · CTA CONTACTO -->
+  <!-- BLOQUE 6 · CTA FINAL con card diferenciada -->
   <section class="section">
-    <div class="container container-narrow text-center">
-      <span class="kicker">Conversemos</span>
-      <h2>Consulta inicial sin costo.</h2>
-      <p class="section-lede">
-        Te respondemos en menos de 24 horas hábiles. Migración, propiedad,
-        sociedades o cualquier otra área — contanos y vemos si podemos ayudarte.
-      </p>
-      <div class="cta-row-center">
-        <a href={waLink} class="cta cta-whatsapp" target="_blank" rel="noopener">
-          WhatsApp
-        </a>
-        <a href="mailto:info@dtrabogados.com" class="cta cta-outline">
-          Escribir un correo
-        </a>
+    <div class="container container-narrow">
+      <div class="cta-card">
+        <span class="kicker">Conversemos</span>
+        <h2>Contanos tu caso.</h2>
+        <p>
+          Escribinos por WhatsApp o correo — te respondemos en menos de 24
+          horas hábiles. Si tu asunto no está entre nuestras áreas principales,
+          te derivamos a un colega.
+        </p>
+        <div class="cta-row-center">
+          <a href={waLink({ tema: "Consulta general" })} class="cta cta-whatsapp" target="_blank" rel="noopener">
+            WhatsApp
+          </a>
+          <a href="mailto:info@dtrabogados.com" class="cta cta-outline">
+            Escribir un correo
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -147,11 +195,15 @@ const waLink = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
 <style>
   /* Hero */
   .hero {
+    position: relative;
+    overflow: hidden;
     background: linear-gradient(180deg, var(--dtr-white) 0%, var(--dtr-cream) 100%);
     padding: 5rem 0 4rem;
     border-bottom: 1px solid var(--dtr-line);
   }
   .hero-inner {
+    position: relative;
+    z-index: 1;
     text-align: center;
     max-width: 820px;
   }
@@ -212,31 +264,66 @@ const waLink = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
     }
   }
 
-  /* Pasos */
+  /* Pasos con línea conectora dorada */
+  .pasos-wrapper {
+    position: relative;
+    margin-top: 3rem;
+  }
+  .pasos-line {
+    display: none;
+  }
+  @media (min-width: 720px) {
+    .pasos-line {
+      display: block;
+      position: absolute;
+      top: 42px;
+      left: 16.5%;
+      right: 16.5%;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent 0%,
+        var(--dtr-gold) 15%,
+        var(--dtr-gold) 85%,
+        transparent 100%
+      );
+      z-index: 0;
+    }
+  }
   .pasos {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    margin-top: 3rem;
     text-align: left;
+    position: relative;
+    z-index: 1;
   }
-  @media (min-width: 640px) {
+  @media (min-width: 720px) {
     .pasos {
       grid-template-columns: repeat(3, 1fr);
     }
   }
   .paso {
-    padding: 1.5rem;
+    padding: 1.75rem;
     background: var(--dtr-white);
     border: 1px solid var(--dtr-line);
     border-radius: var(--radius-lg);
   }
   .paso-num {
     font-family: var(--font-serif);
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--dtr-gold);
-    margin-bottom: 0.5rem;
+    background: var(--dtr-cream);
+    width: 56px;
+    height: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1.5px solid var(--dtr-gold);
+    margin-bottom: 1rem;
+    line-height: 1;
   }
   .paso h3 {
     font-size: 1.2rem;
@@ -248,11 +335,84 @@ const waLink = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
     margin: 0;
   }
 
+  /* Bloque confianza */
+  .confianza-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    text-align: center;
+  }
+  @media (min-width: 640px) {
+    .confianza-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .confianza-item {
+    padding: 1.5rem 1.25rem;
+  }
+  .confianza-num {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--dtr-gold-dark);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+  .confianza-label {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    color: var(--dtr-navy);
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+  }
+  .confianza-sub {
+    font-size: 0.9rem;
+    color: var(--texto-claro);
+  }
+
+  /* Honorarios layout */
+  .hon-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    align-items: center;
+  }
+  @media (min-width: 720px) {
+    .hon-layout {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+  .hon-copy h2 {
+    margin-bottom: 1rem;
+  }
+  .hon-ctas {
+    margin-top: 1.5rem;
+  }
+  .hon-seal {
+    display: flex;
+    justify-content: center;
+  }
+
+  /* CTA card final */
+  .cta-card {
+    padding: 3rem 2.5rem;
+    background: var(--dtr-cream-alt);
+    border: 1px solid var(--dtr-line);
+    border-radius: var(--radius-lg);
+    text-align: center;
+  }
+  .cta-card h2 {
+    margin-bottom: 0.75rem;
+  }
+  .cta-card p {
+    color: var(--texto-claro);
+    max-width: 480px;
+    margin: 0 auto 1.75rem;
+  }
   .cta-row-center {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
     justify-content: center;
-    margin-top: 1.5rem;
   }
 </style>
