@@ -156,7 +156,34 @@ const noindex = !entry;
   </section>
 
   <section class="section">
-    <div class="container-content">
+    <div class={data?.tiers ? "container-wide proc-with-sidebar" : "container-content"}>
+      {data?.tiers && (
+        <aside class="tiers-sidebar" aria-label="Planes de retainer">
+          <div class="tiers-card">
+            <h2 class="tiers-title">Planes disponibles</h2>
+            <p class="tiers-lead">Del básico al top tier — elija el que mejor se ajusta a su empresa.</p>
+            <ol class="tiers-list">
+              {data.tiers.map((tier) => (
+                <li class="tier-item">
+                  <div class="tier-head">
+                    <span class="tier-name">{tier.nombre}</span>
+                    <span class="tier-price">{tier.precio}</span>
+                  </div>
+                  {tier.resumen && <p class="tier-resumen">{tier.resumen}</p>}
+                </li>
+              ))}
+            </ol>
+            <div class="tiers-cta">
+              <p class="tiers-cta-lead">¿Cuál le conviene? Le ayudamos a elegir.</p>
+              <a href={wa} class="cta cta-whatsapp" target="_blank" rel="noopener">
+                Consultar por WhatsApp
+              </a>
+              <a href="/contacto/" class="cta cta-outline cta-block">Agendar reunión</a>
+            </div>
+          </div>
+        </aside>
+      )}
+      <div class={data?.tiers ? "proc-main" : ""}>
       {data ? (
         <>
           {/* === CALLOUT ALERTAS (NUEVO, condicional) === */}
@@ -236,19 +263,14 @@ const noindex = !entry;
                   <div class="costos-card">
                     <h3>Costos directos oficiales</h3>
                     <p set:html={renderInline(data.tasas_oficiales)} />
-                    <p class="text-small text-muted">
-                      Tasas que se pagan directamente al SNM, MITRADEL u
-                      otras instituciones. Se abonan aparte de los
-                      honorarios profesionales de la Firma.
-                    </p>
                   </div>
                 )}
                 {data.honorarios_ref && (
                   <div class="costos-card costos-card-honor">
-                    <h3>Honorarios profesionales</h3>
+                    <h3>{data.tiers ? "Honorarios fuera del retainer" : "Honorarios profesionales"}</h3>
                     <p set:html={renderInline(data.honorarios_ref)} />
                     <p class="text-small text-muted">
-                      Determinados según el
+                      {data.tiers ? "Los servicios no cubiertos por el retainer se cotizan según el " : "Determinados según el "}
                       <a href="/honorarios/">Acuerdo CNA 609-A/2021</a>
                       del Colegio Nacional de Abogados. Le enviamos
                       propuesta escrita con precio cerrado antes de
@@ -320,6 +342,7 @@ const noindex = !entry;
           </a>
           <a href="/contacto/" class="cta cta-outline">Formulario</a>
         </div>
+      </div>
       </div>
     </div>
   </section>
@@ -580,4 +603,97 @@ const noindex = !entry;
     gap: 0.75rem;
     justify-content: center;
   }
+
+  /* === TIERS SIDEBAR (Sprint 2 día 4) === */
+  .container-wide {
+    max-width: var(--max-wide, 1240px);
+    margin-inline: auto;
+    padding-inline: clamp(1.5rem, 4vw, 3.5rem);
+  }
+  .proc-with-sidebar {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  @media (min-width: 960px) {
+    .proc-with-sidebar {
+      grid-template-columns: 320px minmax(0, 1fr);
+      align-items: start;
+    }
+  }
+  .tiers-sidebar {
+    position: relative;
+  }
+  @media (min-width: 960px) {
+    .tiers-sidebar { position: sticky; top: 2rem; }
+  }
+  .tiers-card {
+    background: var(--dtr-cream-alt);
+    border: 1px solid var(--dtr-line);
+    border-left: 4px solid var(--dtr-gold);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem 1.25rem;
+  }
+  .tiers-title {
+    font-size: 1.1rem;
+    margin: 0 0 0.35rem 0;
+    color: var(--dtr-navy);
+  }
+  .tiers-lead {
+    font-size: 0.85rem;
+    color: var(--texto-claro);
+    margin: 0 0 1rem 0;
+  }
+  .tiers-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.25rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .tier-item {
+    padding: 0.75rem 0.85rem;
+    background: var(--dtr-white);
+    border: 1px solid var(--dtr-line);
+    border-radius: var(--radius);
+  }
+  .tier-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-bottom: 0.2rem;
+  }
+  .tier-name {
+    font-weight: 600;
+    color: var(--dtr-navy);
+    font-size: 0.95rem;
+  }
+  .tier-price {
+    font-size: 0.8rem;
+    color: var(--dtr-gold-dark);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .tier-resumen {
+    font-size: 0.8rem;
+    color: var(--texto-claro);
+    margin: 0;
+    line-height: 1.4;
+  }
+  .tiers-cta {
+    border-top: 1px solid var(--dtr-line);
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .tiers-cta-lead {
+    font-size: 0.85rem;
+    color: var(--texto);
+    margin: 0 0 0.25rem 0;
+    font-weight: 500;
+  }
+  .cta-block { width: 100%; text-align: center; }
 </style>
