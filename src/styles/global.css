@@ -67,16 +67,24 @@ a:hover {
   text-decoration-color: var(--dtr-gold);
 }
 
-.container {
-  max-width: var(--max-width);
+.container,
+.container-content,
+.container-narrow {
   margin: 0 auto;
-  padding: 0 1.5rem;
+  /* padding adaptivo: 24px móvil → 56px desktop grande */
+  padding: 0 clamp(1.5rem, 4vw, 3.5rem);
+}
+
+.container {
+  max-width: var(--max-wide);
+}
+
+.container-content {
+  max-width: var(--max-content);
 }
 
 .container-narrow {
-  max-width: var(--max-width-narrow);
-  margin: 0 auto;
-  padding: 0 1.5rem;
+  max-width: var(--max-prose);
 }
 
 /* ---- CTA base ---- */

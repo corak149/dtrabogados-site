@@ -40,9 +40,15 @@
   --fs-body: 1.0625rem;
   --fs-small: 0.875rem;
 
-  /* --- Layout --- */
-  --max-width: 1140px;
-  --max-width-narrow: 720px;
+  /* --- Layout — sistema de 3 escalas de ancho (Sprint 1c día 2) --- */
+  --max-prose: 720px;          /* legales, blog, texto largo — 60-80 char/linea */
+  --max-content: 1040px;       /* hero, áreas, procesos, secciones estándar */
+  --max-wide: 1240px;          /* grids amplios, catálogos, 3+ cards */
+
+  /* alias legacy — mantener por retro-compatibilidad */
+  --max-width: var(--max-wide);
+  --max-width-narrow: var(--max-prose);
+
   --radius-sm: 4px;
   --radius: 6px;
   --radius-lg: 10px;
