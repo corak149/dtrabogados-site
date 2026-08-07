@@ -32,7 +32,7 @@ plazos:
   vigencia: "Hasta 6 años, prorrogables anualmente"
   renovacion: "Anual, con excepción de antecedentes y cheques."
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021. Cotizamos según duración de la asignación."
-tasas_oficiales: "Tasa MITRADEL B/.300 + tasa SNM B/.250 + B/.1,050 (B/.250 Tesoro + B/.800 SNM) en primera solicitud."
+tasas_oficiales: "Tasa SNM B/.250.00 (Resolución de prensa DE 320/2008 arts. 88-90) + tasa MITRADEL variable según clasificación del permiso. Corresponsales NO tienen entrada específica en la Tabla de Costos MITRADEL estándar; se tramita como permiso especial bajo categoria 4D."
 alertas:
   - "El corresponsal debe estar ACREDITADO por las autoridades de prensa de su país de origen."
   - "La remuneración debe ser DE FUENTE EXTRANJERA. Si es contratado por medio panameño, no aplica."

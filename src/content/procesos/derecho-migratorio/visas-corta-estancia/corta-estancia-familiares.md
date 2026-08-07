@@ -32,7 +32,7 @@ plazos:
   vigencia: "Corta estancia, hasta 90 días prorrogables"
   renovacion: "Prórroga mediante solicitud de extensión hasta completar 180 días máximo. Para permanencia mayor, el familiar debe solicitar reagrupación familiar o cambio de categoría."
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021. Cotizamos según documentación de parentesco a acreditar."
-tasas_oficiales: "Tasa SNM B/.100 (corta estancia) + tasa consular si se solicita en exterior."
+tasas_oficiales: "Tasa SNM B/.250.00 (estandar visa corta estancia DE 320/2008 art. 48) + tasa consular si se solicita desde el exterior del pais."
 alertas:
   - "El familiar en Panamá debe ser NACIONAL panameño o RESIDENTE temporal o permanente. Si el familiar está en Panamá con visa de turista, no puede ser garante de esta visa."
   - "Parentesco debe comprobarse con documentos oficiales apostillados o legalizados según país de origen. Documentos no apostillados son rechazados."

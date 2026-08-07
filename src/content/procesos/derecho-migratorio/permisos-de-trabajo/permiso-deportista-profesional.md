@@ -32,7 +32,7 @@ plazos:
   vigencia: "Hasta 4 años (1 año prorrogable hasta 3 años)"
   renovacion: "Anual, con excepción de antecedentes y cheques."
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021. Cotizamos según duración del contrato deportivo."
-tasas_oficiales: "Tasa MITRADEL B/.300 + tasa SNM B/.250 + B/.1,050 (B/.250 Tesoro + B/.800 SNM) en primera solicitud."
+tasas_oficiales: "Tasa MITRADEL $50.00 primera vez o renovacion + $30.00 duplicados (TIPO 7B Deportistas - Tabla oficial MITRADEL www.mitradel.gob.pa/empleo/tabla-de-costos-de-permisos-de-trabajo). NOTA: si requiere RESIDENCIA SNM asociada, la residencia cobra B/.1,050 adicional (B/.250 Tesoro + B/.800 SNM)."
 alertas:
   - "Cubre deportistas, técnicos, instructores y entrenadores de MODALIDADES RECONOCIDAS por Panamá. Deportes no reconocidos no califican."
   - "El plazo máximo (4 años) es MENOR que otras categorías laborales (6 años)."
