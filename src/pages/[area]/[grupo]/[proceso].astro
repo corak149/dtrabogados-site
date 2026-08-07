@@ -28,6 +28,15 @@ import { getCollection } from "astro:content";
  * Es intencionalmente limitado: notas_firma es prosa de la Firma, no
  * documentación técnica. Si en el futuro se necesita más, importar `marked`.
  */
+function renderInline(text: string | undefined): string {
+  if (!text) return "";
+  const escape = (s: string) =>
+    s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  return escape(text)
+    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+    .replace(/(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)/g, "<em>$1</em>");
+}
+
 function renderNotasFirma(md: string): string {
   const escape = (s: string) =>
     s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
@@ -123,9 +132,7 @@ const noindex = !entry;
       </span>
       <h1 style="color: var(--dtr-white);">{title}</h1>
       {data?.resumen && (
-        <p style="color: rgba(255,255,255,0.85); font-size: 1.1rem; margin-top: 0.5rem;">
-          {data.resumen}
-        </p>
+        <p style="color: rgba(255,255,255,0.85); font-size: 1.1rem; margin-top: 0.5rem;" set:html={renderInline(data.resumen)} />
       )}
 
       {/* === HERO INFO STRIP (NUEVO Sprint 1c) === */}
@@ -159,7 +166,7 @@ const noindex = !entry;
               <div class="callout-body">
                 <strong>Antes de continuar, tenga en cuenta:</strong>
                 <ul>
-                  {data.alertas.map((item) => <li>{item}</li>)}
+                  {data.alertas.map((item) => <li set:html={renderInline(item)} />)}
                 </ul>
               </div>
             </div>
@@ -170,7 +177,7 @@ const noindex = !entry;
             <div class="proc-section">
               <h2>Es para usted si...</h2>
               <ul>
-                {data.dirigido_a.map((item) => <li>{item}</li>)}
+                {data.dirigido_a.map((item) => <li set:html={renderInline(item)} />)}
               </ul>
             </div>
           )}
@@ -183,7 +190,7 @@ const noindex = !entry;
                 <div>
                   <h2>Requisitos para persona natural</h2>
                   <ul>
-                    {data.requisitos_persona_natural.map((item) => <li>{item}</li>)}
+                    {data.requisitos_persona_natural.map((item) => <li set:html={renderInline(item)} />)}
                   </ul>
                 </div>
               )}
@@ -191,7 +198,7 @@ const noindex = !entry;
                 <div>
                   <h2>Requisitos para empresa</h2>
                   <ul>
-                    {data.requisitos_empresa.map((item) => <li>{item}</li>)}
+                    {data.requisitos_empresa.map((item) => <li set:html={renderInline(item)} />)}
                   </ul>
                 </div>
               )}
@@ -228,7 +235,7 @@ const noindex = !entry;
                 {data.tasas_oficiales && (
                   <div class="costos-card">
                     <h3>Costos directos oficiales</h3>
-                    <p>{data.tasas_oficiales}</p>
+                    <p set:html={renderInline(data.tasas_oficiales)} />
                     <p class="text-small text-muted">
                       Tasas que se pagan directamente al SNM, MITRADEL u
                       otras instituciones. Se abonan aparte de los
@@ -239,7 +246,7 @@ const noindex = !entry;
                 {data.honorarios_ref && (
                   <div class="costos-card costos-card-honor">
                     <h3>Honorarios profesionales</h3>
-                    <p>{data.honorarios_ref}</p>
+                    <p set:html={renderInline(data.honorarios_ref)} />
                     <p class="text-small text-muted">
                       Determinados según el
                       <a href="/honorarios/">Acuerdo CNA 609-A/2021</a>
@@ -263,7 +270,7 @@ const noindex = !entry;
                 </p>
               )}
               <ul class="base-legal">
-                {data.base_legal.map((item) => <li>{item}</li>)}
+                {data.base_legal.map((item) => <li set:html={renderInline(item)} />)}
               </ul>
             </div>
           )}

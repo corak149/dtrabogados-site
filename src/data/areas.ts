@@ -272,9 +272,16 @@ export const AREAS: Area[] = [
         ],
       },
       {
-        slug: "fundaciones-interes-privado",
-        titulo: "Fundaciones de interés privado",
-        procesos: [],
+        slug: "gobierno-corporativo",
+        titulo: "Gobierno corporativo",
+        procesos: [
+          { slug: "reforma-pacto-social", titulo: "Reformas al pacto social (S.A. y S.R.L.)" },
+          { slug: "acciones-nominativas", titulo: "Emisión y traspaso de acciones nominativas" },
+          { slug: "reforma-carta-fundacional", titulo: "Reforma de Carta Fundacional (Fundación de Interés Privado)" },
+          { slug: "cambio-consejo-fundacional", titulo: "Cambio de Consejo Fundacional (Fundación)" },
+          { slug: "reforma-estatutos-asociacion", titulo: "Reforma de estatutos (Asociación sin fines de lucro)" },
+          { slug: "exencion-fiscal-mef", titulo: "Solicitud de exención fiscal ante el MEF (Asociación)" },
+        ],
       },
       {
         slug: "compliance-corporativo",
@@ -288,8 +295,8 @@ export const AREAS: Area[] = [
         slug: "conflictos-societarios",
         titulo: "Conflictos societarios",
         procesos: [
-          { slug: "exclusion-socios", titulo: "Exclusión de socios" },
-          { slug: "disolucion", titulo: "Disolución" },
+          { slug: "exclusion-socios", titulo: "Exclusión de socios (arbitraje o CPC Ley 402/2023)" },
+          { slug: "disolucion-liquidacion", titulo: "Disolución y liquidación judicial de sociedades" },
         ],
       },
     ],
