@@ -376,6 +376,27 @@ export const AREAS: Area[] = [
           { slug: "cuotas-obrero-patronales", titulo: "Cuotas obrero-patronales" },
           { slug: "riesgos-profesionales", titulo: "Riesgos profesionales" },
           { slug: "pension-invalidez-vejez", titulo: "Pensión por invalidez o vejez" },
+          { slug: "paz-y-salvo-css", titulo: "Paz y Salvo de la CSS" },
+        ],
+      },
+      {
+        slug: "contratacion",
+        titulo: "Contratación y régimen interno",
+        procesos: [
+          { slug: "contrato-trabajo", titulo: "Contrato de trabajo individual" },
+          { slug: "periodo-de-prueba", titulo: "Período de prueba" },
+          { slug: "reglamento-interno", titulo: "Reglamento interno de trabajo" },
+          { slug: "jornada-horas-extras", titulo: "Jornada laboral y horas extras" },
+        ],
+      },
+      {
+        slug: "litigio",
+        titulo: "Conciliación y litigio",
+        procesos: [
+          { slug: "conciliacion-mitradel", titulo: "Conciliación ante MITRADEL" },
+          { slug: "demanda-laboral", titulo: "Demanda laboral ante Juez de Trabajo" },
+          { slug: "apelacion-tribunal", titulo: "Apelación ante Tribunal Superior de Trabajo" },
+          { slug: "apoderamiento-judicial", titulo: "Apoderamiento y representación judicial" },
         ],
       },
     ],
