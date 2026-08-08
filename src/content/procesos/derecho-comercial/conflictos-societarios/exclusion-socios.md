@@ -34,8 +34,7 @@ plazos:
   tramite: "Arbitraje: 6 a 18 meses según reglamento aplicable. Proceso ordinario CPC 402/2023: 12 a 24 meses con audiencia pública y oralidad"
   vigencia: "El laudo o sentencia es definitiva desde su firmeza"
   renovacion: "No aplica"
-tasas_oficiales: "Tribunales civiles: derechos judiciales según cuantía (~US$ 200 – US$ 2,000). Arbitraje: honorarios del árbitro y tasas del Centro de Arbitraje (variable según reglamento)"
-honorarios_ref: "Desde US$ 3,000 por caso simple (defensa o demanda con documentación clara). Casos complejos con audiencia probatoria intensa, peritos y varias partes desde US$ 8,000. Modalidad cuota litis (porcentaje del recuperado) disponible en casos idóneos. Aplicamos el Acuerdo CNA 609-A/2021."
+honorarios_ref: "Los honorarios se cotizan según la complejidad del caso, el número de partes, la vía elegida (arbitraje o proceso ordinario) y la intensidad probatoria. Cuando el caso lo permite, ofrecemos modalidad cuota litis. Le enviamos propuesta escrita con precio cerrado antes de iniciar. Aplicamos el Acuerdo CNA 609-A/2021."
 alertas:
   - "Ley 402/2023 (nuevo Código Procesal Civil) vigente desde 11 de octubre de 2025 — el proceso es ORAL con audiencia pública. La estrategia procesal difiere del Código de 1991."
   - "Si el pacto social contiene cláusula arbitral, los tribunales civiles deben INHIBIRSE y remitir a arbitraje. No hay opción — el arbitraje es preferente."
@@ -45,51 +44,51 @@ alertas:
 notas_firma: |
   La exclusión de socios es uno de los conflictos más delicados del derecho societario panameño. Involucra tres ejes: la causal, el procedimiento y la valoración.
 
-  ## 1. Causales
+  Causales
 
-  **Causales legales** (aplican aunque el pacto no las prevea):
+  Causales legales, que aplican aunque el pacto no las prevea:
   - Incumplimiento grave de las obligaciones de socio.
   - Competencia desleal contra la sociedad.
   - Condena penal firme por delito doloso relacionado con la sociedad.
   - Uso indebido del nombre o los bienes sociales.
 
-  **Causales estatutarias** (solo si el pacto las prevé):
+  Causales estatutarias, que aplican solo si el pacto social las prevé:
   - Pérdida de affectio societatis debidamente acreditada.
   - Incumplimiento de aportes o cuotas periódicas.
   - Violación de pactos de no competencia o confidencialidad.
-  - Otros supuestos que el pacto haya establecido expresamente.
+  - Otros supuestos que el pacto social haya establecido expresamente.
 
-  ## 2. Procedimiento — arbitraje o CPC Ley 402/2023
+  Procedimiento
 
-  **Si el pacto tiene cláusula arbitral:** el conflicto se ventila ante el Centro de Arbitraje pactado (típicamente el Centro de Conciliación y Arbitraje de la Cámara de Comercio de Panamá o el CENAC). El árbitro decide sobre la exclusión y la valoración. La Ley 402/2023 reconoce la fuerza vinculante del arbitraje y obliga a los jueces a inhibirse cuando hay cláusula compromisoria.
+  Si el pacto contiene cláusula arbitral, el conflicto se ventila ante el Centro de Arbitraje pactado, típicamente el Centro de Conciliación y Arbitraje de la Cámara de Comercio de Panamá o el CENAC. El árbitro decide sobre la exclusión y la valoración. La Ley 402 de 2023 reconoce la fuerza vinculante del arbitraje y obliga a los jueces a inhibirse cuando existe cláusula compromisoria.
 
-  **Si no hay cláusula arbitral:** se acude a los tribunales civiles por el proceso ordinario del nuevo Código Procesal Civil (Ley 402 de 2023, vigente desde 11 de octubre de 2025). Los cambios principales:
+  Si no hay cláusula arbitral, se acude a los tribunales civiles por el proceso ordinario del nuevo Código Procesal Civil (Ley 402 de 2023, vigente desde el 11 de octubre de 2025). Los cambios principales son:
 
-  - **Audiencia pública** como eje del proceso — reduce la escritura y acelera la decisión.
-  - **Oralidad** en la práctica de pruebas — testimonios y peritajes se ventilan en audiencia.
-  - **Principio de economía procesal** — el juez puede acumular actos y limitar formalismos.
-  - **MARC obligatorio** — antes de sentencia el juez debe intentar mediación.
+  - Audiencia pública como eje del proceso, que reduce la escritura y acelera la decisión.
+  - Oralidad en la práctica de pruebas, con testimonios y peritajes en audiencia.
+  - Principio de economía procesal: el juez puede acumular actos y limitar formalismos.
+  - MARC obligatorio antes de la sentencia, con intento de mediación.
 
-  ## 3. Valoración
+  Valoración
 
-  La determinación del valor de las acciones o cuotas del socio excluido es crítica:
+  La determinación del valor de las acciones o cuotas del socio excluido es crítica y suele apoyarse en:
 
-  - **Valor nominal**: rara vez aceptable, salvo pacto expreso.
-  - **Valor patrimonial**: activos menos pasivos, ajustado por participación.
-  - **Valor de mercado (comparable)**: si hay operaciones recientes.
-  - **Valor de flujo descontado**: para sociedades operativas con proyecciones.
+  - Valor nominal, rara vez aceptable salvo pacto expreso.
+  - Valor patrimonial, activos menos pasivos, ajustado por participación.
+  - Valor de mercado o comparable, cuando hay operaciones recientes.
+  - Valor de flujo descontado, útil para sociedades operativas con proyecciones.
 
-  Normalmente se designa un perito valuador, aceptado por ambas partes o nombrado por el árbitro/juez.
+  Normalmente se designa un perito valuador, aceptado por ambas partes o nombrado por el árbitro o el juez.
 
-  ## Recomendación DTR
+  Recomendación DTR
 
-  Antes de arrancar un proceso, siempre agotamos:
+  Antes de iniciar un proceso, siempre agotamos:
 
-  1. **Análisis previo** de la causal — muchos conflictos no califican para exclusión y se resuelven mejor por compra-venta forzada o disolución parcial.
-  2. **Mediación** con un mediador profesional — más rápido y económico.
-  3. **Negociación asistida** — la exclusión suele terminar en acuerdo económico antes de sentencia.
+  1. Análisis previo de la causal. Muchos conflictos no califican para exclusión y se resuelven mejor por compra-venta forzada o disolución parcial.
+  2. Mediación con un profesional, más rápida y económica.
+  3. Negociación asistida, que suele terminar en acuerdo económico antes de la sentencia.
 
-  Cuando el litigio es inevitable, defendemos con estrategia procesal alineada al nuevo CPC Ley 402/2023 y a la doctrina arbitral vigente.
+  Cuando el litigio es inevitable, defendemos con estrategia procesal alineada al nuevo CPC Ley 402 de 2023 y a la doctrina arbitral vigente.
 aprobado_por: "DRAFT Claude 08.08.2026 — pendiente extensión y firma Danna (CLO) con doctrina 851.12 + jurisprudencia CPC 402/2023"
 revisar_con: "dtr-vault/800-Knowledge-PA/850-Derecho-Comercial/851-Bloque-1-Norma-Supra-y-Tipos-Societarios/851.12-Casacion-Societaria/ + doctrina Ley 402/2023"
 ultima_actualizacion: "8 de agosto de 2026"

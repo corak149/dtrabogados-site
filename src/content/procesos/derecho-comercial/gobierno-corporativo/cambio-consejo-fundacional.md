@@ -29,7 +29,7 @@ plazos:
   tramite: "5 a 10 días hábiles"
   vigencia: "Permanente desde inscripción registral"
   renovacion: "No aplica"
-tasas_oficiales: "Registro Público (~US$ 75), Notaría (~US$ 40)"
+tasas_oficiales: "Los costos oficiales del Registro Público más notaría se acercan a US$ 400 según el alcance del cambio; los confirmamos junto con la cotización antes de iniciar."
 honorarios_ref: "Desde US$ 500 por cambio simple (1-2 miembros). Renovación total del Consejo desde US$ 900. Aplicamos el Acuerdo CNA 609-A/2021."
 alertas:
   - "El Consejo Fundacional puede ser una persona jurídica (ejemplo: una S.A. profesional que actúa como nominal). Esta figura es común en fundaciones internacionales."

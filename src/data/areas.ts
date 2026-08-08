@@ -287,7 +287,7 @@ export const AREAS: Area[] = [
         slug: "compliance-corporativo",
         titulo: "Compliance corporativo",
         procesos: [
-          { slug: "programa-cumplimiento-penal", titulo: "Programa de cumplimiento penal" },
+          { slug: "programa-cumplimiento-penal", titulo: "Programa de Cumplimiento Corporativo" },
           { slug: "debida-diligencia", titulo: "Debida diligencia" },
         ],
       },

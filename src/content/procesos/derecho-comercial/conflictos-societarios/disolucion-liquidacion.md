@@ -35,8 +35,7 @@ plazos:
   tramite: "Disolución voluntaria: 2-4 meses. Disolución judicial (CPC 402/2023): 12-24 meses. Disolución de oficio: automática por Registro Público según DE 905/2019"
   vigencia: "Cancelación definitiva de la personalidad jurídica"
   renovacion: "No aplica"
-tasas_oficiales: "Registro Público (~US$ 200), Notaría (~US$ 100), Publicación de edictos (~US$ 150), Tribunales civiles (variable según cuantía en disolución judicial)"
-honorarios_ref: "Disolución voluntaria simple: desde US$ 1,500. Disolución con activos y pasivos a liquidar: desde US$ 2,500. Disolución judicial con litigio: desde US$ 5,000. Aplicamos el Acuerdo CNA 609-A/2021."
+honorarios_ref: "Los honorarios se cotizan según la modalidad (voluntaria, forzosa judicial o de oficio), el volumen y complejidad del patrimonio a liquidar y la existencia de litigio. Le enviamos propuesta escrita con precio cerrado antes de iniciar. Aplicamos el Acuerdo CNA 609-A/2021."
 alertas:
   - "El Decreto Ejecutivo 905/2019 permite al Registro Público disolver de OFICIO sociedades morosas de Tasa Única DGI por 3 años consecutivos. Esta disolución afecta la titularidad de activos y la responsabilidad de los directores."
   - "Ley 402/2023 (CPC vigente desde 11.10.2025) rige los procesos de disolución judicial — con audiencia pública y oralidad."
@@ -44,25 +43,25 @@ alertas:
   - "Si hay bienes inmuebles en cabeza de la sociedad disuelta, se requiere protocolización adicional para transferir a los accionistas o rematar."
   - "La cancelación de la personalidad jurídica NO extingue las obligaciones tributarias pendientes — DGI puede perseguir a los directores por deuda tributaria."
 notas_firma: |
-  La disolución de una sociedad panameña puede ser voluntaria, forzosa o de oficio. En cada modalidad hay procedimientos, plazos y riesgos distintos.
+  La disolución de una sociedad panameña puede ser voluntaria, forzosa o de oficio. En cada modalidad hay procedimientos, plazos y consideraciones distintas.
 
-  ## 1. Disolución voluntaria
+  Disolución voluntaria
 
-  Los socios acuerdan cerrar la sociedad en Asamblea Extraordinaria. Es el proceso más limpio y rápido:
+  Los socios acuerdan cerrar la sociedad en Asamblea Extraordinaria. Es el proceso más limpio y ágil:
 
   1. Convocatoria y acta de disolución con quórum reforzado.
   2. Escritura pública ante notaría.
-  3. Nombramiento del liquidador (puede ser un socio o un tercero).
+  3. Nombramiento del liquidador, que puede ser un socio o un tercero.
   4. Publicación de edictos.
   5. Liquidación de activos y pago de pasivos.
   6. Inscripción de la cancelación en el Registro Público.
 
-  ## 2. Disolución forzosa (judicial o arbitral)
+  Disolución forzosa, judicial o arbitral
 
   Cuando hay conflicto entre socios y no hay acuerdo:
 
-  - **Si hay cláusula arbitral en el pacto**: se ventila por arbitraje.
-  - **Si no hay cláusula arbitral**: proceso ordinario ante tribunales civiles bajo la **Ley 402 de 2023 (CPC vigente desde 11 de octubre de 2025)**. El nuevo Código introduce audiencia pública, oralidad y MARC obligatorio antes de sentencia.
+  - Si el pacto social contiene cláusula arbitral, el conflicto se ventila por arbitraje.
+  - Si no hay cláusula arbitral, se acude al proceso ordinario ante tribunales civiles bajo la Ley 402 de 2023, Código Procesal Civil vigente desde el 11 de octubre de 2025, que introduce audiencia pública, oralidad y MARC obligatorio antes de la sentencia.
 
   Causales típicas de disolución judicial:
 
@@ -71,37 +70,37 @@ notas_firma: |
   - Pérdida grave del capital.
   - Incumplimiento reiterado de socios o directores.
 
-  ## 3. Disolución de oficio (Decreto Ejecutivo 905/2019)
+  Disolución de oficio (Decreto Ejecutivo 905 de 2019)
 
-  El Registro Público puede disolver una sociedad de oficio cuando ha dejado de pagar la Tasa Única DGI por 3 años consecutivos. Consecuencias:
+  El Registro Público puede disolver una sociedad de oficio cuando ha dejado de pagar la Tasa Única DGI por tres años consecutivos. Consecuencias:
 
-  - **Pérdida de la personalidad jurídica** — la sociedad ya no puede contratar ni ser demandada como tal.
-  - **Los activos quedan en limbo** — típicamente pasan a los accionistas por liquidación proporcional.
-  - **Los directores pueden ser responsabilizados** personalmente por deudas tributarias.
+  - Pérdida de la personalidad jurídica: la sociedad ya no puede contratar ni ser demandada como tal.
+  - Los activos quedan en situación de indefinición y suelen pasar a los accionistas por liquidación proporcional.
+  - Los directores pueden ser responsabilizados personalmente por deudas tributarias.
 
-  Es reversible dentro de ciertos plazos si se paga la Tasa Única acumulada + multas.
+  Es reversible dentro de ciertos plazos si se paga la Tasa Única acumulada más las multas.
 
-  ## 4. Liquidación
+  Liquidación
 
-  Independiente del tipo de disolución, la liquidación sigue reglas comunes:
+  Independientemente del tipo de disolución, la liquidación sigue reglas comunes:
 
-  1. **Inventario** de activos y pasivos.
-  2. **Publicación de edictos** para que acreedores comparezcan.
-  3. **Pago de pasivos** en orden de prelación: laborales, fiscales, garantías reales, quirografarios.
-  4. **Reparto del remanente** a los accionistas proporcional a su participación.
-  5. **Escritura final de liquidación** e inscripción de cancelación.
+  1. Inventario de activos y pasivos.
+  2. Publicación de edictos para que los acreedores comparezcan.
+  3. Pago de pasivos en orden de prelación: laborales, fiscales, garantías reales, quirografarios.
+  4. Reparto del remanente entre los accionistas proporcional a su participación.
+  5. Escritura final de liquidación e inscripción de la cancelación.
 
-  Duración típica de una liquidación completa: 3 a 12 meses según complejidad patrimonial.
+  Duración típica de una liquidación completa: 3 a 12 meses según la complejidad patrimonial.
 
-  ## Recomendación DTR
+  Recomendación DTR
 
   Antes de disolver, siempre analizamos alternativas:
 
-  - **Suspensión temporal** — la sociedad puede quedar inactiva pero registralmente vigente.
-  - **Venta de la sociedad** — a un tercero interesado en la personalidad jurídica y su historial.
-  - **Reestructuración de socios** — cambio de accionistas o directorio antes de decidir cerrar.
+  - Suspensión temporal: la sociedad queda inactiva pero registralmente vigente.
+  - Venta de la sociedad a un tercero interesado en la personalidad jurídica y el historial.
+  - Reestructuración de socios: cambio de accionistas o directorio antes de decidir cerrar.
 
-  Cuando la disolución es la vía, acompañamos todo el proceso hasta la cancelación registral y la protocolización de activos.
+  Cuando la disolución es la vía, acompañamos todo el proceso hasta la cancelación registral y la protocolización de los activos.
 aprobado_por: "DRAFT Claude 08.08.2026 — pendiente extensión Danna (CLO)"
 revisar_con: "dtr-vault/800-Knowledge-PA/850-Derecho-Comercial/851-Bloque-1-Norma-Supra-y-Tipos-Societarios/851.11-Disolucion-y-Suspension-Sociedades/ + doctrina Ley 402/2023"
 ultima_actualizacion: "8 de agosto de 2026"

@@ -32,10 +32,10 @@ plazos:
   tramite: "6 a 12 meses desde presentación completa"
   vigencia: "Permanente mientras la Asociación mantenga sus actividades no lucrativas y presente reportes anuales"
   renovacion: "Reporte anual de estados financieros a la DGI para mantener la exención"
-tasas_oficiales: "Sin costo oficial de presentación; los timbres fiscales son mínimos (~US$ 20)"
+tasas_oficiales: "El trámite no tiene tasa de presentación; los costos de timbres y notarizaciones asociadas los estudiamos y confirmamos con la cotización."
 honorarios_ref: "Desde US$ 1,800 por trámite completo (memorial + acompañamiento hasta resolución). Con seguimiento intensivo y respuesta a requerimientos, desde US$ 2,500. Aplicamos el Acuerdo CNA 609-A/2021."
 alertas:
-  - "El trámite es LENTO — planificar 6 a 12 meses desde presentación. La DGI puede hacer requerimientos adicionales que extienden el plazo."
+  - "El trámite es extenso — se recomienda planificar de 6 a 12 meses desde la presentación. La DGI puede formular requerimientos adicionales que amplían el plazo."
   - "La exención NO es automática. Muchas Asociaciones creen que por ser sin fines de lucro no tributan; la exención debe RECONOCERSE expresamente por la DGI."
   - "Las Asociaciones con actividades comerciales colaterales (ejemplo: venta de mercadería para financiar el objeto) sí pueden tributar sobre esas actividades."
   - "El incumplimiento del reporte anual puede llevar a la REVOCATORIA de la exención."

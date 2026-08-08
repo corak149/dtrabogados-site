@@ -34,11 +34,11 @@ plazos:
   tramite: "5 a 10 días hábiles desde firma de escritura hasta inscripción registral"
   vigencia: "La reforma queda inscrita de forma permanente; genera un nuevo folio en el Registro Público"
   renovacion: "No aplica"
-tasas_oficiales: "Registro Público (US$ 50–150 según tipo de reforma), Notaría (~US$ 40), Timbres fiscales (~US$ 10)"
+tasas_oficiales: "Los costos oficiales varían según el tipo de reforma; los estudiamos y cotizamos con precisión una vez identificado el alcance del cambio."
 honorarios_ref: "Desde US$ 600 por reforma sencilla (cambio de nombre, cambio de dignatarios). Reformas complejas (aumento de capital con emisión de acciones, cambio de objeto amplio, reestructuración de administración) desde US$ 900. Aplicamos el Acuerdo CNA 609-A/2021."
 alertas:
   - "Las reformas al Pacto Social requieren quórum reforzado según el pacto vigente — típicamente 75% del capital. Verificar antes de convocar la asamblea."
-  - "Cambios que afecten a los accionistas minoritarios (dilución, cambio de objeto) pueden dar derecho a receso — el accionista disconforme puede exigir el reembolso de sus acciones."
+  - "Cambios que afecten a los accionistas minoritarios (dilución, cambio de objeto) pueden generar disconformidades que, si no se manejan con acuerdos previos, pueden escalar a instancias judiciales o arbitrales."
   - "El aumento de capital con emisión de nuevas acciones requiere actualizar el libro de accionistas y emitir nuevos certificados."
   - "Los cambios de dignatarios deben reportarse también al banco y al Agente Residente para actualizar KYC."
 notas_firma: |
