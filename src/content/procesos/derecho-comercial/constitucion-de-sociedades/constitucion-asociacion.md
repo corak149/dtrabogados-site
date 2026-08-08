@@ -1,6 +1,6 @@
 ---
 titulo: Constitución de Asociación sin Fines de Lucro
-descripcion: "Constitución de asociación sin fines de lucro en 7-15 días hábiles. Desde $1,500. Para fines sociales, culturales o deportivos. Ley 3/1980."
+descripcion: "Constitución de asociación sin fines de lucro en 15-30 días hábiles. Desde $1,500. Para fines sociales, culturales o deportivos. Ley 3/1980."
 resumen: La Asociación sin Fines de Lucro es una persona jurídica panameña dedicada a actividades sociales, culturales, religiosas, deportivas o de beneficencia. No reparte utilidades entre sus miembros.
 decreto_principal: "Ley 3 de 6 de enero de 1980 (asociaciones sin fines de lucro) + Ley 33 de 26 de junio de 1984 (régimen de exención fiscal)"
 categoria_comercial: "Constitución de persona jurídica — Asociación sin Fines de Lucro"
@@ -27,7 +27,7 @@ requisitos_persona_natural:
 requisitos_empresa:
   - "No aplica — es proceso de creación"
 plazos:
-  tramite: "7 a 15 días hábiles una vez recibida la documentación completa"
+  tramite: "15 a 30 días hábiles una vez recibida la documentación completa"
   vigencia: "Duración indefinida (perpetua) salvo disolución voluntaria"
   renovacion: "Renovación anual ante Registro Público (Paz y Salvo DGI) + reportes MEF si aplica exención"
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021 del Colegio Nacional de Abogados. Cotizamos por caso considerando complejidad (número de fundadores, fines, si requiere exención fiscal MEF)."
@@ -41,7 +41,7 @@ alertas:
 notas_firma: |
   La Asociación sin Fines de Lucro es la figura ideal para
   actividades sociales, culturales, religiosas o de beneficencia. En
-  DTR tramitamos la constitución completa en 7 a 15 días hábiles,
+  DTR tramitamos la constitución completa en 15 a 30 días hábiles,
   incluyendo:
 
   1. **Convocatoria y Asamblea Constitutiva** (acta firmada por los fundadores).

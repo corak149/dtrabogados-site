@@ -39,7 +39,7 @@ alertas:
   - "Las cooperativas tienen régimen fiscal especial: las de primer grado se eximen del ISR bajo condiciones, las de segundo grado también."
   - "IPACOOP supervisa continuamente: reportes anuales obligatorios + auditorías externas periódicas."
   - "KYC + Beneficiario Final: igual que S.A., declaración ante la SSNF antes del 15 de junio de cada año."
-  - "Después de constituida, retainer corporativo mensual desde $300 con agente residente continuo, KYC anual, recordatorios DGI/RUBF/IPACOOP y horas jurídicas incluidas."
+  - "Después de constituida, ponemos a su disposición nuestro retainer corporativo mensual con KYC anual, recordatorios DGI/RUBF/IPACOOP, coordinación con el agente residente y horas jurídicas incluidas."
 notas_firma: |
   La Cooperativa es la figura jurídica para organizaciones de
   economía social regida por Ley 17/1997. En DTR tramitamos la

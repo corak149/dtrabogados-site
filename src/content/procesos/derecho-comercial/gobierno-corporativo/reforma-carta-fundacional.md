@@ -30,7 +30,7 @@ plazos:
   tramite: "10 a 20 días hábiles según complejidad de la reforma"
   vigencia: "Permanente desde inscripción"
   renovacion: "No aplica"
-tasas_oficiales: "Registro Público (~US$ 100), Notaría (~US$ 50), Timbres (~US$ 15)"
+tasas_oficiales: "Los costos oficiales del Registro Público más notaría y timbres se acercan a US$ 400 según el tipo de reforma; los confirmamos junto con la cotización antes de iniciar."
 honorarios_ref: "Desde US$ 700 por reforma simple (cambio de un miembro del Consejo, incorporación de Protector). Reformas complejas (cambio de beneficiarios, régimen de administración) desde US$ 1,200. Aplicamos el Acuerdo CNA 609-A/2021."
 alertas:
   - "La Carta Fundacional puede prever CUÁNDO y CÓMO puede reformarse. Si el Fundador ha fallecido o la Carta no lo autoriza, algunas reformas pueden ser imposibles."

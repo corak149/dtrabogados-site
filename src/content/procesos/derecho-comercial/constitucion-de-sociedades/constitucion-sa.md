@@ -1,6 +1,6 @@
 ---
 titulo: Constitución de Sociedad Anónima
-descripcion: "Constitución de S.A. panameña en 5-10 días hábiles. Desde $1,700. Incluye agente residente 1er año, notaría y registro. Ley 32/1927."
+descripcion: "Constitución de S.A. panameña en 7-15 días hábiles. Desde $1,700. Incluye agente residente 1er año, notaría y registro. Ley 32/1927."
 resumen: La Sociedad Anónima (S.A.) es la figura societaria más utilizada en Panamá para empresas nacionales y extranjeras. Constitución rápida con capital autorizado desde USD $10,000,00, sin obligación de desembolsarlo en su totalidad.
 decreto_principal: "Ley 32 de 1927 (Sociedades Anónimas) + Decreto Ley 5 de 2 de julio de 1997"
 categoria_comercial: "Constitución de persona jurídica — Sociedad Anónima"
@@ -28,7 +28,7 @@ requisitos_persona_natural:
 requisitos_empresa:
   - "No aplica — es proceso de creación"
 plazos:
-  tramite: "5 a 10 días hábiles una vez recibida la documentación completa"
+  tramite: "7 a 15 días hábiles una vez recibida la documentación completa"
   vigencia: "La sociedad se constituye por duración indefinida (perpetua) salvo pacto en contrario"
   renovacion: "Renovación anual ante Registro Público (Aviso de Operación + Paz y Salvo DGI)"
 honorarios_ref: "Honorarios profesionales según el Acuerdo CNA 609-A/2021 del Colegio Nacional de Abogados. Cotizamos por caso considerando complejidad (estructura societaria, número de accionistas, capital, junta directiva)."
@@ -42,7 +42,7 @@ alertas:
 notas_firma: |
   La Sociedad Anónima es la figura corporativa más utilizada en
   Panamá para empresas nacionales y extranjeras. En DTR tramitamos
-  la constitución completa en 5 a 10 días hábiles, incluyendo:
+  la constitución completa en 7 a 15 días hábiles, incluyendo:
 
   1. **Reserva de nombre** y redacción del Pacto Social.
   2. **Protocolización notarial** de la escritura pública.

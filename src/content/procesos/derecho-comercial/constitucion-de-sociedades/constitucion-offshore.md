@@ -39,14 +39,14 @@ alertas:
   - "La S.A. offshore NO puede ser contribuyente fiscal en Panamá (si lo es, pierde el beneficio de la exención territorial)."
   - "Requiere agente residente (obligatorio por Ley 51/2016) — incluso si la sociedad no tiene actividad local."
   - "KYC + Beneficiario Final: declaración ante la SSNF antes del 15 de junio de cada año a través del agente residente."
-  - "Apertura de cuenta bancaria corporativa: típicamente 2-6 semanas por due diligence bancaria intensificada (BAC, Banco General, Banistmo, Multibank, Credicorp, Banco Aliado)."
-  - "Recomendamos retainer corporativo mensual desde $300 con agente residente continuo, KYC anual, recordatorios DGI/RUBF y horas jurídicas incluidas."
+  - "Apertura de cuenta bancaria corporativa: típicamente 2-6 semanas por la debida diligencia bancaria que aplican las entidades panameñas."
+  - "Le recomendamos activar nuestro retainer corporativo mensual — disponible para acompañamiento continuo con KYC anual, recordatorios DGI/RUBF, coordinación con el agente residente y horas jurídicas incluidas."
 notas_firma: |
   La S.A. offshore panameña es el vehículo más usado para
   estructuración internacional. En DTR tramitamos la constitución
   completa en 5 a 10 días hábiles, incluyendo:
 
-  1. **Reserva de nombre** y redacción del Pacto Social bilingüe.
+  1. **Reserva de nombre** y redacción del Pacto Social.
   2. **Protocolización notarial** de la escritura.
   3. **Inscripción en el Registro Público de Panamá**.
   4. **Traducción al inglés** del Pacto Social.
@@ -57,7 +57,6 @@ notas_firma: |
   **Casos donde ESTA VÍA NO es la correcta:**
   - Si va a tener actividad económica dentro de Panamá (considere S.A. operativa).
   - Si busca tenencia de activos privados sin operativa (considere Fundación de Interés Privado).
-  - Si la jurisdicción requiere establecimiento físico (considere opciones como Nevis, BVI, Belice para optimización).
 aprobado_por: "Danna (CLO), 08.08.2026"
 revisar_con: "800-Knowledge-PA/850-Derecho-Comercial/851-Bloque-1-Norma-Supra-y-Tipos-Societarios/851.1-Sociedades-Anonimas/ + 100-HQ-DTR/150-Catalogo-Servicios/154-Benchmark-Precios-Mercado/2026-08-Rangos-Constitucion-Sociedades.md"
 ultima_actualizacion: 8 de agosto de 2026

@@ -35,8 +35,7 @@ plazos:
   tramite: "3 a 10 días hábiles por perfil según profundidad requerida"
   vigencia: "Perfil válido por 12 meses; actualización recomendada anualmente"
   renovacion: "Actualización anual obligatoria para sujetos obligados; screening continuo mensual disponible"
-tasas_oficiales: "Ninguna tasa oficial. Costo de bases de datos de screening internacional (World-Check, LexisNexis, otras) puede sumarse aparte."
-honorarios_ref: "Desde US$ 500 por perfil KYC estándar. Perfiles de alto riesgo con investigación reforzada desde US$ 1,500. Programas anuales de screening continuo desde US$ 3,000. Aplicamos el Acuerdo CNA 609-A/2021."
+honorarios_ref: "Los honorarios se estiman según el perfil (persona natural o jurídica), su nivel de riesgo y si se contrata como perfil puntual o como programa anual de screening continuo. Le enviamos propuesta escrita con precio cerrado antes de iniciar. Aplicamos el Acuerdo CNA 609-A/2021."
 alertas:
   - "Los sujetos obligados bajo Ley 23/2015 tienen OBLIGACIÓN de KYC — su omisión genera sanciones administrativas y responsabilidad penal."
   - "El screening debe hacerse contra listas actualizadas: OFAC, ONU, UE, listas de PEP, adverse media. Bases desactualizadas dejan al cliente expuesto."
@@ -45,40 +44,42 @@ alertas:
 notas_firma: |
   La debida diligencia (KYC / DDC) es la piedra angular del compliance corporativo. En Panamá tiene dimensión legal específica bajo la Ley 23 de 2015 y sus modificaciones.
 
-  ## Tres niveles de diligencia
+  Tres niveles de diligencia
 
-  1. **Simple (SDD)**: para clientes de bajo riesgo con documentación estándar.
-  2. **Estándar (CDD)**: para la mayoría de los clientes — identificación completa, verificación y perfilamiento.
-  3. **Reforzada (EDD)**: para clientes de alto riesgo, PEP, jurisdicciones no cooperantes, estructuras opacas.
+  1. Simple (SDD): para clientes de bajo riesgo con documentación estándar.
+  2. Estándar (CDD): para la mayoría de los clientes, con identificación completa, verificación y perfilamiento.
+  3. Reforzada (EDD): para clientes de alto riesgo, PEP, jurisdicciones no cooperantes o estructuras societarias con múltiples capas.
 
-  ## Componentes esenciales
+  Componentes esenciales
 
-  1. **Identificación**: cédula, pasaporte, cadena societaria hasta beneficiario final.
-  2. **Verificación**: cotejo con bases oficiales y screening internacional.
-  3. **Perfil de riesgo**: bajo, medio, alto con justificación documentada.
-  4. **Monitoreo continuo**: revisión periódica y alertas por eventos relevantes.
-  5. **Actualización**: revisión anual completa y actualización de datos.
+  1. Identificación de titulares y beneficiarios finales.
+  2. Verificación por cotejo con bases oficiales y screening internacional.
+  3. Perfil de riesgo bajo, medio o alto con justificación documentada.
+  4. Monitoreo continuo con revisión periódica y alertas por eventos relevantes.
+  5. Actualización anual completa de datos.
 
-  ## Sujetos obligados bajo Ley 23/2015
+  Sujetos obligados bajo Ley 23/2015
 
-  - Bancos y financieras
-  - Casinos y salas de apuestas
-  - Remesadoras y casas de cambio
-  - Inmobiliarias
-  - Joyerías, comercio de metales preciosos
-  - Abogados y notarios (en ciertas actividades)
-  - Contadores públicos autorizados
-  - Corredores y agentes de seguros
-  - Fiduciarios y agentes residentes
+  - Bancos y financieras.
+  - Casinos y salas de apuestas.
+  - Remesadoras y casas de cambio.
+  - Inmobiliarias.
+  - Joyerías y comercio de metales preciosos.
+  - Abogados y notarios en ciertas actividades.
+  - Contadores públicos autorizados.
+  - Corredores y agentes de seguros.
+  - Fiduciarios y agentes residentes.
 
-  Cada categoría tiene reglas específicas de la SSNF o de su ente regulador.
+  Cada categoría tiene reglas específicas de la SSNF o del ente regulador que corresponda.
 
-  ## Servicios DTR
+  Servicios DTR
 
-  1. **KYC puntual** por perfil (US$ 500 – US$ 1,500).
-  2. **Programa anual** de screening continuo (US$ 3,000+).
-  3. **Auditoría KYC** para revisar cartera existente y detectar brechas.
-  4. **Capacitación** al personal de la empresa en cumplimiento KYC.
+  1. KYC puntual por perfil.
+  2. Programa anual de screening continuo.
+  3. Auditoría KYC para revisar la cartera existente y detectar brechas.
+  4. Capacitación al personal de la empresa en cumplimiento KYC.
+
+  Los honorarios de cada modalidad se cotizan según el volumen y complejidad de la operación.
 aprobado_por: "DRAFT Claude 08.08.2026 — pendiente extensión Danna (CLO)"
 revisar_con: "dtr-vault/800-Knowledge-PA/850-Derecho-Comercial/851-Bloque-1-Norma-Supra-y-Tipos-Societarios/851.5-AML/"
 ultima_actualizacion: "8 de agosto de 2026"
