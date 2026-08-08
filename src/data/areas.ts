@@ -335,14 +335,49 @@ export const AREAS: Area[] = [
     slug: "derecho-laboral",
     titulo: "Derecho Laboral",
     tituloCorto: "Laboral",
-    pregunta: "Despido, mutuo acuerdo o CSS — ¿cómo termino la relación laboral bien?",
+    pregunta: "Necesito asesoría en una terminación laboral o en seguridad social — ¿cómo procede el proceso?",
     descripcion:
-      "Despidos justificados e injustificados, mutuo acuerdo y trámites ante Seguridad Social.",
+      "Terminaciones laborales, seguridad social y CSS, contratos de trabajo, conciliación y litigio. Honorarios personalizados según el Colegio Nacional de Abogados. Representamos tanto a empleadores como a trabajadores.",
+    destacada: true,
+    head: {
+      nombre: "Lcda. Rosemary S. De León",
+      cargo: "Socia Fundadora · Head del Departamento",
+      especialidad: "Especialista en Derecho Laboral y Seguridad Social",
+      bio: "Con más de 20 años de experiencia en el régimen laboral panameño, la Lcda. De León lidera el departamento de Derecho Laboral de DTR. Asesora tanto a empleadores como a trabajadores en terminaciones, conciliaciones MITRADEL y trámites ante la Caja de Seguro Social.",
+      experiencia_anios: 20,
+      stats: {
+        expedientes: "500+",
+        success_rate: "96%",
+        otras: [
+          { label: "Años de experiencia", value: "20+" },
+        ],
+      },
+      foto: "/team/rosemary-de-leon.jpg",
+      foto_alt: "Lcda. Rosemary S. De León — Socia Fundadora de DTR Abogados",
+    },
     grupos: [
-      { slug: "despido-justificado", titulo: "Despido justificado", procesos: [] },
-      { slug: "despido-injustificado", titulo: "Despido injustificado", procesos: [] },
-      { slug: "mutuo-acuerdo", titulo: "Mutuo acuerdo", procesos: [] },
-      { slug: "seguridad-social", titulo: "Seguridad social", procesos: [] },
+      {
+        slug: "terminaciones",
+        titulo: "Terminaciones y jubilaciones",
+        procesos: [
+          { slug: "despido-justificado", titulo: "Despido justificado" },
+          { slug: "despido-justificado-reclamo", titulo: "Reclamo de trabajador ante despido justificado" },
+          { slug: "despido-injustificado", titulo: "Despido injustificado" },
+          { slug: "mutuo-acuerdo", titulo: "Mutuo acuerdo" },
+          { slug: "renuncia-voluntaria", titulo: "Renuncia voluntaria" },
+          { slug: "jubilacion-retiro", titulo: "Jubilación y retiro" },
+        ],
+      },
+      {
+        slug: "seguridad-social",
+        titulo: "Seguridad social y CSS",
+        procesos: [
+          { slug: "afiliacion-css", titulo: "Afiliación a la CSS" },
+          { slug: "cuotas-obrero-patronales", titulo: "Cuotas obrero-patronales" },
+          { slug: "riesgos-profesionales", titulo: "Riesgos profesionales" },
+          { slug: "pension-invalidez-vejez", titulo: "Pensión por invalidez o vejez" },
+        ],
+      },
     ],
   },
   {
